@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { FaSearch, FaChevronLeft, FaChevronRight, FaCalendar } from 'react-icons/fa';
 import image1 from '../../assets/images/image1.png';
-import './MainContent.css';
 
 const MainContent = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -36,64 +35,53 @@ const MainContent = () => {
   };
 
   return (
-    <div className="content-container">
-      <h1 className="title">BERITA TERKINI</h1>
-      <p className="subtitle">
+    <div className="w-full min-h-[1600px] flex flex-col items-center p-12 bg-[#F7F3F5]">
+      <h1 className="font-inter font-bold text-4xl text-center text-[#EC121C] mb-2">BERITA TERKINI</h1>
+      <p className="font-inter text-lg text-center text-black mb-6 max-w-[1049px]">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       </p>
       
-      <div className="search-bar">
-        <FaSearch className="search-icon" />
-        <input className="search-input" placeholder="Cari artikel disini...." />
-        <button className="search-button">Search</button>
+      <div className="relative w-[780px] h-[48px] mb-6">
+        <FaSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-black" />
+        <input className="w-full h-full pl-10 pr-24 border border-[#261317] rounded-2xl font-inter text-lg" placeholder="Cari artikel disini...." />
+        <button className="absolute right-0 top-0 h-full px-6 bg-[#261317] rounded-r-2xl text-white font-bold">Search</button>
       </div>
 
-      <div className="featured-article">
-        <div className="slider" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
-          {featuredArticles.map((article, index) => (
-            <div key={article.id} className="slide" onClick={() => console.log(`Clicked article ${article.id}`)}>
-              <img src={article.image} alt={article.title} className="featured-image" />
-              <div className="gradient"></div>
-              <div className="slide-content">
-                <h2>{article.title}</h2>
-                <p>{article.description}</p>
+      <div className="relative w-[1180px] h-[415px] mb-6 rounded-lg overflow-hidden">
+        <div className="flex transition-transform duration-500" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+          {featuredArticles.map((article) => (
+            <div key={article.id} className="min-w-full relative cursor-pointer">
+              <img src={article.image} alt={article.title} className="w-full h-full object-cover rounded-lg" />
+              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black to-transparent opacity-50"></div>
+              <div className="absolute bottom-10 left-10 text-white z-10">
+                <h2 className="text-2xl font-bold">{article.title}</h2>
+                <p className="text-sm">{article.description}</p>
               </div>
             </div>
           ))}
         </div>
-        <button className="navigation-button left" onClick={prevSlide}>
+        <button className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white rounded-full p-2" onClick={prevSlide}>
           <FaChevronLeft size={24} />
         </button>
-        <button className="navigation-button right" onClick={nextSlide}>
+        <button className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white rounded-full p-2" onClick={nextSlide}>
           <FaChevronRight size={24} />
         </button>
-        <div className="slide-indicators">
-          {featuredArticles.map((_, index) => (
-            <div 
-              key={index} 
-              className={`indicator ${currentSlide === index ? 'active' : ''}`}
-              onClick={() => setCurrentSlide(index)}
-            />
-          ))}
-        </div>
       </div>
 
-      <div className="article-grid">
+      <div className="grid grid-cols-3 gap-5 w-[1180px]">
         {[1, 2, 3, 4, 5, 6].map((item) => (
-          <div key={item} className="article-card">
-            <img src={image1} alt="Article" className="card-image" />
-            <div className="card-content">
-              <h3 className="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-              <p className="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
+          <div key={item} className="relative w-[380px] h-[390px] bg-white rounded-lg shadow-md overflow-hidden">
+            <img src={image1} alt="Article" className="w-full h-[220px] object-cover rounded-t-lg" />
+            <div className="p-5">
+              <h3 className="font-inter font-semibold text-lg mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+              <p className="font-inter text-sm text-justify mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
-            <div className="card-footer">
-              <div className="date-wrapper">
-                <FaCalendar />
+            <div className="absolute bottom-0 left-0 right-0 p-4 flex justify-between items-center">
+              <div className="flex items-center text-gray-500 text-sm">
+                <FaCalendar className="mr-1" />
                 23 Januari 2025
               </div>
-              <span className="read-more">Read more...</span>
+              <span className="font-inter font-bold text-[#D60100] text-sm cursor-pointer">Read more...</span>
             </div>
           </div>
         ))}

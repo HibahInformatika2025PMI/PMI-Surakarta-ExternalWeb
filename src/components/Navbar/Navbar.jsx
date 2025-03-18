@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebook, FaInstagram, FaTwitterSquare, FaYoutube } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaTwitterSquare, FaYoutube, FaChevronDown } from 'react-icons/fa';
 import logoImg from '../../assets/images/pmi_logo.png';
 import './Navbar.css';
 
@@ -21,10 +21,21 @@ const Navbar = () => {
       <div className="bottom-bar">
         <ul className="nav-menu">
           <li className="nav-item">Beranda</li>
-          <li className="nav-item">Tentang Kami</li>
+          <li className="nav-item">Donor Darah</li>
+          <li className="nav-item">Layanan Ambulance</li>
+          <li className="nav-item dropdown"><FaChevronDown className="dropdown-arrow" />Portal Info<ul className="dropdown-menu">
+              <li>Dropdown 1</li>
+              <li>Dropdown 2</li>
+              <li>Dropdown 3</li>
+            </ul>
+          </li>
           <li className="nav-item">Berita</li>
-          <li className="nav-item">Layanan</li>
-          <li className="nav-item">Kontak</li>
+          <li className="nav-item dropdown"><FaChevronDown className="dropdown-arrow" />Tentang Kami<ul className="dropdown-menu">
+              <li>Dropdown 1</li>
+              <li>Dropdown 2</li>
+              <li>Dropdown 3</li>
+            </ul>
+          </li>
         </ul>
         <button className="donate-button">Donasi Sekarang</button>
       </div>

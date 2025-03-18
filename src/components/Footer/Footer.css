@@ -1,0 +1,77 @@
+.footer-container {
+  width: 100%;
+  height: 560px;
+  position: relative;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 48px 130px;
+  height: 500px;
+  background: #FFFFFF;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 404px;
+}
+
+.left-section {
+  width: 347px;
+}
+
+.footer-logo {
+  width: 234.07px;
+  height: 66px;
+  margin-bottom: 24px;
+}
+
+.address {
+  font-family: 'Inter';
+  font-size: 12px;
+  margin: 24px 0;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  margin: 12px 0;
+  font-family: 'Inter';
+  font-size: 12px;
+}
+
+.contact-info svg {
+  margin-right: 12px;
+}
+
+.right-section {
+  width: 423px;
+}
+
+.title {
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.map-image {
+  width: 423px;
+  height: 332px;
+}
+
+.copyright {
+  width: 100%;
+  height: 60px;
+  background: #D60100;
+  display: flex;
+  align-items: center;
+  padding: 0 130px;
+  color: #FFFFFF;
+  font-family: 'Inter';
+  font-size: 12px;
+}

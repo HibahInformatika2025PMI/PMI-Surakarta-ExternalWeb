@@ -40,20 +40,6 @@ npm run dev
 
 Aplikasi akan tersedia di `http://localhost:5173`
 
-## Build
-
-Untuk build production:
-```bash
-npm run build
-```
-
-## Perintah yang Tersedia
-
-- `npm run dev` - Menjalankan server development
-- `npm run build` - Build untuk production
-- `npm run preview` - Preview hasil build production
-- `npm run lint` - Menjalankan ESLint
-
 ## Struktur Project
 
 ```

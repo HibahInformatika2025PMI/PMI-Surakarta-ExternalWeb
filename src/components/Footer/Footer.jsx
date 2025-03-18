@@ -28,6 +28,16 @@ const Footer = () => {
           </div>
           <div className="right-section">
             <h2 className="title">PMI Kota Surakarta</h2>
+            <div className="map-container">
+              <iframe 
+                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=PMI%20Kota%20Surakarta+(PMI%20Kota%20Surakarta)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                className="google-map"
+                frameBorder="0"
+                scrolling="no"
+                marginHeight="0"
+                marginWidth="0"
+              />
+            </div>
           </div>
         </div>
       </div>

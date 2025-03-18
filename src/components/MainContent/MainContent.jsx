@@ -1,28 +1,48 @@
 import React, { useState } from 'react';
 import { FaSearch, FaChevronLeft, FaChevronRight, FaCalendar } from 'react-icons/fa';
 import image1 from '../../assets/images/image1.png';
+import { useNavigate } from 'react-router-dom';
 
 const MainContent = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const navigate = useNavigate();
 
   const featuredArticles = [
     {
       id: 1,
       title: "N!gga One",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image: image1
+      image: image1,
+      date: "21 Maret 2024",
+      content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.`
     },
     {
       id: 2,
       title: "N!gga Two",
       description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      image: image1
+      image: image1,
+      date: "22 Maret 2024",
+      content: `Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.
+
+      At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.`
     },
     {
       id: 3,
       title: "N!gga Three",
       description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      image: image1
+      image: image1,
+      date: "23 Maret 2024",
+      content: `Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+      Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+
+      Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.`
     }
   ];
 
@@ -32,6 +52,10 @@ const MainContent = () => {
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev === 0 ? featuredArticles.length - 1 : prev - 1));
+  };
+
+  const handleArticleClick = (articleId) => {
+    navigate(`/article/${articleId}`);
   };
 
   return (
@@ -50,7 +74,11 @@ const MainContent = () => {
       <div className="relative w-[1180px] h-[415px] mb-6 rounded-lg overflow-hidden">
         <div className="flex transition-transform duration-500" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
           {featuredArticles.map((article) => (
-            <div key={article.id} className="min-w-full relative cursor-pointer">
+            <div 
+              key={article.id} 
+              className="min-w-full relative cursor-pointer"
+              onClick={() => handleArticleClick(article.id)}
+            >
               <img src={article.image} alt={article.title} className="w-full h-full object-cover rounded-lg" />
               <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black to-transparent opacity-50"></div>
               <div className="absolute bottom-10 left-10 text-white z-10">
@@ -70,7 +98,11 @@ const MainContent = () => {
 
       <div className="grid grid-cols-3 gap-5 w-[1180px]">
         {[1, 2, 3, 4, 5, 6].map((item) => (
-          <div key={item} className="relative w-[380px] h-[390px] bg-white rounded-lg shadow-md overflow-hidden">
+          <div 
+            key={item} 
+            className="relative w-[380px] h-[390px] bg-white rounded-lg shadow-md overflow-hidden cursor-pointer"
+            onClick={() => handleArticleClick(item)}
+          >
             <img src={image1} alt="Article" className="w-full h-[220px] object-cover rounded-t-lg" />
             <div className="p-5">
               <h3 className="font-inter font-semibold text-lg mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>

@@ -1,19 +1,20 @@
 import React from 'react';
 import { FaFacebook, FaInstagram, FaTwitterSquare, FaYoutube, FaChevronDown } from 'react-icons/fa';
 import logoImg from '../../assets/images/pmi_logo.png';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
     <nav className="w-full h-[180px] relative">
       {/* Top Bar */}
       <div className="absolute w-full h-[90px] bg-white flex items-center justify-between px-4">
-        <a href="/" className="inline-block">
+        <Link to="/" className="inline-block">
           <img 
             src={logoImg} 
             alt="PMI Kota Surakarta" 
             className="w-[300px] h-[85px] ml-[125px] object-contain cursor-pointer transition-colors duration-300 rounded-2xl" 
           />
-        </a>
+        </Link>
         <div className="flex items-center gap-3">
           <span className="font-inter italic text-sm mr-3.5">find us on</span>
           <div className="flex gap-3 mr-[125px]">
@@ -29,7 +30,12 @@ const Navbar = () => {
       {/* Bottom Bar */}
       <div className="absolute w-full h-[90px] top-[90px] bg-[#D60100] shadow-md flex items-center justify-between px-4">
         <ul className="flex gap-6 ml-[125px]">
-          {['Beranda', 'Donor Darah', 'Layanan Ambulance'].map((item) => (
+          <li>
+            <Link to="/" className="text-white font-inter font-semibold text-base cursor-pointer transition-colors duration-300 hover:text-[#ffb7b7] py-5 px-4 flex items-center">
+              Beranda
+            </Link>
+          </li>
+          {['Donor Darah', 'Layanan Ambulance'].map((item) => (
             <li key={item} className="text-white font-inter font-semibold text-base cursor-pointer transition-colors duration-300 hover:text-[#ffb7b7] py-5 px-4 flex items-center">
               {item}
             </li>

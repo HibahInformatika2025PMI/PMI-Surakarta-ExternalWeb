@@ -76,11 +76,11 @@ const MainContent = () => {
           {featuredArticles.map((article) => (
             <div 
               key={article.id} 
-              className="min-w-full relative cursor-pointer"
+              className="min-w-full relative cursor-pointer group"
               onClick={() => handleArticleClick(article.id)}
             >
               <img src={article.image} alt={article.title} className="w-full h-full object-cover rounded-lg" />
-              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black to-transparent opacity-50"></div>
+              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-red-500 opacity-30 transition-opacity duration-500 group-hover:opacity-0"></div>
               <div className="absolute bottom-10 left-10 text-white z-10">
                 <h2 className="text-2xl font-bold">{article.title}</h2>
                 <p className="text-sm">{article.description}</p>
@@ -100,10 +100,13 @@ const MainContent = () => {
         {[1, 2, 3, 4, 5, 6].map((item) => (
           <div 
             key={item} 
-            className="relative w-[380px] h-[390px] bg-white rounded-lg shadow-md overflow-hidden cursor-pointer"
+            className="relative w-[380px] bg-white rounded-lg shadow-md overflow-hidden cursor-pointer pb-4 group"
             onClick={() => handleArticleClick(item)}
           >
-            <img src={image1} alt="Article" className="w-full h-[220px] object-cover rounded-t-lg" />
+            <div className="relative">
+              <img src={image1} alt="Article" className="w-full h-[220px] object-cover rounded-t-lg" />
+              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-red-500 opacity-30 transition-opacity duration-500 group-hover:opacity-0"></div>
+            </div>
             <div className="p-5">
               <h3 className="font-inter font-semibold text-lg mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
               <p className="font-inter text-sm text-justify mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>

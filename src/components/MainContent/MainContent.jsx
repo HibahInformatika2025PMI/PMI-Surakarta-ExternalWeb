@@ -10,7 +10,7 @@ const MainContent = () => {
   const featuredArticles = [
     {
       id: 1,
-      title: "N!gga One",
+      title: "N!gga Onee",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       image: image1,
       date: "21 Maret 2024",

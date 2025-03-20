@@ -40,7 +40,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="w-full h-[60px] bg-[#D60100] flex items-center justify-center text-white font-inter text-sm">
+      <div className="w-full h-[60px] bg-gradient-to-b from-red-600 to-red-900 flex items-center justify-center text-white font-inter text-sm">
         © Copyright Palang Merah Indonesia Kota Surakarta 2025
       </div>
     </footer>

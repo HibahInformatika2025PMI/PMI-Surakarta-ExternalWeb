@@ -2,8 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import MainContent from './components/MainContent/MainContent';
-import ArticleList from './components/ArticleList/ArticleList';
+import EditCarousel from './components/ArticleList/EditCarousel';
+import EditArticle from './components/ArticleList/EditArticle';
 import DetailArticle from './components/DetailArticle/DetailArticle';
+import ArticleForm from './components/ArticleEdit/ArticleForm';
 import Footer from './components/Footer/Footer';
 import './App.css';
 
@@ -15,7 +17,13 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<MainContent />} />
-            <Route path="/berita" element={<ArticleList />} />
+            <Route path="/berita" element={
+              <div>
+                <EditCarousel />
+                <EditArticle />
+              </div>
+            } />
+            <Route path="/berita/form" element={ <ArticleForm /> } />
             <Route path="/article/:id" element={<DetailArticle />} />
           </Routes>
         </main>

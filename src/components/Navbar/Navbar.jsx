@@ -28,7 +28,7 @@ const Navbar = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="absolute w-full h-[90px] top-[90px] bg-[#D60100] shadow-md flex items-center justify-between px-4">
+      <div className="absolute w-full h-[70px] top-[90px] bg-gradient-to-b from-red-600 to-red-900 shadow-md flex items-center justify-between px-4">
         <ul className="flex gap-6 ml-[125px]">
           <li>
             <Link to="/" className="text-white font-inter font-semibold text-base cursor-pointer transition-colors duration-300 hover:text-[#ffb7b7] py-5 px-4 flex items-center">

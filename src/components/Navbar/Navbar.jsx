@@ -56,8 +56,11 @@ const Navbar = () => {
             </ul>
           </li>
 
-          <li className="text-white font-inter font-semibold text-base cursor-pointer transition-colors duration-300 hover:text-[#ffb7b7] py-5 px-4 flex items-center">
-            Berita
+          {/* Bagian Admin --------- List artikel dan edit artikel */}
+          <li>
+            <Link to="/berita" className="text-white font-inter font-semibold text-base cursor-pointer transition-colors duration-300 hover:text-[#ffb7b7] py-5 px-4 flex items-center">
+              Berita
+            </Link>
           </li>
 
           {/* Tentang Kami Dropdown */}

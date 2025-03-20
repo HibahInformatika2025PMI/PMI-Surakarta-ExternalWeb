@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import MainContent from './components/MainContent/MainContent';
+import ArticleList from './components/ArticleList/ArticleList';
 import DetailArticle from './components/DetailArticle/DetailArticle';
 import Footer from './components/Footer/Footer';
 import './App.css';
@@ -14,6 +15,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<MainContent />} />
+            <Route path="/berita" element={<ArticleList />} />
             <Route path="/article/:id" element={<DetailArticle />} />
           </Routes>
         </main>

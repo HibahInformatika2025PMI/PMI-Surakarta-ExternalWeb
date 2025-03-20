@@ -100,7 +100,7 @@ const MainContent = () => {
         {[1, 2, 3, 4, 5, 6].map((item) => (
           <div 
             key={item} 
-            className="relative w-[380px] bg-white rounded-lg shadow-md overflow-hidden cursor-pointer pb-4 group"
+            className="relative w-[380px] h-[400px] bg-white rounded-lg shadow-md overflow-hidden cursor-pointer"
             onClick={() => handleArticleClick(item)}
           >
             <div className="relative">

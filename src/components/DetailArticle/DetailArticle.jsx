@@ -110,19 +110,6 @@ const DetailArticle = () => {
         </div>
       </div>
 
-      <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div>
-          <h3 className="font-bold mb-4">PMI Kota Surakarta</h3>
-          <div className="space-y-2 text-gray-600">
-            <p>Jl. Kol. Sutarto No. 58 Jebres, Surakarta, Jawa Tengah 57126</p>
-            <p>(0271) 648 731</p>
-            <p>Email: info@pmisurakarta.or.id</p>
-          </div>
-        </div>
-        <div className="w-full h-[200px] bg-gray-200 rounded-lg">
-          {/* Map implementation here */}
-        </div>
-      </div>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaFacebook, FaInstagram, FaTwitterSquare, FaYoutube, FaChevronDown } from 'react-icons/fa';
 import logoImg from '../../assets/images/pmi_logo.png';
 import { Link } from 'react-router-dom';
@@ -28,22 +28,22 @@ const Navbar = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="absolute w-full h-[70px] top-[90px] bg-gradient-to-b from-red-600 to-red-900 shadow-md flex items-center justify-between px-4">
+      <div className="absolute w-full h-[70px] top-[90px] bg-gradient-to-b from-red-600 to-red-900 shadow-md flex items-center justify-between px-4 ">
         <ul className="flex gap-6 ml-[125px]">
           <li>
-            <Link to="/" className="text-white font-inter font-semibold text-base cursor-pointer transition-colors duration-300 hover:text-[#ffb7b7] py-5 px-4 flex items-center">
+            <Link to="/" className="text-[#D9D9D9] font-inter font-semibold text-base cursor-pointer transition-colors duration-300 hover:text-white py-5 px-4 flex items-center">
               Beranda
             </Link>
           </li>
           {['Donor Darah', 'Layanan Ambulance'].map((item) => (
-            <li key={item} className="text-white font-inter font-semibold text-base cursor-pointer transition-colors duration-300 hover:text-[#ffb7b7] py-5 px-4 flex items-center">
+            <li key={item} className="text-[#D9D9D9] font-inter font-semibold text-base cursor-pointer transition-colors duration-300 hover:text-white py-5 px-4 flex items-center">
               {item}
             </li>
           ))}
           
           {/* Portal Info Dropdown */}
           <li className="relative group">
-            <div className="text-white font-inter font-semibold text-base cursor-pointer transition-colors duration-300 group-hover:text-[#ffb7b7] py-5 px-4 flex items-center gap-2">
+            <div className="text-[#D9D9D9] font-inter font-semibold text-base cursor-pointer transition-colors duration-300 group-hover:text-white py-5 px-4 flex items-center gap-2">
               <FaChevronDown className="text-xs transition-transform duration-300 group-hover:rotate-180" />
               Portal Info
             </div>
@@ -58,14 +58,14 @@ const Navbar = () => {
 
           {/* Bagian Admin --------- List artikel dan edit artikel */}
           <li>
-            <Link to="/berita" className="text-white font-inter font-semibold text-base cursor-pointer transition-colors duration-300 hover:text-[#ffb7b7] py-5 px-4 flex items-center">
+            <Link to="/berita" className="text-[#D9D9D9] font-inter font-semibold text-base cursor-pointer transition-colors duration-300 hover:text-white py-5 px-4 flex items-center">
               Berita
             </Link>
           </li>
 
           {/* Tentang Kami Dropdown */}
           <li className="relative group">
-            <div className="text-white font-inter font-semibold text-base cursor-pointer transition-colors duration-300 group-hover:text-[#ffb7b7] py-5 px-4 flex items-center gap-2">
+            <div className="text-[#D9D9D9] font-inter font-semibold text-base cursor-pointer transition-colors duration-300 group-hover:text-white py-5 px-4 flex items-center gap-2">
               <FaChevronDown className="text-xs transition-transform duration-300 group-hover:rotate-180" />
               Tentang Kami
             </div>

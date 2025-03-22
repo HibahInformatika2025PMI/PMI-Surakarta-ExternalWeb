@@ -16,7 +16,17 @@ function App() {
         <Navbar />
         <main>
           <Routes>
+            {/* Beranda Page */}
             <Route path="/" element={<MainContent />} />
+            <Route path="/article/:id" element={<DetailArticle />} />
+
+            {/* Donor Darah Page */}
+
+            {/* Layanan Ambulance Page */}
+
+            {/* Portal Info Page */}
+
+            {/* Berita Page */}
             <Route path="/berita" element={
               <div>
                 <EditCarousel />
@@ -24,7 +34,9 @@ function App() {
               </div>
             } />
             <Route path="/berita/form" element={ <ArticleForm /> } />
-            <Route path="/article/:id" element={<DetailArticle />} />
+
+            {/* Tentang Kami Page */}
+            
           </Routes>
         </main>
         <Footer />

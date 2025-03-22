@@ -14,7 +14,8 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
-        <main>
+
+        <main className='bg-[#F7F3F5]'>
           <Routes>
             {/* Beranda Page */}
             <Route path="/" element={<MainContent />} />
@@ -39,6 +40,7 @@ function App() {
             
           </Routes>
         </main>
+        
         <Footer />
       </div>
     </Router>

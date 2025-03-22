@@ -59,7 +59,7 @@ const MainContent = () => {
   };
 
   return (
-    <div className="w-full min-h-[1600px] flex flex-col items-center p-12 bg-[#F7F3F5]">
+    <div className="w-full min-h-[1600px] flex flex-col items-center p-12">
       {/* Header */}
       <h1 className="font-inter font-bold text-4xl text-center text-[#EC121C] mb-2">BERITA TERKINI</h1>
       <p className="font-inter text-lg text-center text-black mb-6 max-w-[1049px]">

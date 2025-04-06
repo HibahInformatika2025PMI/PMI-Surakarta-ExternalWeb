@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import articleImage from "../../assets/images/image1.png"
+import articleImage from "../../../assets/images/article_pmi.png"
 
 const EditCarousel = () => {
     // State form

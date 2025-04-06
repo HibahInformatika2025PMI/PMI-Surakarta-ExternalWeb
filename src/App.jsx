@@ -1,13 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar/Navbar';
-import MainContent from './components/MainContent/MainContent';
-import EditCarousel from './components/ArticleList/EditCarousel';
-import EditArticle from './components/ArticleList/EditArticle';
-import DetailArticle from './components/DetailArticle/DetailArticle';
-import ArticleForm from './components/ArticleEdit/ArticleForm';
-import Footer from './components/Footer/Footer';
-import './App.css';
+
+import Navbar from './components/shared/Navbar';
+import Footer from './components/shared/Footer';
+
+import EditCarousel from './pages/admin/ArticleList/EditCarousel';
+import EditArticle from './pages/admin/ArticleList/EditArticle';
+import ArticleForm from './pages/admin/ArticleEdit/ArticleForm';
+
+import Homepage from './pages/client/Homepage';
+import News from './pages/client/News/News';
+import DetailArticle from './pages/client/DetailArticle/DetailArticle';
 
 function App() {
   return (
@@ -17,9 +20,20 @@ function App() {
 
         <main className='bg-[#F7F3F5]'>
           <Routes>
+            {/* Admin */}
+            {/* Edit Artikel */}
+            <Route path="/admin-news" element={
+              <div>
+                <EditCarousel />
+                <EditArticle />
+              </div>
+            } />
+            <Route path="/admin-news/form" element={ <ArticleForm /> } />
+
+
+            {/* Client */}
             {/* Beranda Page */}
-            <Route path="/" element={<MainContent />} />
-            <Route path="/article/:id" element={<DetailArticle />} />
+            <Route path="/" element={<Homepage />} />
 
             {/* Donor Darah Page */}
 
@@ -28,13 +42,8 @@ function App() {
             {/* Portal Info Page */}
 
             {/* Berita Page */}
-            <Route path="/berita" element={
-              <div>
-                <EditCarousel />
-                <EditArticle />
-              </div>
-            } />
-            <Route path="/berita/form" element={ <ArticleForm /> } />
+            <Route path='/news' element={<News />} />
+            <Route path="/news/article/:id" element={<DetailArticle />} />
 
             {/* Tentang Kami Page */}
             

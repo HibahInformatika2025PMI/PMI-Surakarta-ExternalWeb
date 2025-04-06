@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { FaCalendar, FaFacebook, FaTwitter, FaYoutube } from 'react-icons/fa';
-import image1 from '../../assets/images/image1.png';
+import image1 from '../../../assets/images/article_pmi.png';
 
 const DetailArticle = () => {
   const { id } = useParams();

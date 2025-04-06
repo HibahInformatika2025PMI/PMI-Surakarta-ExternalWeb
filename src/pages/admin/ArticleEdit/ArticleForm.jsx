@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react'
-import noPicture from "../../assets/images/ant-design--picture-filled.png"
 import { useNavigate } from 'react-router-dom';
 
 const ArticleForm = () => {

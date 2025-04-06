@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { FaSearch, FaChevronLeft, FaChevronRight, FaCalendar } from 'react-icons/fa';
-import image1 from '../../assets/images/image1.png';
 import { useNavigate } from 'react-router-dom';
+import image1 from '../../../assets/images/article_pmi.png';
 
-const MainContent = () => {
+const News = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const navigate = useNavigate();
 
@@ -55,7 +55,7 @@ const MainContent = () => {
   };
 
   const handleArticleClick = (articleId) => {
-    navigate(`/article/${articleId}`);
+    navigate(`/news/article/${articleId}`);
   };
 
   return (
@@ -130,4 +130,4 @@ const MainContent = () => {
   );
 };
 
-export default MainContent;
+export default News;

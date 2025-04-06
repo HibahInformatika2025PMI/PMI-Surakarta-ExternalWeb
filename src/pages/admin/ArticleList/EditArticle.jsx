@@ -1,9 +1,6 @@
 import React, { useState } from "react"
-import articleImage from "../../assets/images/image1.png"
-import penLogo from "../../assets/images/solar--pen-bold.png"
-import trashLogo from "../../assets/images/bi--trash-fill.png"
-import calenderLogo from "../../assets/images/uil--calender.png"
 import { Navigate, useNavigate } from "react-router-dom"
+import articleImage from "../../../assets/images/article_pmi.png"
 
 const EditArtikel = () => {
     const existingArticles = [
@@ -164,7 +161,6 @@ const EditArtikel = () => {
                     </div>
                     <div className="flex-1 p-4">
                         <div className="p-2 text-xs text-black font-medium mb-2 bg-gray-100 flex items-center gap-2">
-                            <img src={ calenderLogo } alt="" className="w-4 h-4"/>
                             <p>{article.date}</p>
                             <p>{article.status}</p>
                         </div>
@@ -178,14 +174,12 @@ const EditArtikel = () => {
                             onClick={() => handleEdit(article.id)}
                             className="w-full py-2 bg-yellow-400 text-white rounded-md flex justify-center items-center gap-2 hover:bg-yellow-500"
                         >
-                            <img src={penLogo} alt="Edit" className='w-4 h-4'/>
                             Edit
                         </button>
                         <button
                             onClick={() => handleDelete(article.id)}
                             className="w-full py-2 bg-red-400 text-white rounded-md flex justify-center items-center gap-2 hover:bg-red-600"
                         >
-                            <img src={trashLogo} alt="Delete" className='w-4 h-4'/>
                             Delete
                         </button>
                     </div>
@@ -228,7 +222,7 @@ const EditArtikel = () => {
             {/* New Article Button */}
             <div className="flex justify-end">
                 <button
-                    onClick={() => handleNewArticle("/berita/form")}
+                    onClick={() => handleNewArticle("/news/form")}
                     className="px-6 py-3 bg-gradient-to-b from-red-500 to-red-700 text-white font-semibold rounded-md"
                 >
                     + New Article

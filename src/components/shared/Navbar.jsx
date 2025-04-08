@@ -2,13 +2,11 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaTwitterSquare, FaYoutube, FaChevronDown } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
-
 import { Colors } from '../../themes/ColorPallete';
 import { Body } from '../../themes/Typography';
 import { OutlineButton } from './Button';
 import Dropdown from './dropdown';
 import { portalInfoItems, tentangKamiItems } from '../../assets/dummyData/ExampleDropdown';
-
 import logoImg from '../../assets/images/pmi_logo.png';
 
 const IconLink = ({ href, children }) => {

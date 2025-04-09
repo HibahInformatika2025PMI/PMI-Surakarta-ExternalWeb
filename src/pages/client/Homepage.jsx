@@ -56,21 +56,18 @@ const Homepage = () => {
           title='DONOR DARAH'
           description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
           buttonLabel='Selengkapnya'
-          onButtonClick={() => alert('Tombol ditekan')}
         />
         <CardHomepage 
           icon={<FaAmbulance size={28} color={Colors.primary.white}/>}
           title='CALL AMBULANCE'
           description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
           buttonLabel='Selengkapnya'
-          onButtonClick={() => alert('Tombol ditekan')}
         />
         <CardHomepage 
           icon={<FaDonate size={28} color={Colors.primary.white}/>}
           title='DONASI'
           description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
           buttonLabel='Selengkapnya'
-          onButtonClick={() => alert('Tombol ditekan')}
         />
       </div>
       
@@ -127,21 +124,18 @@ const Homepage = () => {
                 title='Bantu Dek Immanuel Sembuh dari Penyakit Crohns Disease'
                 description='Berjuang seorang diri, Ibunda harus membiayai seluruh pengobatan Immanuel dengan total lebih dari ... Read more'
                 buttonLabel='Selengkapnya'
-                onButtonClick={() => alert('Tombol ditekan')}
               />
               <CardDonasi 
                 image={DonasiCard}
                 title='Bantu Dek Immanuel Sembuh dari Penyakit Crohns Disease'
                 description='Berjuang seorang diri, Ibunda harus membiayai seluruh pengobatan Immanuel dengan total lebih dari ... Read more'
                 buttonLabel='Selengkapnya'
-                onButtonClick={() => alert('Tombol ditekan')}
               />
               <CardDonasi 
                 image={DonasiCard}
                 title='Bantu Dek Immanuel Sembuh dari Penyakit Crohns Disease'
                 description='Berjuang seorang diri, Ibunda harus membiayai seluruh pengobatan Immanuel dengan total lebih dari ... Read more'
                 buttonLabel='Selengkapnya'
-                onButtonClick={() => alert('Tombol ditekan')}
               />
 
               <button className="transform bg-white rounded-full p-2">
@@ -162,7 +156,6 @@ const Homepage = () => {
             title='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
             description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
             date='21 Januari 2025'
-            onButtonClick={() => alert('Tombol ditekan')}
           />
           <CardNews
             id='2'
@@ -170,7 +163,6 @@ const Homepage = () => {
             title='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
             description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
             date='21 Januari 2025'
-            onButtonClick={() => alert('Tombol ditekan')}
           />
           <CardNews
             id='3'
@@ -178,7 +170,6 @@ const Homepage = () => {
             title='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
             description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
             date='21 Januari 2025'
-            onButtonClick={() => alert('Tombol ditekan')}
           />
           <CardNews
             id='4'
@@ -186,7 +177,6 @@ const Homepage = () => {
             title='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
             description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
             date='21 Januari 2025'
-            onButtonClick={() => alert('Tombol ditekan')}
           />
           <CardNews
             id='5'
@@ -194,7 +184,6 @@ const Homepage = () => {
             title='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
             description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
             date='21 Januari 2025'
-            onButtonClick={() => alert('Tombol ditekan')}
           />
           <CardNews
             id='6'
@@ -202,7 +191,6 @@ const Homepage = () => {
             title='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
             description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
             date='21 Januari 2025'
-            onButtonClick={() => alert('Tombol ditekan')}
           />
           
           <GradientOutlineButton className={'w-full'}>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaSearch, FaChevronLeft, FaChevronRight, FaCalendar } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import image1 from '../../../assets/images/article_pmi.png';
@@ -6,45 +6,25 @@ import image1 from '../../../assets/images/article_pmi.png';
 const News = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const navigate = useNavigate();
+  const [featuredArticles, setFeaturedArticles] = useState([]);
 
-  const featuredArticles = [
-    {
-      id: 1,
-      title: "N!gga Onee",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image: image1,
-      date: "21 Maret 2024",
-      content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.`
-    },
-    {
-      id: 2,
-      title: "N!gga Two",
-      description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      image: image1,
-      date: "22 Maret 2024",
-      content: `Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.
-
-      At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.`
-    },
-    {
-      id: 3,
-      title: "N!gga Three",
-      description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      image: image1,
-      date: "23 Maret 2024",
-      content: `Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-      Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
-
-      Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.`
+  // Fetch news articles
+  const fetchNews = async () => {
+    try {
+      const response = await fetch('http://localhost:8080/news'); // atau pake 'http://localhost:8080/news?is_draft=false'
+      const data = await response.json();
+      console.log(data);
+      if (data.status === 'success') {
+        setFeaturedArticles(data.data);
+      }
+    } catch (error) {
+      console.error('Error fetching news:', error);
     }
-  ];
+  };
+
+  useEffect(() => {
+    fetchNews();
+  }, []);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev === featuredArticles.length - 1 ? 0 : prev + 1));
@@ -82,11 +62,10 @@ const News = () => {
               className="min-w-full relative cursor-pointer group"
               onClick={() => handleArticleClick(article.id)}
             >
-              <img src={article.image} alt={article.title} className="w-full h-full object-cover rounded-lg" />
-              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-red-500 opacity-30 transition-opacity duration-500 group-hover:opacity-0"></div>
+              <img src={article.cover_image} alt={article.title} className="w-full h-full object-cover rounded-lg" />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-red-600 to-transparent backdrop-opacity-90 text-white px-10 py-10 rounded-b-lg">
                 <h2 className="text-2xl font-bold">{article.title}</h2>
-                <p className="text-sm line-clamp-1">{article.description}</p>
+                <p className="text-sm line-clamp-1">{article.summary}</p>
               </div>
             </div>
           ))}
@@ -101,31 +80,30 @@ const News = () => {
 
       {/* List */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full max-w-[1180px]">
-        {[1, 2, 3, 4, 5, 6].map((item) => (
+        {featuredArticles.map((article) => (
           <div 
-            key={item} 
+            key={article.id} 
             className="relative w-[380px] h-[400px] bg-white rounded-lg shadow-md overflow-hidden cursor-pointer"
-            onClick={() => handleArticleClick(item)}
+            onClick={() => handleArticleClick(article.id)}
           >
             <div className="relative">
-              <img src={image1} alt="Article" className="w-full h-[220px] object-cover rounded-t-lg" />
+              <img src={article.cover_image} alt={article.title} className="w-full h-[220px] object-cover rounded-t-lg" />
               <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-red-500 opacity-30 transition-opacity duration-500 group-hover:opacity-0"></div>
             </div>
             <div className="p-5">
-              <h3 className="font-inter font-semibold text-lg mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-              <p className="font-inter text-sm text-justify mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <h3 className="font-inter font-semibold text-lg mb-2">{article.title}</h3>
+              <p className="font-inter text-sm text-justify mb-4">{article.summary}</p>
             </div>
             <div className="absolute bottom-0 left-0 right-0 p-4 flex justify-between items-center">
               <div className="flex items-center text-gray-500 text-sm">
                 <FaCalendar className="mr-1" />
-                23 Januari 2025
+                {new Date(article.updated_at).toLocaleDateString()}
               </div>
               <span className="font-inter font-bold text-[#D60100] text-sm cursor-pointer">Read more...</span>
             </div>
           </div>
         ))}
       </div>
-
     </div>
   );
 };

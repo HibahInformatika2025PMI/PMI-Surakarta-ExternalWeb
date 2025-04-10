@@ -35,8 +35,28 @@ const EditArtikel = () => {
       console.log("Edit artikel dengan id:", id);
       navigate(`/admin-news/form?id=${id}`);
   };
-  const handleDelete = (id) => {
-      console.log("Delete artikel dengan id:", id);
+  const handleDelete = async (id) => {
+      // Konfirmasi sebelum menghapus
+      if (window.confirm('Apakah Anda yakin ingin menghapus artikel ini?')) {
+          try {
+              const response = await fetch(`http://localhost:8080/news/${id}`, {
+                  method: 'DELETE',
+              });
+              
+              const data = await response.json();
+              
+              if (data.status === "success") {
+                  // Hapus artikel dari state setelah berhasil dihapus dari server
+                  setArticles(articles.filter(article => article.id !== id));
+                  alert('Artikel berhasil dihapus!');
+              } else {
+                  alert('Gagal menghapus artikel: ' + data.message);
+              }
+          } catch (error) {
+              console.error('Error deleting article:', error);
+              alert('Terjadi kesalahan saat menghapus artikel');
+          }
+      }
   };
   // Filter articles
   const filteredArticles = articles

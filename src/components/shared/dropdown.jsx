@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaChevronDown } from 'react-icons/fa';
-import { NavbarTitle } from './Navbar';
+import NavbarTitle from '../navbar/NavbarTitle';
 
 const Dropdown = ({ items, children }) => {
   return (

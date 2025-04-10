@@ -1,16 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Navbar from './components/shared/Navbar';
-import Footer from './components/shared/Footer';
+import Navbar from './components/navbar/Navbar';
+import Footer from './components/footer/Footer';
 
-import EditCarousel from './pages/admin/ArticleList/EditCarousel';
-import EditArticle from './pages/admin/ArticleList/EditArticle';
-import ArticleForm from './pages/admin/ArticleEdit/ArticleForm';
+import EditCarousel from './pages/news/admin/ArticleList/EditCarousel';
+import EditArticle from './pages/news/admin/ArticleList/EditArticle';
+import ArticleForm from './pages/news/admin/ArticleEdit/ArticleForm';
 
-import Homepage from './pages/client/Homepage';
-import News from './pages/client/News/News';
-import DetailArticle from './pages/client/DetailArticle/DetailArticle';
+import Homepage from './pages/homepage/Homepage';
+import ClientNews from './pages/news/client/ClientNews';
+import ArticleDetails from './pages/article_details/ArticleDetails';
 
 function App() {
   return (
@@ -42,8 +42,8 @@ function App() {
             {/* Portal Info Page */}
 
             {/* Berita Page */}
-            <Route path='/news' element={<News />} />
-            <Route path="/news/article/:id" element={<DetailArticle />} />
+            <Route path='/news' element={<ClientNews />} />
+            <Route path="/news/article/:id" element={<ArticleDetails />} />
 
             {/* Tentang Kami Page */}
             

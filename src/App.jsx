@@ -10,7 +10,9 @@ import ArticleForm from './pages/news/admin/ArticleEdit/ArticleForm';
 
 import Homepage from './pages/homepage/Homepage';
 import ClientNews from './pages/news/client/ClientNews';
+import AboutUs from './pages/about_us/AboutUs';
 import ArticleDetails from './pages/article_details/ArticleDetails';
+import AdminNews from './pages/news/admin/AdminNews';
 
 function App() {
   return (
@@ -22,18 +24,13 @@ function App() {
           <Routes>
             {/* Admin */}
             {/* Edit Artikel */}
-            <Route path="/admin-news" element={
-              <div>
-                <EditCarousel />
-                <EditArticle />
-              </div>
-            } />
+            <Route path="/admin-news" element={ <AdminNews /> } />
             <Route path="/admin-news/form" element={ <ArticleForm /> } />
 
 
             {/* Client */}
             {/* Beranda Page */}
-            <Route path="/" element={<Homepage />} />
+            <Route path="/" element={ <Homepage /> } />
 
             {/* Donor Darah Page */}
 
@@ -42,11 +39,11 @@ function App() {
             {/* Portal Info Page */}
 
             {/* Berita Page */}
-            <Route path='/news' element={<ClientNews />} />
-            <Route path="/news/article/:id" element={<ArticleDetails />} />
+            <Route path='/news' element={ <ClientNews /> } />
+            <Route path="/news/article/:id" element={ <ArticleDetails /> } />
 
             {/* Tentang Kami Page */}
-            
+            <Route path='/about-us' element={ <AboutUs /> } />
           </Routes>
         </main>
         

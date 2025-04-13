@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import SearchBar from "../../../../components/shared/SearchBar";
+import Heading from "../../../../themes/typography/Heading";
+import PrimaryColor from "../../../../themes/color_pallete/PrimaryColor";
+import { FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/fa";
 
 const EditArtikel = () => {
   const [articles, setArticles] = useState([]);
@@ -28,9 +31,6 @@ const EditArtikel = () => {
       fetchArticles();
   }, []);
   // Handling action button
-  const handleSearch = () => {
-      setCurrentPage(1);
-  };
   const handleEdit = (id) => {
       console.log("Edit artikel dengan id:", id);
       navigate(`/admin-news/form?id=${id}`);
@@ -82,22 +82,12 @@ const EditArtikel = () => {
   return (
       <div className="px-32 pb-12">
           {/* Edit Article */}
-          <h1 className="text-2xl font-bold mb-6 border-b-4 border-red-500 w-fit">Edit Artikel</h1>
+          <Heading className={`text-2xl border-b-4 w-fit`} style={{ borderColor: PrimaryColor.red }}>
+            Edit Article
+          </Heading>
+          
           <div className="flex flex-col md:flex-row md:items-center gap-4 mb-6">
               {/* Search Input */}
-              {/* <div className="flex-grow flex items-center border rounded-md px-3 py-2 bg-white">
-                  <input
-                      type="text"
-                      placeholder="Cari artikel di sini..."
-                      className="flex-grow focus:outline-none"
-                      value={searchTerm}
-                      onChange={(e) => setSearchTerm(e.target.value)}
-                  />
-              </div> */}
-              {/* Search Button */}
-              {/* <button onClick={handleSearch} className="px-6 py-2 bg-red-500 text-white rounded-md hover:bg-red-600">
-                  Search
-              </button> */}
               <SearchBar />
               
               {/* Dropdown Filter */}
@@ -167,7 +157,7 @@ const EditArtikel = () => {
                     currentPage === 1 ? "text-gray-400 cursor-not-allowed" : "hover:text-red-500"
                   }`}
               >
-                &lt;
+                <FaChevronCircleLeft size={30} />
               </button>
               <p>Page {currentPage}/{totalPages}</p>
               <button
@@ -177,7 +167,7 @@ const EditArtikel = () => {
                       currentPage === totalPages ? "text-gray-400 cursor-not-allowed" : "hover:text-red-500"
                   }`}
               >
-                &gt;
+                <FaChevronCircleRight size={30} />
               </button>
             </div>
           )}

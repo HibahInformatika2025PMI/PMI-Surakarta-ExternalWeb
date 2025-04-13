@@ -9,10 +9,11 @@
 
 import React from 'react'
 
-const Heading = ({ children, className, ...props }) => {
+const Heading = ({ children, className, style, ...props }) => {
   return (
     <h2
       className={`font-inter font-bold ${className || ''}`}
+      style={style}
       { ...props }
     >
       { children }

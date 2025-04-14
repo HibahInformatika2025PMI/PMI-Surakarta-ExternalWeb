@@ -15,6 +15,7 @@ import ArticleDetails from './pages/article_details/ArticleDetails';
 import AdminNews from './pages/news/admin/AdminNews';
 import UserProfile from './pages/user_profile/UserProfile';
 import EditProfile from './pages/user_profile/EditProfile';
+import AuthIndex from './pages/authentication/AuthIndex';
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
 
         <main className='bg-[#F7F3F5]'>
           <Routes>
+            {/* Authentication */}
+            <Route path='/auth' element={ <AuthIndex /> } />
+
             {/* Admin */}
             {/* Edit Artikel */}
             <Route path="/admin-news" element={ <AdminNews /> } />

@@ -25,6 +25,7 @@ const BottomNavbar = () => {
         <NavbarTitle navigate={'/about-us'}>Tentang Kami</NavbarTitle>
 
         <NavbarTitle navigate={'/admin-news'}>Admin-Berita</NavbarTitle>
+        <NavbarTitle navigate={'/auth'}>Authentication</NavbarTitle>
       </ul>
 
       <RedOutlineButton>Donasi Sekarang</RedOutlineButton>

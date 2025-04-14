@@ -16,7 +16,8 @@
 
 import React from "react";
 import { BaseButton } from "./BaseButton";
-import { Colors } from "../../themes/color_pallete/ColorPallete";
+import PrimaryColor from "../../themes/color_pallete/PrimaryColor";
+import SecondaryColor from "../../themes/color_pallete/SecondaryColor";
 import UseHover from "../../hooks/UseHover";
 
 const SuccessButton = ({ children, path, className, ...props }) => {
@@ -29,8 +30,8 @@ const SuccessButton = ({ children, path, className, ...props }) => {
       onMouseLeave={ handleMouseLeave }
       onClick={ () => handleClick(path) }
       style={{ 
-        backgroundColor: isHovered ? Colors.secondary.lightGreen : Colors.primary.green,
-        color: isHovered? Colors.secondary.lightSilver : Colors.primary.white,
+        backgroundColor: isHovered ? SecondaryColor.lightGreen : PrimaryColor.green,
+        color: isHovered? SecondaryColor.lightSilver : PrimaryColor.white,
         transition: 'background-color 0.2s ease'
       }}
       { ...props }

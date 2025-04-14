@@ -13,6 +13,8 @@ import ClientNews from './pages/news/client/ClientNews';
 import AboutUs from './pages/about_us/AboutUs';
 import ArticleDetails from './pages/article_details/ArticleDetails';
 import AdminNews from './pages/news/admin/AdminNews';
+import UserProfile from './pages/user_profile/UserProfile';
+import EditProfile from './pages/user_profile/EditProfile';
 
 function App() {
   return (
@@ -44,6 +46,12 @@ function App() {
 
             {/* Tentang Kami Page */}
             <Route path='/about-us' element={ <AboutUs /> } />
+
+            {/* User Profile Pages */}
+            <Route path="/profile" element={ <UserProfile /> } />
+            <Route path="/profile/:userId" element={ <UserProfile /> } />
+            <Route path="/profile/edit/:userId" element={ <EditProfile /> } />
+            <Route path="/profile/edit" element={ <EditProfile /> } />
           </Routes>
         </main>
         

@@ -16,8 +16,10 @@
 
 import React from "react";
 import { BaseButton } from "./BaseButton";
-import { Colors } from "../../themes/color_pallete/ColorPallete";
 import UseHover from "../../hooks/UseHover";
+import PrimaryColor from "../../themes/color_pallete/PrimaryColor";
+import SecondaryColor from "../../themes/color_pallete/SecondaryColor";
+import { CgSelectO } from "react-icons/cg";
 
 export const WarningButton = ({ children, path, className, ...props }) => {
   const { isHovered, handleMouseEnter, handleMouseLeave } = UseHover();
@@ -29,8 +31,8 @@ export const WarningButton = ({ children, path, className, ...props }) => {
       onMouseLeave={ handleMouseLeave }
       onClick={ () => handleClick(path) }
       style={{ 
-        backgroundColor: isHovered ? Colors.secondary.lightYellow : Colors.primary.yellow,
-        color: isHovered? Colors.secondary.lightSilver : Colors.primary.white,
+        backgroundColor: isHovered ? SecondaryColor.lightYellow : PrimaryColor.yellow,
+        color: isHovered? SecondaryColor.lightSilver : PrimaryColor.white,
         transition: 'background-color 0.2s ease'
       }}
       { ...props }

@@ -16,7 +16,7 @@ const NavbarTitle = ({ children, navigate, className, ...props }) => {
     <li className='relative'>
       <Link
         to={ navigate }
-        className={`text-[#D9D9D9] font-inter font-semibold text-base cursor-pointer transition-colors duration-300 hover:text-white py-5 px-4 flex items-center group ${className}`}
+        className={`text-[#D9D9D9] font-inter font-semibold text-base cursor-pointer transition-colors duration-300 hover:text-white py-3 lg:py-5 px-2 lg:px-4 flex items-center group ${className}`}
         { ...props }
       >
         { children }

@@ -1,34 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import { FaSearch, FaChevronLeft, FaChevronRight, FaCalendar } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import UseArticleNavigation from '../../../hooks/UseArticleNavigation';
+import UseEffectFetchArticles from '../../../hooks/UseEffectFetchArticles';
 import SearchBar from '../../../components/shared/SearchBar';
 import PageTitle from '../../../themes/typography/PageTitle';
 import Body from '../../../themes/typography/Body';
 import ArticlesList from '../../../components/shared/ArticlesList';
-import FetchNews from '../../../utils/FetchNews';
+import HandleLoading from '../../../utils/HandleLoading'; 
+import HandleError from '../../../utils/HandleError';
+import HandleZeroArticles from '../../../utils/HandleZeroArticles';
 
 const ClientNews = () => {
   // Fetch news articles
-  const [featuredArticles, setFeaturedArticles] = useState([]);
-  const [error, setError] = useState(null);
-  
-  useEffect(() => {
-    const fetchArticles = async () => {
-      try {
-        const articles = await FetchNews();
-        setFeaturedArticles(articles);
-      } catch (err) {
-        setError(err.message);
-      }
-    };
-    
-    fetchArticles();
-  }, []);
-  
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
+  const { featuredArticles, loading, error } = UseEffectFetchArticles();
 
   // Slider logic
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -56,33 +40,43 @@ const ClientNews = () => {
         <SearchBar />
       </div>
 
-      {/* Slide */}
-      <div className="relative w-full mt-5 mb-6 rounded-lg overflow-hidden">
-        <div className="h-[500px] flex transition-transform duration-500" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
-          {featuredArticles.map((article) => (
-            <div 
-              key={article.id} 
-              className="min-w-full relative cursor-pointer group"
-              onClick={() => handleArticleClick(article.id)}
-            >
-              <img src={article.cover_image} alt={article.title} className="w-full h-full object-cover rounded-lg" />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-red-600 to-transparent backdrop-opacity-90 text-white px-10 py-10 rounded-b-lg">
-                <h2 className="text-2xl font-bold">{article.title}</h2>
-                <p className="text-sm line-clamp-1">{article.summary}</p>
-              </div>
+      {loading ? (
+        <HandleLoading loadingText="Memuat berita..." />
+      ) : error ? (
+        <HandleError error={ error } />
+      ) : featuredArticles.length === 0 ? (
+        <HandleZeroArticles />
+      ) : (
+        <div>
+          {/* Slide */}
+          <div className="relative w-full mt-5 mb-6 rounded-lg overflow-hidden">
+            <div className="h-[500px] flex transition-transform duration-500" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+              {featuredArticles.map((article) => (
+                <div 
+                  key={article.id} 
+                  className="min-w-full relative cursor-pointer group"
+                  onClick={() => handleArticleClick(article.id)}
+                >
+                  <img src={article.cover_image} alt={article.title} className="w-full h-full object-cover rounded-lg" />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-red-600 to-transparent backdrop-opacity-90 text-white px-10 py-10 rounded-b-lg">
+                    <h2 className="text-2xl font-bold">{article.title}</h2>
+                    <p className="text-sm line-clamp-1">{article.summary}</p>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-        <button className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white rounded-full p-2" onClick={prevSlide}>
-          <FaChevronLeft size={24} />
-        </button>
-        <button className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white rounded-full p-2" onClick={nextSlide}>
-          <FaChevronRight size={24} />
-        </button>
-      </div>
+            <button className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white rounded-full p-2" onClick={prevSlide}>
+              <FaChevronLeft size={24} />
+            </button>
+            <button className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white rounded-full p-2" onClick={nextSlide}>
+              <FaChevronRight size={24} />
+            </button>
+          </div>
 
-      {/* List */}
-      <ArticlesList articles={featuredArticles} />
+          {/* List */}
+          <ArticlesList articles={featuredArticles} />
+        </div>
+      )}
     </div>
   );
 };

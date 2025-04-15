@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { FaTint, FaAmbulance, FaDonate, FaAngleLeft, FaAngleRight } from 'react-icons/fa'
 
 import beranda1PMI from '../../assets/images/beranda1_pmi.png'
@@ -9,56 +9,29 @@ import GriyaPMI3 from '../../assets/images/GriyaPMI3.png'
 import GriyaPMI4 from '../../assets/images/GriyaPMI4.png'
 import DonasiCard from '../../assets/images/DonasiPMI.png'
 
-import ExampleQuotes from '../../assets/dummy_data/ExampleQuotes'
-
 import HomepageCard from '../../components/card/HomepageCard'
 import DonationCard from '../../components/card/DonationCard'
+import RedOutlineButton from '../../components/buttons/RedOutlineButton'
+import GradRedDarkButton from '../../components/buttons/GradRedDarkButton'
+import ArticlesList from '../../components/shared/ArticlesList'
 
 import PageTitle from '../../themes/typography/PageTitle'
 import Body from '../../themes/typography/Body'
-
-import RedOutlineButton from '../../components/buttons/RedOutlineButton'
-import GradRedDarkButton from '../../components/buttons/GradRedDarkButton'
 import GradientColor from '../../themes/color_pallete/GradientColor'
 import PrimaryColor from '../../themes/color_pallete/PrimaryColor'
-import ArticlesList from '../../components/shared/ArticlesList'
-import FetchNews from '../../utils/FetchNews'
+
+import UseEffectFetchArticles from '../../hooks/UseEffectFetchArticles'
+
+import HandleLoading from '../../utils/HandleLoading'
+import HandleError from '../../utils/HandleError'
+import HandleZeroArticles from '../../utils/HandleZeroArticles'
 
 const Homepage = () => {
   // Fetch news articles
-  const [featuredArticles, setFeaturedArticles] = useState([]);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchArticles = async () => {
-      try {
-        const articles = await FetchNews();
-        setFeaturedArticles(articles);
-      } catch (err) {
-        setError(err.message);
-      }
-    };
-    
-    fetchArticles();
-  }, []);
-  
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
+  const { featuredArticles, loading, error } = UseEffectFetchArticles();
 
   // Slider logic
-  const itemsPerPage = 3;
-  const totalPages = Math.ceil(ExampleQuotes.length / itemsPerPage);
   const [currentPage, setCurrentPage] = useState(0);
-
-  const goToPage = (pageIndex) => {
-    if (pageIndex >= 0 && pageIndex < totalPages) {
-      setCurrentPage(pageIndex);
-    }
-  };
-
-  const startIndex = currentPage * itemsPerPage;
-  const visibleQuotes = ExampleQuotes.slice(startIndex, startIndex + itemsPerPage);
 
   return (
     <div>
@@ -175,10 +148,20 @@ const Homepage = () => {
       <div className='flex flex-col justify-center mb-[100px] px-[160px]'>
         <PageTitle className={'text-center uppercase mb-10'}>Berita Terkini</PageTitle>
         
-        <ArticlesList articles={featuredArticles
-          .slice(0, 8) // Display only the first 8 articles
-          }
-        />
+        {loading ? (
+          <HandleLoading loadingText="Memuat berita..." />
+        ) : error ? (
+          <HandleError error={ error } />
+        ) : featuredArticles.length === 0 ? (
+          <HandleZeroArticles />
+        ) : (
+          <div>
+            {/* List */}
+            <ArticlesList articles={featuredArticles
+              .slice(0, 8)
+            } />
+          </div>
+        )}
       </div>
 
       <div className='mb-[100px]'>

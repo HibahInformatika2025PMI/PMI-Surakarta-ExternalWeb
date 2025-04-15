@@ -6,7 +6,7 @@ import Description from '../../themes/typography/Description'
 
 import GradRedPurpleButton from '../buttons/GradRedPurpleButton'
 
-const DonationCard = ({ image, title, description, buttonLabel, onButtonClick, className='', style={}, ...props }) => {
+const DonationCard = ({ image, title, description, buttonLabel, onClick, className='', style={}, ...props }) => {
   return (
     <div
       className={`max-w-[300px] rounded-3xl shadow-md ${className}`}
@@ -36,7 +36,7 @@ const DonationCard = ({ image, title, description, buttonLabel, onButtonClick, c
         {/* Button */}
         {buttonLabel && (
           <div className='flex justify-center'>
-            <GradRedPurpleButton className={'w-full'} onClick={onButtonClick}>
+            <GradRedPurpleButton className={'w-full'} path={onClick}>
               {buttonLabel}
             </GradRedPurpleButton>
           </div>

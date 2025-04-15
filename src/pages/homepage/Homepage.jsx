@@ -43,7 +43,7 @@ const Homepage = () => {
           <div className='flex flex-col items-end'>
             <PageTitle className={'text-5xl mb-5'} style={{ color:PrimaryColor.white }}>PMI Surakarta</PageTitle>
             <Body className={'italic text-3xl mb-5'} style={{ color:PrimaryColor.white }}>Kami Siap Bantu!</Body>
-            <RedOutlineButton>Kenali PMI Surakarta</RedOutlineButton>
+            <RedOutlineButton path={'/about-us'}>Kenali PMI Surakarta</RedOutlineButton>
           </div>
         </div>
       </div>
@@ -54,18 +54,21 @@ const Homepage = () => {
           title='DONOR DARAH'
           description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
           buttonLabel='Selengkapnya'
+          onClick={'/donor-darah'}
         />
         <HomepageCard 
           icon={<FaAmbulance size={28} color={PrimaryColor.white}/>}
           title='CALL AMBULANCE'
           description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
           buttonLabel='Selengkapnya'
+          onClick={'/call-ambulance'}
         />
         <HomepageCard 
           icon={<FaDonate size={28} color={PrimaryColor.white}/>}
           title='DONASI'
           description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
           buttonLabel='Selengkapnya'
+          onClick={'/donasi'}
         />
       </div>
       
@@ -100,7 +103,7 @@ const Homepage = () => {
         <div className='flex flex-col items-center xl:items-start justify-center'>
           <PageTitle className={'uppercase text-center x;:text-left mb-5'}>Yuk, kita bantu Griya PMI Peduli!</PageTitle>
           <Body className={'max-w-[700px] text-justify mb-5'}>Griya PMI Peduli merupakan tempat yang digunakan untuk menampung orang-orang telantar dengan kondisi gangguan jiwa atau psikotik (kelainan jiwa yang disertai dengan disintegrasi kepribadian dan gangguan kontak dengan kenyataan). Orang-orang telantar dengan kondisi seperti ini, baik muda maupun tua, dapat ditampung di Griya PMI Peduli.</Body>
-          <GradRedDarkButton>Donasi Sekarang</GradRedDarkButton>
+          <GradRedDarkButton path={'/donasi'}>Donasi Sekarang</GradRedDarkButton>
         </div>
       </div>
 
@@ -123,18 +126,21 @@ const Homepage = () => {
                 title='Bantu Dek Immanuel Sembuh dari Penyakit Crohns Disease'
                 description='Berjuang seorang diri, Ibunda harus membiayai seluruh pengobatan Immanuel dengan total lebih dari ... Read more'
                 buttonLabel='Selengkapnya'
+                onClick={'/donasi'}
               />
               <DonationCard 
                 image={DonasiCard}
                 title='Bantu Dek Immanuel Sembuh dari Penyakit Crohns Disease'
                 description='Berjuang seorang diri, Ibunda harus membiayai seluruh pengobatan Immanuel dengan total lebih dari ... Read more'
                 buttonLabel='Selengkapnya'
+                onClick={'/donasi'}
               />
               <DonationCard 
                 image={DonasiCard}
                 title='Bantu Dek Immanuel Sembuh dari Penyakit Crohns Disease'
                 description='Berjuang seorang diri, Ibunda harus membiayai seluruh pengobatan Immanuel dengan total lebih dari ... Read more'
                 buttonLabel='Selengkapnya'
+                onClick={'/donasi'}
               />
 
               <button className="transform bg-white rounded-full p-2">

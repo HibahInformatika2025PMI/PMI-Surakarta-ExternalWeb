@@ -9,7 +9,7 @@ import SocialMediaLink from "../shared/SocialMediaLink"
 
 const TopNavbar = () => {
   return (
-    <div className='flex px-[25px] md:px-[75px] lg:px-[125px] py-1 justify-between'>
+    <div className='flex px-[16px] md:px-[32px] xl:px-[125px] py-1 justify-between'>
       <PMILogo navigate={'/'} />
 
       <div className="flex items-center">

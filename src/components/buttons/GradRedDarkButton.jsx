@@ -15,20 +15,24 @@
  */
 
 import React from 'react'
+
 import { BaseButton } from './BaseButton'
+
 import PrimaryColor from '../../themes/color_pallete/PrimaryColor'
 import GradientColor from '../../themes/color_pallete/GradientColor'
 import UseHover from '../../hooks/UseHover'
+import UseNavigation from '../../hooks/UseNavigation'
 
 const GradRedDarkButton = ({ children, path, className, ...props }) => {
   const { isHovered, handleMouseEnter, handleMouseLeave } = UseHover();
-  
+  const { handleNavigation } = UseNavigation();
+
   return (
     <BaseButton
       className={`text-white rounded-2xl ${className || ''}`}
       onMouseLeave={ handleMouseLeave }
       onMouseEnter={ handleMouseEnter }
-      onClick={ () => handleClick(path) }
+      onClick={ () => handleNavigation(path) }
       style={{ 
         background: isHovered ? PrimaryColor.white : GradientColor.gradient1,
         color: isHovered ? PrimaryColor.red : PrimaryColor.white,

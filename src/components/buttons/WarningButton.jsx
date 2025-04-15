@@ -15,21 +15,24 @@
  */
 
 import React from "react";
+
 import { BaseButton } from "./BaseButton";
+
 import UseHover from "../../hooks/UseHover";
+import UseNavigation from "../../hooks/UseNavigation";
 import PrimaryColor from "../../themes/color_pallete/PrimaryColor";
 import SecondaryColor from "../../themes/color_pallete/SecondaryColor";
-import { CgSelectO } from "react-icons/cg";
 
 export const WarningButton = ({ children, path, className, ...props }) => {
   const { isHovered, handleMouseEnter, handleMouseLeave } = UseHover();
-  
+  const { handleNavigation } = UseNavigation();
+
   return (
     <BaseButton
       className={`${className || ''}`}
       onMouseEnter={ handleMouseEnter }
       onMouseLeave={ handleMouseLeave }
-      onClick={ () => handleClick(path) }
+      onClick={ () => handleNavigation(path) }
       style={{ 
         backgroundColor: isHovered ? SecondaryColor.lightYellow : PrimaryColor.yellow,
         color: isHovered? SecondaryColor.lightSilver : PrimaryColor.white,

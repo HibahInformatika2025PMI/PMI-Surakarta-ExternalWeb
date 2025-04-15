@@ -1,3 +1,20 @@
+/***
+ * Search Button Component uses the base button as its structure.
+ * The button has a white background by default and black red text.
+ * On hover, the background will changes to black red and the text to white.
+ * 
+ * Parameters:
+ * - children: The content inside the button.
+ * - path: The path to navigate to when the button is clicked.
+ * - className: Additional classes for styling.
+ * - ...props: Other props to be passed to the button.
+ * 
+ * Usage:
+ * <SearchButton onClick={ handleClick }>
+ *   Click Me
+ * </SearchButton>
+ */
+
 import { BaseButton } from "./BaseButton"
 import UseHover from "../../hooks/UseHover";
 import SecondaryColor from "../../themes/color_pallete/SecondaryColor";

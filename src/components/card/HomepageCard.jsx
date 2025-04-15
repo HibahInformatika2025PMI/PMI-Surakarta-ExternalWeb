@@ -8,7 +8,7 @@ import Description from '../../themes/typography/Description'
 
 import GradRedPurpleButton from '../buttons/GradRedPurpleButton'
 
-const HomepageCard = ({ icon, title, description, buttonLabel, onButtonClick, className='', style={}, ...props }) => {
+const HomepageCard = ({ icon, title, description, buttonLabel, onClick, className='', style={}, ...props }) => {
   return (
     <div
       className={`max-w-[400px] rounded-3xl p-5 shadow-md ${className}`}
@@ -39,7 +39,7 @@ const HomepageCard = ({ icon, title, description, buttonLabel, onButtonClick, cl
       {/* Button */}
       {buttonLabel && (
         <div className='flex justify-center'>
-          <GradRedPurpleButton className={'w-full'} onClick={onButtonClick}>
+          <GradRedPurpleButton className={'w-full'} path={onClick}>
             {buttonLabel}
           </GradRedPurpleButton>
         </div>

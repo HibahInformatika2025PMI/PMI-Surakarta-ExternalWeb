@@ -4,17 +4,19 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 
-import EditCarousel from './pages/news/admin/ArticleList/EditCarousel';
-import EditArticle from './pages/news/admin/ArticleList/EditArticle';
 import ArticleForm from './pages/news/admin/ArticleEdit/ArticleForm';
+import ClientNews from './pages/news/client/ClientNews';
+import AdminNews from './pages/news/admin/AdminNews';
+
+import ArticleDetails from './pages/article_details/ArticleDetails';
 
 import Homepage from './pages/homepage/Homepage';
-import ClientNews from './pages/news/client/ClientNews';
+
 import AboutUs from './pages/about_us/AboutUs';
-import ArticleDetails from './pages/article_details/ArticleDetails';
-import AdminNews from './pages/news/admin/AdminNews';
+
 import UserProfile from './pages/user_profile/UserProfile';
 import EditProfile from './pages/user_profile/EditProfile';
+
 import AuthIndex from './pages/authentication/AuthIndex';
 
 function App() {

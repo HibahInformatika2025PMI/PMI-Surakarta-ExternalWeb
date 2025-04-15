@@ -23,19 +23,19 @@ const AuthIndex = () => {
   };
 
   return (
-    <div className='relative overflow-hidden'>
+    <div className='relative min-h-screen w-screen overflow-hidden'>
       {/* Background */}
-      <img src={ beranda1PMI } alt="PMI Surakarta" className='w-full object-cover'/>
-      <div className='absolute inset-0' style={{ background:PrimaryColor.red, mixBlendMode:'multiply' }} />
+      <img src={ beranda1PMI } alt="PMI Surakarta" className='w-full h-full object-cover absolute inset-0'/>
+      <div className='absolute inset-0 w-full h-full' style={{ background:PrimaryColor.red, mixBlendMode:'multiply' }} />
 
       {/* Content */}
-      <div className='absolute inset-0 flex items-center justify-center z-10'>
-        <div className="relative z-10 max-w-md w-full mx-auto p-6 bg-white rounded-2xl shadow-lg">
+      <div className='absolute inset-0 flex items-center justify-center z-10 px-4 py-8 sm:p-6'>
+        <div className="relative z-10 w-full max-w-md mx-auto p-4 sm:p-6 bg-white rounded-2xl shadow-lg">
           {/* Tab buttons */}
-          <div className="flex border-b-0 mb-6">
+          <div className="flex border-b-0 mb-4 sm:mb-6">
             <button
               onClick={() => setTab('login')}
-              className={`w-1/2 py-3 px-4 text-center rounded-tl-lg ${
+              className={`w-1/2 py-2 sm:py-3 px-2 sm:px-4 text-center text-sm sm:text-base rounded-tl-lg ${
                 tab === 'login' 
                   ? 'bg-red-600 text-white' 
                   : 'bg-white text-red-600 border border-red-600'
@@ -45,7 +45,7 @@ const AuthIndex = () => {
             </button>
             <button
               onClick={() => setTab('register')}
-              className={`w-1/2 py-3 px-4 text-center rounded-tr-lg ${
+              className={`w-1/2 py-2 sm:py-3 px-2 sm:px-4 text-center text-sm sm:text-base rounded-tr-lg ${
                 tab === 'register' 
                   ? 'bg-red-600 text-white' 
                   : 'bg-white text-red-600 border border-red-600'
@@ -58,10 +58,10 @@ const AuthIndex = () => {
           {/* Login Form */}
           {tab === 'login' && (
             <div className='flex flex-col items-center'>
-              <Heading className={'text-2xl mb-1'}>Selamat Datang!</Heading>
-              <Description className={'mb-5'} style={{ color:PrimaryColor.grey }}>Log in ke akun Anda</Description>
+              <Heading className={'text-xl sm:text-2xl mb-1'}>Selamat Datang!</Heading>
+              <Description className={'mb-3 sm:mb-5 text-center'} style={{ color:PrimaryColor.grey }}>Log in ke akun Anda</Description>
               
-              <form className="w-full space-y-4" onSubmit={handleLogin}>
+              <form className="w-full space-y-3 sm:space-y-4" onSubmit={handleLogin}>
                 <div className="relative">
                   <label className="block text-sm font-medium mb-1">Username / Email</label>
                   <div className="relative">
@@ -71,7 +71,7 @@ const AuthIndex = () => {
                     <input
                       type="text"
                       placeholder="Username / Email"
-                      className="w-full pl-10 pr-3 py-2 border rounded-lg focus:outline-none focus:ring"
+                      className="w-full pl-10 pr-3 py-2 text-sm sm:text-base border rounded-lg focus:outline-none focus:ring focus:border-red-500"
                     />
                   </div>
                 </div>
@@ -85,7 +85,7 @@ const AuthIndex = () => {
                     <input
                       type={showPassword ? "text" : "password"}
                       placeholder="Password"
-                      className="w-full pl-10 pr-10 py-2 border rounded-lg focus:outline-none focus:ring"
+                      className="w-full pl-10 pr-10 py-2 text-sm sm:text-base border rounded-lg focus:outline-none focus:ring focus:border-red-500"
                     />
                     <button 
                       type="button"
@@ -97,25 +97,25 @@ const AuthIndex = () => {
                   </div>
                 </div>
                 
-                <div className="flex justify-between items-center">
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-0">
                   <div className="flex items-center">
                     <input
                       type="checkbox"
                       id="remember"
                       className="h-4 w-4 text-red-600 focus:ring-red-500 border-gray-300 rounded"
                     />
-                    <label htmlFor="remember" className="ml-2 block text-sm text-gray-700">
+                    <label htmlFor="remember" className="ml-2 block text-xs sm:text-sm text-gray-700">
                       Ingat Saya?
                     </label>
                   </div>
-                  <a href="#" className="text-sm text-red-600 hover:underline">
+                  <a href="#" className="text-xs sm:text-sm text-red-600 hover:underline">
                     Lupa Password?
                   </a>
                 </div>
                 
                 <button
                   type="submit"
-                  className="w-full py-3 mt-4 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
+                  className="w-full py-2 sm:py-3 mt-2 sm:mt-4 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors text-sm sm:text-base"
                 >
                   Log In
                 </button>
@@ -126,10 +126,10 @@ const AuthIndex = () => {
           {/* Register Form */}
           {tab === 'register' && (
             <div className='flex flex-col items-center'>
-              <Heading className={'text-2xl mb-1'}>Register</Heading>
-              <Description className={'mb-5'} style={{ color:PrimaryColor.grey }}>Daftar akun baru Anda</Description>
+              <Heading className={'text-xl sm:text-2xl mb-1'}>Register</Heading>
+              <Description className={'mb-3 sm:mb-5 text-center'} style={{ color:PrimaryColor.grey }}>Daftar akun baru Anda</Description>
               
-              <form className="w-full space-y-4" onSubmit={handleRegister}>
+              <form className="w-full space-y-3 sm:space-y-4" onSubmit={handleRegister}>
                 <div className="relative">
                   <label className="block text-sm font-medium mb-1">NIK</label>
                   <div className="relative">
@@ -139,7 +139,7 @@ const AuthIndex = () => {
                     <input
                       type="text"
                       placeholder="NIK"
-                      className="w-full pl-10 pr-3 py-2 border rounded-lg focus:outline-none focus:ring"
+                      className="w-full pl-10 pr-3 py-2 text-sm sm:text-base border rounded-lg focus:outline-none focus:ring focus:border-red-500"
                     />
                   </div>
                 </div>
@@ -153,7 +153,7 @@ const AuthIndex = () => {
                     <input
                       type="email"
                       placeholder="Email"
-                      className="w-full pl-10 pr-3 py-2 border rounded-lg focus:outline-none focus:ring"
+                      className="w-full pl-10 pr-3 py-2 text-sm sm:text-base border rounded-lg focus:outline-none focus:ring focus:border-red-500"
                     />
                   </div>
                 </div>
@@ -167,7 +167,7 @@ const AuthIndex = () => {
                     <input
                       type="text"
                       placeholder="Username"
-                      className="w-full pl-10 pr-3 py-2 border rounded-lg focus:outline-none focus:ring"
+                      className="w-full pl-10 pr-3 py-2 text-sm sm:text-base border rounded-lg focus:outline-none focus:ring focus:border-red-500"
                     />
                   </div>
                 </div>
@@ -181,7 +181,7 @@ const AuthIndex = () => {
                     <input
                       type={showPassword ? "text" : "password"}
                       placeholder="Password"
-                      className="w-full pl-10 pr-10 py-2 border rounded-lg focus:outline-none focus:ring"
+                      className="w-full pl-10 pr-10 py-2 text-sm sm:text-base border rounded-lg focus:outline-none focus:ring focus:border-red-500"
                     />
                     <button 
                       type="button"
@@ -202,7 +202,7 @@ const AuthIndex = () => {
                     <input
                       type={showConfirmPassword ? "text" : "password"}
                       placeholder="Confirm Password"
-                      className="w-full pl-10 pr-10 py-2 border rounded-lg focus:outline-none focus:ring"
+                      className="w-full pl-10 pr-10 py-2 text-sm sm:text-base border rounded-lg focus:outline-none focus:ring focus:border-red-500"
                     />
                     <button 
                       type="button"
@@ -216,7 +216,7 @@ const AuthIndex = () => {
                 
                 <button
                   type="submit"
-                  className="w-full py-3 mt-4 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
+                  className="w-full py-2 sm:py-3 mt-2 sm:mt-4 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors text-sm sm:text-base"
                 >
                   Sign Up
                 </button>

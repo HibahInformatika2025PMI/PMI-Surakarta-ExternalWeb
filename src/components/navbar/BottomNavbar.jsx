@@ -7,7 +7,7 @@ import { useState } from 'react'
 import { portalInfoItems, tentangKamiItems } from "../../assets/dummy_data/ExampleDropdown"
 import GradientColor from "../../themes/color_pallete/GradientColor"
 import RedOutlineButton from "../buttons/RedOutlineButton"
-import Dropdown from "../shared/Dropdown"
+import Dropdown from "../shared/dropdown"
 import NavbarTitle from "./NavbarTitle"
 import { FaBars, FaTimes } from 'react-icons/fa'
 

@@ -4,7 +4,7 @@
  */
 
 import React from 'react'
-import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaTiktok, FaYoutube} from 'react-icons/fa'
 import { FaXTwitter } from 'react-icons/fa6'
 import IconLink from './IconLink'
 
@@ -22,6 +22,9 @@ const SocialMediaLink = ({ size }) => {
       </IconLink>
       <IconLink href={'https://www.youtube.com/channel/UC-sSYMmJ8trtPD54Fi-KprA'}>
         <FaYoutube size={ size } />
+      </IconLink>
+      <IconLink href={'https://www.tiktok.com/@pmisurakarta'}>
+        <FaTiktok size={ size } />
       </IconLink>
     </div>
   )

@@ -23,7 +23,7 @@ const Dropdown = ({ items, children }) => {
       </div>
       
       {/* Desktop dropdown (hover) */}
-      <ul className="hidden lg:group-hover:block absolute top-full left-0 bg-white min-w-[200px] py-2 rounded-lg shadow-md z-10">
+      <ul className="hidden lg:group-hover:block absolute top-full left-0 bg-white min-w-[200px] py-2 rounded-lg shadow-md z-[100]">
         {items.map((item) => (
           <li key={item.id}>
             <Link 
@@ -39,7 +39,7 @@ const Dropdown = ({ items, children }) => {
       
       {/* Mobile dropdown (click) */}
       {isOpen && (
-        <ul className="lg:hidden bg-[#f5f1f1] min-w-[200px] py-2 rounded-lg mt-2 shadow-inner">
+        <ul className="lg:hidden bg-[#f5f1f1] min-w-[200px] py-2 rounded-lg mt-2 shadow-inner z-[100]">
           {items.map((item) => (
             <li key={item.id}>
               <Link 

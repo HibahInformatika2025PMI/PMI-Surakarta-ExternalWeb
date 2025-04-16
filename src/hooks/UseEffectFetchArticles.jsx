@@ -1,3 +1,8 @@
+/***
+ * UseEffectFetchArticles is a hook that fetches articles from the server and returns them.
+ * This hook will handles errors and logs them to the console.
+ */
+
 import { useState, useEffect } from 'react';
 import FetchNews from '../utils/FetchNews';
 

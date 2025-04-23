@@ -23,7 +23,7 @@ const SearchButton = ({ children, className, ...props }) => {
       style={{
         background: isHovered ? PrimaryColor.white : SecondaryColor.darker_red,
         color: isHovered ? SecondaryColor.darker_red : PrimaryColor.white,
-        border: '2px solid',
+        border: isHovered ? '2px solid' : 'none',
         transition: 'background-color 0.2s ease'
       }}
       {...props}

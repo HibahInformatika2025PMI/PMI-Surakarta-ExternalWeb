@@ -1,5 +1,8 @@
 /***
  * This component is used as a template for the cards on the homepage.
+ * 
+ * Is used in:
+ * - 
  */
 
 import React from 'react'
@@ -7,10 +10,8 @@ import React from 'react'
 import GradRedPurpleButton from '../buttons/GradRedPurpleButton'
 
 import { GradientColor, PrimaryColor } from '../../themes/color_palletes/ColorPalletes'
-import Heading from '../../themes/typography/Heading'
 import SubHeading from '../../themes/typography/SubHeading'
 import Subtitle from '../../themes/typography/Subtitle'
-
 
 const HomepageCard = ({ icon, title, description, buttonLabel, path, className, style, ...props }) => {
   return (

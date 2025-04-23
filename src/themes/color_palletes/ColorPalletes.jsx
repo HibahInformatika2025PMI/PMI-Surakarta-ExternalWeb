@@ -34,5 +34,6 @@ export const GradientColor = {
   gradient3: 'linear-gradient(to bottom, rgba(214, 1, 0, 1) 0%, rgba(105, 48, 110, 1) 100%)',
   gradient4: 'linear-gradient(to left,rgba(214, 1, 0, 0.83) 0%, rgba(160, 24, 55, 0.5) 30%, rgba(105, 48, 110, 0.4) 50%)',
   gradient5: 'linear-gradient(to right, rgba(90, 36, 135, 0.05) 40%, rgba(90, 36, 135, 0.8) 60%, rgba(106, 0, 3, 0.83) 100%)',
-  gradient6: 'linear-gradient(to right, rgba(90, 36, 135, 0.8) 1% , rgba(123, 36, 135, 0.7) 30%, rgba(106, 0, 3, 1) 100%)'
+  gradient6: 'linear-gradient(to right, rgba(90, 36, 135, 0.8) 1% , rgba(123, 36, 135, 0.7) 30%, rgba(106, 0, 3, 1) 100%)',
+  gradient7: 'linear-gradient(to top, rgba(214, 1, 0, 0.85) 0%, rgba(214, 1, 0, 0) 100%)'
 }

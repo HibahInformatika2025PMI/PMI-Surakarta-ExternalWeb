@@ -1,5 +1,6 @@
 /***
  * This section will display the banner of the PMI Kota Surakarta.
+ * This section is a sub-section of Homepage.
  */
 
 import React from 'react'
@@ -17,7 +18,7 @@ const BannerSection = ({ className }) => {
       <img 
         src={PMIBeranda1}
         alt='PMI Kota Surakarta'
-        className='w-full h-[500px] object-cover object-[50%_29%]'
+        className='w-full h-[500px] scale-125 object-cover object-[50%_20%]'
       />
 
       <div className='absolute inset-0 opacity-90' style={{ background: GradientColor.gradient4 }} />

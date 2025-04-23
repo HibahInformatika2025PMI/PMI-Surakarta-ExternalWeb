@@ -1,5 +1,6 @@
 /***
  * This section will display the Griya PMI image and the description of the Griya PMI.
+ * This section is a sub-section of Homepage.
  */
 
 import React from 'react'

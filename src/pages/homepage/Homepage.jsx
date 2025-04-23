@@ -1,5 +1,5 @@
 /***
- * This is the homepage component.
+ * This is the homepage (Beranda) of the website.
  */
 
 import React from 'react'

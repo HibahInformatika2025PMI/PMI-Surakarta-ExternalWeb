@@ -6,6 +6,7 @@ import React from 'react'
 
 import HistoryPMI from '../../assets/images/pmi_surakarta_old.jpg'
 import { PrimaryColor } from '../../themes/color_palletes/ColorPalletes'
+import PageTitle from '../../themes/typography/PageTitle'
 import Heading from '../../themes/typography/Heading'
 import Body from '../../themes/typography/Body'
 
@@ -22,10 +23,10 @@ const HistoryPMISection = ({ className }) => {
         style={{ color: PrimaryColor.red, border: '5px solid '}}
       />
 
-      <div className='flex flex-col gap-6'>
-        <Heading className={'text-center xl:text-justify '}>
+      <div className='flex flex-col gap-8'>
+        <PageTitle className={'text-center xl:text-justify'}>
           Salah Satu Pelopor di Indonesia
-        </Heading>
+        </PageTitle>
 
         <Body className={'text-justify'}>
           Palang Merah Indonesia (PMI) Kota Surakarta adalah satu dari lima PMI pelopor di Indonesia selain Surabaya, Yogyakarta, Semarang, dan Bandung. Disebut pelopor karena kelima PMI cabang itulah yang berdiri tujuh bulan setelah PMI Pusat diresmikan pada 17 September 1945.

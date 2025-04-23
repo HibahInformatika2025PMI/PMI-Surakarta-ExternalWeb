@@ -1,5 +1,6 @@
 /***
  * This section will display cards containing services available at PMI Kota Surakarta.
+ * This section is a sub-section of Homepage.
  */
 
 import React from 'react'

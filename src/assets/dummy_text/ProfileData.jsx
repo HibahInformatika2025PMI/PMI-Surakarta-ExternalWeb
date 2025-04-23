@@ -65,7 +65,7 @@ export const RegulationPMI = ({ className }) => {
     <div className={`${className}`}>
       {regulationList.map((regulation, index) => (
         <Body key={index} className={'text-justify flex items-start gap-2'}>
-          <span><strong>{index + 1}.</strong></span>
+          <span>&bull;</span>
           <span>{regulation}</span>
         </Body>
       ))}
@@ -76,7 +76,7 @@ export const RegulationPMI = ({ className }) => {
 // Short description of Palang Merah Principle
 export const AboutPrinciple = ({ className }) => {
   return (
-    <Body className={`text-justify ${className}`}>
+    <Body className={`text-justify ${className}`} style={{ color: PrimaryColor.white }}>
       Dalam setiap melaksanakan tugas kemanusiaan, Palang Merah Indonesia selalu berdasar pada tujuh prinsip dasar gerakan Palang Merah dan Bulan Sabit Merah Internasional.
     </Body>
   )
@@ -118,7 +118,7 @@ export const PalangMerahPrinciple = ({ className }) => {
   return (
     <div className={`${className}`}>
       {principleList.map((principle, index) => (
-        <Body key={index} className={'text-justify flex items-start gap-2'}>
+        <Body key={index} className={'text-justify flex items-start gap-3 mb-2'}>
           <span>{index + 1}.</span>
           <span><strong>{principle.firstSentence}</strong> {principle.otherSentence} </span>
         </Body>

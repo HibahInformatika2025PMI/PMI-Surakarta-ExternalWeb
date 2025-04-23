@@ -1,33 +1,28 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Navbar from './components/navbar/Navbar';
-import Footer from './components/footer/Footer';
+import { SecondaryColor } from './themes/color_palletes/ColorPalletes';
 
-import ArticleForm from './pages/news/admin/ArticleEdit/ArticleForm';
-import ClientNews from './pages/news/client/ClientNews';
-import AdminNews from './pages/news/admin/AdminNews';
-
-import ArticleDetails from './pages/article_details/ArticleDetails';
+import Navbar from './components/navbar/main_navbar/Navbar';
 
 import Homepage from './pages/homepage/Homepage';
-
-import AboutUs from './pages/about_us/AboutUs';
-
-import UserProfile from './pages/user_profile/UserProfile';
-import EditProfile from './pages/user_profile/EditProfile';
-
-import AuthIndex from './pages/authentication/AuthIndex';
+import Profile from './pages/profile/Profile';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <main className='bg-[#F7F3F5]'>
+        <Navbar />
+
+        <main style={{ backgroundColor: SecondaryColor.white_greyish }}>
           <Routes>
             <Route path='/' element={ <Homepage /> } />
+            <Route path='/profile' element={ <Profile /> } />
           </Routes>
         </main>
+        
+        <Footer />
       </div>
     </Router>
   );

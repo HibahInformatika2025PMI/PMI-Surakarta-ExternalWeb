@@ -2,7 +2,7 @@
  * This component is used as a template for the news cards.
  * 
  * Is used in:
- * - 
+ * - ArticleList.jsx
  */
 
 import React from 'react'
@@ -15,7 +15,7 @@ import Subtitle from '../../themes/typography/Subtitle'
 const NewsCard = ({ id, image, title, summary, updated_at, onlick, className, style, ...props }) => {
   return (
     <div 
-      className={`max-w-[380px] rounded-3xl shadow-md cursor-pointer overflow-hidden ${className}`}
+      className={`w-[380px] rounded-3xl shadow-md cursor-pointer overflow-hidden ${className}`}
       style={{ background: PrimaryColor.white, ...style }}
       onClick={onlick}
       {...props}

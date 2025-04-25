@@ -1,5 +1,8 @@
 /***
  * This component is used for components that need a search bar on the website.
+ * 
+ * Is used in:
+ * - ClientNews.jsx
  */
 
 import React from 'react'

@@ -13,7 +13,7 @@ import GriyaPMI4 from '../../assets/images/pmi_griya4.png'
 import GradRedDarkButton from '../../components/buttons/GradRedDarkButton'
 
 import { PrimaryColor } from '../../themes/color_palletes/ColorPalletes'
-import PageTitle from '../../themes/typography/PageTitle'
+import PageSubTitle from '../../themes/typography/PageSubTitle'
 import Body from '../../themes/typography/Body'
 
 const GriyaPMISection = ({ className }) => {
@@ -46,10 +46,10 @@ const GriyaPMISection = ({ className }) => {
         />
       </div>
 
-      <div className='flex flex-col items-center xl:items-start justify-center'>
-        <PageTitle className={'uppercase text-center xl:text-left mb-5'} style={{ color: PrimaryColor.red }}>Yuk, kita bantu Griya PMI Peduli!</PageTitle>
-        <Body className={'max-w-[700px] text-justify mb-5'}>Griya PMI Peduli merupakan tempat yang digunakan untuk menampung orang-orang telantar dengan kondisi gangguan jiwa atau psikotik (kelainan jiwa yang disertai dengan disintegrasi kepribadian dan gangguan kontak dengan kenyataan). Orang-orang telantar dengan kondisi seperti ini, baik muda maupun tua, dapat ditampung di Griya PMI Peduli.</Body>
-        <GradRedDarkButton className={'w-[700px] xl:w-auto'} path={'/donasi'}>Donasi Sekarang</GradRedDarkButton>
+      <div className='w-1/2 flex flex-col items-center xl:items-start justify-center'>
+        <PageSubTitle className={'uppercase text-center xl:text-left mb-5'} style={{ color: PrimaryColor.red }}>Yuk, kita bantu Griya PMI Peduli!</PageSubTitle>
+        <Body className={'text-justify mb-5'}>Griya PMI Peduli merupakan tempat yang digunakan untuk menampung orang-orang telantar dengan kondisi gangguan jiwa atau psikotik (kelainan jiwa yang disertai dengan disintegrasi kepribadian dan gangguan kontak dengan kenyataan). Orang-orang telantar dengan kondisi seperti ini, baik muda maupun tua, dapat ditampung di Griya PMI Peduli.</Body>
+        <GradRedDarkButton className={'w-full xl:w-auto'} path={'/donasi'}>Donasi Sekarang</GradRedDarkButton>
       </div>
     </div>
   )

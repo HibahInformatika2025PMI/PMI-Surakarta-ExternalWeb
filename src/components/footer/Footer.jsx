@@ -18,7 +18,7 @@ const Footer = () => {
       {/* Top Footer */}
       <div className='grid grid-cols-1 lg:grid-cols-2 justify-items-center items-start w-full p-10'>
         {/* Left Column */}
-        <div className='w-[500px] self-start mb-10'>
+        <div className='w-1/2 self-start mb-10'>
           <PMILogo navigate='/' />
           <Body className='py-2'>Jl. Kol. Sutarto No. 58 Jebres, Surakarta, Jawa Tengah 57126</Body>
           <Body className={'flex items-center py-1'}><MdPhone size={20} className="mr-2" />0271 646 505</Body>
@@ -27,7 +27,7 @@ const Footer = () => {
         </div>
 
         {/* Right Column */}
-        <div className='w-[500px] h-[400px] mb-20'>
+        <div className='w-1/2 h-[400px] mb-20'>
           <Heading className={'mt-3 mb-6'}>PMI Kota Surakarta</Heading>
           <span className='w-full h-[332px] rounded-lg overflow-hidden shadow-md'>
             <Maps />
@@ -37,7 +37,7 @@ const Footer = () => {
 
       {/* Bottom Footer */}
       <span 
-        className='w-full h-[60px] flex items-center justify-center'
+        className='w-full flex items-center justify-center py-5'
         style={{ background: GradientColor.gradient1, color: PrimaryColor.white }}
       >
         <Body>

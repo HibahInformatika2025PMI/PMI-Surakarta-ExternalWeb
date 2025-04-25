@@ -32,7 +32,6 @@ const DekstopNavbar = ({ className }) => {
 
         <div className='flex items-center gap-4'>
           <RedOutlineButton path={'/donasi'}>Donasi Sekarang</RedOutlineButton>
-          <RedOutlineButton path={'/auth'}>Log In</RedOutlineButton>
         </div>
       </div>
     </div>

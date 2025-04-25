@@ -2,7 +2,7 @@
  * This component is used as a template for the cards on the homepage.
  * 
  * Is used in:
- * - 
+ * - Homepage.jsx
  */
 
 import React from 'react'

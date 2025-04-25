@@ -33,10 +33,9 @@ const MobileNavbar = ({ className }) => {
           {isMenuOpen ? <FaTimes className='h-6 w-6' /> : <FaBars className='h-6 w-6' />}
         </button>
 
-        {/* Button to donate and login */}
+        {/* Button to donate */}
         <div className='flex items-center gap-4'>
           <RedOutlineButton path={'/donasi'}>Donasi Sekarang</RedOutlineButton>
-          <RedOutlineButton path={'/auth'}>Log In</RedOutlineButton>
         </div>
       </div>
 

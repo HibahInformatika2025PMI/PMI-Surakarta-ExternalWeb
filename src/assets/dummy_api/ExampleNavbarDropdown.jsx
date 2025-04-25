@@ -2,8 +2,6 @@
  * Dummy data for the navbar dropdown.
  */
 
-import React from 'react'
-
 export const DonorDarahItems = [
   {
     id: 1,

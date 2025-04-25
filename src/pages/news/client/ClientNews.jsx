@@ -10,7 +10,7 @@ import SearchBar from '../../../components/shared/SearchBar'
 import ArticlesList from '../../../components/shared/ArticlesList'
 
 import UseFetchNews from '../../../hooks/UseFetchNews'
-import UseSlider from '../../../hooks/UseSlider'
+import { UseSlider1 } from '../../../hooks/UseSlider'
 import UseNavigation from '../../../hooks/UseNavigation'
 
 import { GradientColor, PrimaryColor } from '../../../themes/color_palletes/ColorPalletes'
@@ -24,7 +24,7 @@ import HandleZeroNews from '../../../utils/HandleZeroNews'
 
 const ClientNews = () => {
   const { featuredNews, loading, error } = UseFetchNews();
-  const { currentSlide, nextSlide, prevSlide } = UseSlider(featuredNews);
+  const { currentSlide, nextSlide, prevSlide } = UseSlider1(featuredNews);
   const { handleNavigation } = UseNavigation();
 
   return (

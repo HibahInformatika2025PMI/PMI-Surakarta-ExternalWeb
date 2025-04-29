@@ -28,7 +28,7 @@ const NewsCard = ({ id, image, title, summary, updated_at, onlick, className, st
 
       {/* Content Part */}
       <div className='p-4'>
-        <Heading className='line-clamp-2 mb-2'>{title}</Heading>
+        <Heading className='h-[75px] line-clamp-2 mb-2'>{title}</Heading>
         <Subtitle className='line-clamp-3'>{summary}</Subtitle>
 
         {/* Bottom Part */}

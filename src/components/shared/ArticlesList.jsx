@@ -3,7 +3,7 @@
  * 
  * Is used in:
  * - TopNewsSection.jsx
- * - ClientNews.jsx
+ * - News.jsx
  */
 
 import React from 'react'

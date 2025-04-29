@@ -3,28 +3,26 @@
  * This page will display the details of the article that is selected by the user.
  * 
  * Is used in:
- * - ClientNews.jsx
+ * - News.jsx
  */
 
 import React from 'react'
 import { FaRegCalendar, FaUserAlt } from 'react-icons/fa'
 
-import ExampleArticles from '../../../assets/dummy_api/ExampleArticles'
+import OtherNewsList from '../../components/shared/OtherNewsList'
+import SocialMediaLink from '../../components/shared/SocialMediaLink'
 
-import OtherNewsList from '../../../components/shared/OtherNewsList'
-import SocialMediaLink from '../../../components/shared/SocialMediaLink'
+import UseFetchArticleDetails from '../../hooks/UseFetchArticleDetails'
+import UseFetchNews from '../../hooks/UseFetchNews'
 
-import UseFetchArticleDetails from '../../../hooks/UseFetchArticleDetails'
-import UseFetchNews from '../../../hooks/UseFetchNews'
+import PageTitle from '../../themes/typography/PageTitle'
+import Heading from '../../themes/typography/Heading'
+import Body from '../../themes/typography/Body'
 
-import PageTitle from '../../../themes/typography/PageTitle'
-import Heading from '../../../themes/typography/Heading'
-import Body from '../../../themes/typography/Body'
+import { PrimaryColor } from '../../themes/color_palletes/ColorPalletes'
 
-import { PrimaryColor } from '../../../themes/color_palletes/ColorPalletes'
-
-import HandleError from '../../../utils/HandleError'
-import HandleLoading from '../../../utils/HandleLoading'
+import HandleError from '../../utils/HandleError'
+import HandleLoading from '../../utils/HandleLoading'
 
 const Article_Details = () => {
   const { featuredNews } = UseFetchNews();
@@ -49,7 +47,9 @@ const Article_Details = () => {
             <div className='flex justify-between gap-10'>
               <div className='flex flex-row gap-3'>
                 <FaRegCalendar size={24} color={PrimaryColor.grey} />
-                <Body style={{ color: PrimaryColor.grey }}>{articleDetails.updated_at}</Body>
+                <Body style={{ color: PrimaryColor.grey }}>
+                  {articleDetails.updated_at ? new Date(articleDetails.updated_at).toLocaleDateString() : 'N/A'}
+                </Body>
               </div>
               <div className='flex flex-row items-center gap-3'>
                 <FaUserAlt size={20} color={PrimaryColor.grey} />

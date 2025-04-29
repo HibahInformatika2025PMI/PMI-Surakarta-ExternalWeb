@@ -8,8 +8,8 @@ import Footer from './components/footer/Footer';
 
 import Homepage from './pages/homepage/Homepage';
 import Profile from './pages/profile/Profile';
-import ClientNews from './pages/news/client/ClientNews';
-import Article_Details from './pages/news/shared/ArticleDetails';
+import News from './pages/news/News';
+import Article_Details from './pages/news/ArticleDetails';
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
           <Routes>
             <Route path='/' element={ <Homepage /> } />
             <Route path='/profile' element={ <Profile /> } />
-            <Route path='/news' element={ <ClientNews /> } />
+            <Route path='/news' element={ <News /> } />
             <Route path='/news/article/:id' element={ <Article_Details /> } />
           </Routes>
         </main>

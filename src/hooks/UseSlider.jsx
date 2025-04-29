@@ -62,8 +62,34 @@ export const UseSlider2 = (items) => {
 }
 
 // Slider auto play
-export const UseSlider3 = (items) => {
+export const UseSlider3 = (totalItems, duration) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  useEffect
+  // Auto play
+  useEffect(() => {
+    if (duration === 0 || totalItems === 0) return;
+
+    const interval = setInterval(() => {
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % totalItems);
+    }, duration);
+
+    return () => clearInterval(interval);
+  }, [totalItems, duration]);
+
+  // For navigation
+  const nextSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % totalItems);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide - 1 + totalItems) % totalItems);
+  };
+
+  const goToSlide = (index) => {
+    if (index >= 0 && index < totalItems) {
+      setCurrentSlide(index);
+    }
+  }
+
+  return { currentSlide, nextSlide, prevSlide, goToSlide, totalItems, duration };
 }

@@ -2,19 +2,26 @@
  * This component is used for components that need a search bar on the website.
  * 
  * Is used in:
- * - ClientNews.jsx
+ * - News.jsx
  */
 
-import React from 'react'
+import React, { useState } from 'react'
 import { FaSearch } from 'react-icons/fa'
 
 import SearchButton from '../buttons/SearchButton'
 
 import { PrimaryColor, SecondaryColor } from '../../themes/color_palletes/ColorPalletes'
 
-const SearchBar = ({ placeholder, onChange }) => {
+const SearchBar = ({ placeholder, onSearch }) => {
+  const [searchQuery, setSearchQuery] = useState('')
+
+  const handleSearch = (e) => {
+    e.preventDefault()
+    onSearch(searchQuery)
+  }
+
   return (
-    <div className='relative w-full h-[48px] mt-5 mb-6 mx-auto'>
+    <form onSubmit={handleSearch} className='relative w-full h-[48px] mt-5 mb-6 mx-auto'>
       <FaSearch
         className='absolute left-4 top-1/2 transform -translate-y-1/2'
         style={{ color: PrimaryColor }}
@@ -23,15 +30,19 @@ const SearchBar = ({ placeholder, onChange }) => {
       <input
         type="text"
         placeholder={placeholder}
-        onChange={onChange}
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
         className='w-full h-full pl-10 pr-24 border rounded-2xl font-inter text-lg'
         style={{ borderColor: SecondaryColor.darker_red }}
       />
 
-      <SearchButton className={'absolute right-0 top-0 h-full px-6 rounded-r-2xl'}>
+      <SearchButton 
+        type="submit"
+        className={'absolute right-0 top-0 h-full px-6 rounded-r-2xl'}
+      >
         Search
       </SearchButton>
-    </div>
+    </form>
   )
 }
 

@@ -1,5 +1,6 @@
 /***
  * This component will display navbar on desktop view (> 1280px).
+ * This component is a sub-component of Navbar.jsx.
  */
 
 import React from 'react'

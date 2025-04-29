@@ -1,5 +1,9 @@
 /***
  * This component will display the dropdown menu of the navbar.
+ * 
+ * Is used in:
+ * - DesktopNavbar.jsx
+ * - MobileNavbar.jsx
  */
 
 import React, { useState } from 'react'

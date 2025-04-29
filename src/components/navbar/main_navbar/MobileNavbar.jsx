@@ -1,5 +1,6 @@
 /***
  * This component will display the navbar on mobile view (< 1280px).
+ * This component is a sub-component of Navbar.jsx.
  */
 
 import React, { useState } from 'react'

@@ -1,7 +1,11 @@
 /***
- * Component for the navbar title.
- * Displays a link to the specified navigation path.
+ * Component for the navbar title that will display a link to the specified navigation path.
  * Highlights the link when hovered over.
+ * 
+ * Is used in:
+ * - DesktopNavbar.jsx
+ * - MobileNavbar.jsx
+ * - NavbarDropdown.jsx
  */
 
 import React from 'react'

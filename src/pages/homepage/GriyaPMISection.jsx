@@ -19,7 +19,7 @@ import Body from '../../themes/typography/Body'
 const GriyaPMISection = ({ className }) => {
   return (
     <div className={`flex flex-col xl:flex-row items-center justify-center gap-10 px-[160px] ${className}`}>
-      <div className='w-1/2 grid grid-cols-1 xl:grid-cols-2 gap-2 justify-items-center'>
+      <div className='w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-2 justify-items-center'>
         <img 
           src={ GriyaPMI1 } 
           alt="Griya PMI" 

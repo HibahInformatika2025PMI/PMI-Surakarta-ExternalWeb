@@ -1,6 +1,9 @@
 /***
  * This component is used to display the PMI logo
  * with a clickable image that navigates to the specified route.
+ * 
+ * Is used in:
+ * - Navbar.jsx
  */
 
 import { Link } from "react-router-dom"

@@ -1,5 +1,8 @@
 /***
  * This component is used to display the Google Maps of PMI Surakarta
+ * 
+ * Is used in:
+ * - Footer.jsx
  */
 
 import React from 'react'

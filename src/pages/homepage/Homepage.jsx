@@ -10,6 +10,7 @@ import GriyaPMISection from './GriyaPMISection'
 import DonationSection from './DonationSection'
 import TopNewsSection from './TopNewsSection'
 import QuotesSection from './QuotesSection'
+import PartnershipSection from './PartnershipSection'
 
 const Homepage = () => {
   return (
@@ -25,6 +26,8 @@ const Homepage = () => {
       <TopNewsSection className={'mb-[100px]'} />
 
       <QuotesSection className={'mb-[75px]'} />
+
+      <PartnershipSection className={'pb-[75px]'} />
     </div>
   )
 }

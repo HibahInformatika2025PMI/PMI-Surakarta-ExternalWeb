@@ -17,8 +17,8 @@ const QuotesList = ({ quotes, style }) => {
     >
       {quotes.map((item) => (
         <div
-          className='w-full flex-shrink-0'
-          key={item.id}
+        key={item.id}
+        className='w-full flex-shrink-0'
         >
           <QuotesCard
             name={item.name}

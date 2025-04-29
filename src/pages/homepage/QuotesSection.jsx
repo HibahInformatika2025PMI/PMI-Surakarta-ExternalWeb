@@ -25,7 +25,7 @@ const QuotesSection = ({ className }) => {
       <PageSubTitle className={'mb-5 text-center'} style={{ color: PrimaryColor.red }}>Apa Kata Mereka Tentang PMI Kota Surakarta</PageSubTitle>
       <Body className={'mb-10 text-center'}>Pendapat masyarakat, mitra kerja, pejabat, tokoh masyarakat, dan pengusaha mengenai peran serta kegiatan yang dijalankan oleh PMI Kota Surakarta.</Body>
 
-      <div className=''>
+      <div className='relative'>
         <div className='overflow-hidden'>
           <QuotesList
             quotes={ExampleQuotes}

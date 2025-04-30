@@ -2,7 +2,9 @@
  * This is a utility function that handles the UI of loading state while fetching data.
  * 
  * Is used in:
- * - 
+ * - News.jsx
+ * - TopNewsSection.jsx
+ * - ArticleDetails.jsx
  */
 
 import React from 'react'

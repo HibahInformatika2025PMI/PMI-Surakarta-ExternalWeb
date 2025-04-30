@@ -12,7 +12,12 @@ import TopNewsSection from './TopNewsSection'
 import QuotesSection from './QuotesSection'
 import PartnershipSection from './PartnershipSection'
 
+import UseScrollToTop from '../../hooks/UseScrollToTop'
+
 const Homepage = () => {
+  // For auto scroll to top when the page is loaded
+  UseScrollToTop();
+
   return (
     <div>
       <BannerSection className={'mb-[75px]'} />

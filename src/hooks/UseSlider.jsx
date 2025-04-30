@@ -4,7 +4,8 @@
  * Is used in:
  * - DonationSection.jsx
  * - TopNewsSection.jsx
- * - ClientNews.jsx
+ * - News.jsx
+ * - QuotesSection.jsx
  */
 
 import React, { useEffect, useState } from 'react'

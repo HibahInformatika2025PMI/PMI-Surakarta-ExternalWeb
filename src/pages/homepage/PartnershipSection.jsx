@@ -31,7 +31,7 @@ const PartnershipSection = ({ className }) => {
           />
         </div>
 
-        <div className='flex justify-center items-center mt-6'>
+        <div className='flex justify-center items-center'>
           <button onClick={prevSlide} className='mr-4'>
             <FaAngleLeft size={24} />
           </button>

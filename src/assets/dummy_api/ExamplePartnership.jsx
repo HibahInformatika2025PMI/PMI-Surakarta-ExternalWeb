@@ -2,8 +2,8 @@
  * Dummy API for Partnership Section
  */
 
-import partner1 from '../images/pmi_partner1.png'
-import partner2 from '../images/pmi_partner2.png'
+import partner1 from '../images/pmi_partner1.jpg'
+import partner2 from '../images/pmi_partner2.jpg'
 
 const ExamplePartnership = [
   {

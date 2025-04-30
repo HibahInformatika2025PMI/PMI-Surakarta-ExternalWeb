@@ -6,13 +6,13 @@
 import React, { useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa';
 
+import { DonorDarahItems, PendidikanItems, RelawanItems, YankesItems, YansosItems } from './ItemsNavbarDropdown';
 import NavbarTitle from './NavbarTitle';
 import NavbarDropdown from './NavbarDropdown';
 
 import RedOutlineButton from '../../buttons/RedOutlineButton';
 
 import { GradientColor, PrimaryColor } from '../../../themes/color_palletes/ColorPalletes'
-import { DonorDarahItems, PendidikanItems, RelawanItems, YankesItems, YansosItems } from '../../../assets/dummy_api/ExampleNavbarDropdown';
 
 const MobileNavbar = ({ className }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

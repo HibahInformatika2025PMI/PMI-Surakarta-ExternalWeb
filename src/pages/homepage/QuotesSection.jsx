@@ -4,6 +4,7 @@
  */
 
 import React from 'react'
+import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
 
 import ExampleQuotes from '../../assets/dummy_api/ExampleQuotes'
 
@@ -14,7 +15,6 @@ import { UseSlider3 } from '../../hooks/UseSlider'
 import { PrimaryColor } from '../../themes/color_palletes/ColorPalletes'
 import PageSubTitle from '../../themes/typography/PageSubTitle'
 import Body from '../../themes/typography/Body'
-import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
 
 const QuotesSection = ({ className }) => {
   // For auto slider with 10 seconds interval

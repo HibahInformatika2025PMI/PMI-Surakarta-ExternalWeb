@@ -2,7 +2,8 @@
  * This hook provides a simple way to fetch news from the server.
  * 
  * Is used in:
- * - HandleFetchNews.jsx
+ * - News.jsx
+ * - TopNewsSection.jsx
  */
 
 import { useState, useEffect } from 'react'

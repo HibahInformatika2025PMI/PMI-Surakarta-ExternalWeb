@@ -1,5 +1,6 @@
 /***
  * This section contains vision, mission and regulation in PMI Kota Surakarta.
+ * This section is a sub-section of Profile page.
  */
 
 import React from 'react'

@@ -2,8 +2,7 @@
  * Contains the dummy text for the website.
  * 
  * Is used in:
- * - Homepage.jsx
- * - DonationSection.jsx
+ * - 
  */
 
 import React from 'react'

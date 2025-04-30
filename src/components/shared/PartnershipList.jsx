@@ -18,11 +18,11 @@ const PartnershipList = ({ partnership, style }) => {
           key={item.id}
           className='w-full flex-shrink-0'
         >
-          <span className='w-full h-[300px] flex items-center justify-center p-4 rounded-lg shadow-sm'>
+          <span className='w-[full] h-[300px] flex items-center justify-center p-4 rounded-lg shadow-sm'>
             <img
               src={item.image}
               alt={item.name}
-              className='max-w-full max-h-full object-cover'
+              className='max-w-full max-h-full object-contain'
             />
           </span>
         </div>

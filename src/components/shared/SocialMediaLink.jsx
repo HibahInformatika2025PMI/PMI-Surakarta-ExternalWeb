@@ -1,6 +1,10 @@
 /***
  * This component is used to display the social media links of PMI Surakarta.
  * Contains links to Facebook, Instagram, Twitter, YouTube, and TikTok.
+ * 
+ * Is used in:
+ * - Footer.jsx
+ * - ArticleDetails.jsx
  */
 
 import React from 'react'

@@ -1,5 +1,5 @@
 /***
- * Dummy data for the navbar dropdown.
+ * Data items for the navbar dropdown.
  */
 
 export const DonorDarahItems = [

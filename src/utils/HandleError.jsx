@@ -2,7 +2,9 @@
  * This is a utility function that handles the UI of error state while fetching data.
  * 
  * Is used in:
- * - 
+ * - ArticleDetails.jsx
+ * - TopNewsSection.jsx
+ * - News.jsx
  */
 
 import React from 'react'

@@ -1,6 +1,10 @@
 /***
- * This hook provides a simple way to navigate between different routes
- * when using react-router-dom
+ * This hook provides a simple way to navigate between different routes when using react-router-dom
+ * 
+ * Is used in:
+ * - News.jsx
+ * - TopNewsSection.jsx
+ * - ArticleDetails.jsx
  */
 
 import { useNavigate } from 'react-router-dom'

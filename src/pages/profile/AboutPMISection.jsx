@@ -1,5 +1,6 @@
 /***
  * This section contains short description about PMI.
+ * This section is a sub-section of Profile page.
  */
 
 import React from 'react'

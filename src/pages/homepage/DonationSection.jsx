@@ -4,17 +4,20 @@
  */
 
 import React from 'react'
+import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
 
-import { DummyHeading } from '../../assets/dummy_text/LoremIpsum'
 import PMIBeranda2 from '../../assets/images/pmi_beranda2.png'
+
+import ExampleDonation from '../../assets/dummy_api/ExampleDonation'
+
+import DonationCard from '../../components/cards/DonationCard'
+
+import { UseSlider2 } from '../../hooks/UseSlider'
 
 import { GradientColor, PrimaryColor } from '../../themes/color_palletes/ColorPalletes'
 import PageSubTitle from '../../themes/typography/PageSubTitle'
 import Body from '../../themes/typography/Body'
-import ExampleDonation from '../../assets/dummy_api/ExampleDonation'
-import DonationCard from '../../components/cards/DonationCard'
-import { UseSlider2 } from '../../hooks/UseSlider'
-import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
+
 
 const DonationSection = ({ className }) => {
   const { currentSlide, totalItems, itemsToShow, nextSlide, prevSlide } = UseSlider2(ExampleDonation)
@@ -29,7 +32,7 @@ const DonationSection = ({ className }) => {
       {/* Content */}
       <div className='absolute inset-0 flex flex-col py-10 px-[25px] md:px-[75px] lg:px-[125px]'>
         <PageSubTitle className={'py-3 uppercase'} style={{ color: PrimaryColor.white }}>Donasi Peduli Sesama</PageSubTitle>
-        <Body className={'py-3'} style={{ color: PrimaryColor.white }}><DummyHeading /></Body>
+        <Body className={'py-3'} style={{ color: PrimaryColor.white }}>Mari Peduli Dengan Berbagi Untuk Sesama</Body>
 
         {/* Slider */}
         <div className='relative w-full overflow-hidden py-[50px]'>

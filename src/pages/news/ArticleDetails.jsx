@@ -14,6 +14,7 @@ import SocialMediaLink from '../../components/shared/SocialMediaLink'
 
 import UseFetchArticleDetails from '../../hooks/UseFetchArticleDetails'
 import UseFetchNews from '../../hooks/UseFetchNews'
+import UseScrollToTop from '../../hooks/UseScrollToTop'
 
 import PageTitle from '../../themes/typography/PageTitle'
 import Heading from '../../themes/typography/Heading'
@@ -25,7 +26,11 @@ import HandleError from '../../utils/HandleError'
 import HandleLoading from '../../utils/HandleLoading'
 
 const Article_Details = () => {
+  // For auto scroll to top when the page is loaded
+  UseScrollToTop();
+  // For fetching news
   const { featuredNews } = UseFetchNews();
+  // For fetching article details
   const { articleDetails, loading, error } = UseFetchArticleDetails();
 
   return (

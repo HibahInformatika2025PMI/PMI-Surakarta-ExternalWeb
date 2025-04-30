@@ -1,13 +1,14 @@
 /***
  * This section contains history of PMI Kota Surakarta.
+ * This section is a sub-section of Profile page.
  */
 
 import React from 'react'
 
 import HistoryPMI from '../../assets/images/pmi_surakarta_old.jpg'
+
 import { PrimaryColor } from '../../themes/color_palletes/ColorPalletes'
 import PageTitle from '../../themes/typography/PageTitle'
-import Heading from '../../themes/typography/Heading'
 import Body from '../../themes/typography/Body'
 
 const HistoryPMISection = ({ className }) => {

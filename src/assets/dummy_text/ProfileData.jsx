@@ -1,10 +1,14 @@
 /***
  * This is the text data for the profile page.
+ * 
+ * Is used in:
+ * - AboutPMISection.jsx
  */
 
 import React from 'react'
-import Body from '../../themes/typography/Body'
+
 import { PrimaryColor } from '../../themes/color_palletes/ColorPalletes'
+import Body from '../../themes/typography/Body'
 
 // Short description about PMI
 export const AboutPMI = ({ className }) => {

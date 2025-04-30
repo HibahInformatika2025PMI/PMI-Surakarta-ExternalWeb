@@ -4,6 +4,7 @@
  * 
  * Is used in:
  * - Navbar.jsx
+ * - Footer.jsx
  */
 
 import { Link } from "react-router-dom"

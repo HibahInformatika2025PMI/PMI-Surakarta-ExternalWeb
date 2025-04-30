@@ -3,7 +3,7 @@
  * This page will display the news of the client side.
  */
 
-import React, { useEffect } from 'react'
+import React from 'react'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 
 import SearchBar from '../../components/shared/SearchBar'
@@ -13,6 +13,7 @@ import UseFetchNews from '../../hooks/UseFetchNews'
 import UseSearch from '../../hooks/UseSearch'
 import { UseSlider1 } from '../../hooks/UseSlider'
 import UseNavigation from '../../hooks/UseNavigation'
+import UseScrollToTop from '../../hooks/UseScrollToTop'
 
 import { GradientColor, PrimaryColor } from '../../themes/color_palletes/ColorPalletes'
 import PageTitle from '../../themes/typography/PageTitle'
@@ -24,6 +25,8 @@ import HandleError from '../../utils/HandleError'
 import HandleZeroNews from '../../utils/HandleZeroNews'
 
 const News = () => {
+  // For auto scroll to top when the page is loaded
+  UseScrollToTop();
   // For fetching news
   const { featuredNews, loading, error } = UseFetchNews();
   // For normal slider 
@@ -32,10 +35,6 @@ const News = () => {
   const { handleNavigation } = UseNavigation();
   // For search
   const { searchQuery, filteredItems: filteredNews, handleSearch } = UseSearch(featuredNews, ['title', 'summary', 'content']);
-
-  useEffect(() => {
-    window.scrollTo({ top:0, behavior:'smooth' })
-  }, []);
 
   return (
     <div className='w-full flex flex-col items-center py-[48px] px-[160px]'>

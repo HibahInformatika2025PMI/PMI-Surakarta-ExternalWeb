@@ -5,12 +5,12 @@
 
 import React from 'react'
 
+import { DonorDarahItems, PendidikanItems, RelawanItems, YankesItems, YansosItems } from './ItemsNavbarDropdown'
 import NavbarTitle from './NavbarTitle'
 import NavbarDropdown from './NavbarDropdown'
 
 import RedOutlineButton from '../../buttons/RedOutlineButton'
 
-import { DonorDarahItems, PendidikanItems, RelawanItems, YankesItems, YansosItems } from '../../../assets/dummy_api/ExampleNavbarDropdown'
 
 const DekstopNavbar = ({ className }) => {
   return (

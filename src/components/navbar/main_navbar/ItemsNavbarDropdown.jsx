@@ -6,25 +6,25 @@ export const DonorDarahItems = [
   {
     id: 1,
     label: 'Prosedur & Syarat',
-    route: '/Prosedur-Syarat-Donor-Darah',
+    route: '/prosedur-syarat-donor-darah',
     onClick: () => console.log('Prosedur & Syarat clicked')
   },
   {
     id: 2,
     label: 'Stok Darah',
-    route: '/Stok-Darah',
+    route: '/stok-darah',
     onClick: () => console.log('Stok Darah clicked')
   },
   {
     id: 3,
     label: 'Jadwal',
-    route: '/Jadwal',
+    route: '/jadwal',
     onClick: () => console.log('Jadwal clicked')
   },
   {
     id: 4,
     label: 'Apheresis',
-    route: '/Apheresis',
+    route: '/apheresis',
     onClick: () => console.log('Apheresis clicked')
   }
 ];

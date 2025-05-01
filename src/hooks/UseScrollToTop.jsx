@@ -5,6 +5,7 @@
  * - Homepage.jsx
  * - News.jsx
  * - Profile.jsx
+ * - ProceduresRequirements.jsx
  */
 
 import { useEffect } from 'react'

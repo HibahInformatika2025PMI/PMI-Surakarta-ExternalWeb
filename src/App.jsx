@@ -7,9 +7,19 @@ import Navbar from './components/navbar/main_navbar/Navbar';
 import Footer from './components/footer/Footer';
 
 import Homepage from './pages/homepage/Homepage';
+
 import Profile from './pages/profile/Profile';
+
 import News from './pages/news/News';
-import Article_Details from './pages/news/ArticleDetails';
+import ArticleDetails from './pages/news/ArticleDetails';
+
+import ProceduresRequirements from './pages/blood_donation/procedures_requirements/ProceduresRequirements';
+import BloodStock from './pages/blood_donation/blood_stock/BloodStock';
+import Schedule from './pages/blood_donation/schedule/Schedule';
+import Apheresis from './pages/blood_donation/apheresis/Apheresis';
+
+import PMR from './pages/volunteers/pmr/PMR';
+import Satgana from './pages/volunteers/satgana/Satgana';
 
 function App() {
   return (
@@ -19,10 +29,25 @@ function App() {
 
         <main style={{ backgroundColor: SecondaryColor.white_greyish }}>
           <Routes>
+            {/* Homepage Route */}
             <Route path='/' element={ <Homepage /> } />
+
+            {/* Profil Route */}
             <Route path='/profile' element={ <Profile /> } />
+
+            {/* News and Article Details Route */}
             <Route path='/news' element={ <News /> } />
-            <Route path='/news/article/:id' element={ <Article_Details /> } />
+            <Route path='/news/article/:id' element={ <ArticleDetails /> } />
+
+            {/* Donor Darah Route */}
+            <Route path='/prosedur-syarat-donor-darah' element={ <ProceduresRequirements /> } />
+            <Route path='/stok-darah' element={ <BloodStock /> } />
+            <Route path='/jadwal' element={ <Schedule /> } />
+            <Route path='/apheresis' element={ <Apheresis /> } />
+
+            {/* Relawan Route */}
+            <Route path='/pmr' element={ <PMR /> } />
+            <Route path='/satgana' element={ <Satgana /> } />
           </Routes>
         </main>
         

@@ -4,12 +4,14 @@
 
 import React from 'react'
 
-import AboutPMISection from './AboutPMISection'
 import HistoryPMISection from './HistoryPMISection'
 import VisionMisionSection from './VisionMisionSection'
 import PrincipleSection from './PrincipleSection'
 
-import { PalangMerahPrinciple } from '../../assets/dummy_text/ProfileData'
+import { AboutPMI, PalangMerahPrinciple } from '../../assets/dummy_text/ProfileData'
+import SeragamPMI from '../../assets/images/pmi_seragam.jpg'
+
+import BannerLayout from '../../components/shared/BannerLayout'
 
 import UseScrollToTop from '../../hooks/UseScrollToTop'
 
@@ -19,7 +21,13 @@ const Profile = () => {
 
   return (
     <div>
-      <AboutPMISection />
+      <BannerLayout
+        image={SeragamPMI}
+        imageDescription='Seragam PMI Kota Surakarta'
+        title='Tentang Palang Merah Indonesia'
+      >
+        <AboutPMI className={'mt-4 ml-2'}/>
+      </BannerLayout>
 
       <HistoryPMISection />
 

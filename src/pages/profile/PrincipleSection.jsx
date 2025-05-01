@@ -40,6 +40,7 @@ const PrincipleSection = ({ className }) => {
           >
             Tujuh Prinsip Dasar Gerakan Palang Merah dan Bulan Sabit Merah Internasional
           </Heading>
+          
           <AboutPrinciple />
         </div>
       </div>

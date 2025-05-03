@@ -5,7 +5,7 @@
 
 import React from 'react'
 
-import { AboutPrinciple } from '../../assets/dummy_text/ProfileData'
+import { AboutPrinciple } from '../../assets/text/ProfileData'
 import TopiPMI from '../../assets/images/pmi_topi.jpg'
 import SevenPrinciples from '../../assets/images/tujuh-prinsip-dasar-palang-merah.png'
 

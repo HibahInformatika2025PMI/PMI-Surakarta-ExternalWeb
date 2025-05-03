@@ -7,7 +7,7 @@ import React from 'react'
 import ApheresisTypeSection from './ApheresisTypeSection'
 import ApheresisDescriptionSection from './ApheresisDescriptionSection'
 
-import { AboutApheresis, ApheresisRequirementsData, ApheresisProceduresData } from '../../../assets/dummy_text/ApheresisData'
+import { AboutApheresis, ApheresisRequirementsData, ApheresisProceduresData } from '../../../assets/text/ApheresisData'
 import PMIApheresis1 from '../../../assets/images/pmi_apheresis1.jpg'
 
 import BannerLayout from '../../../components/shared/BannerLayout'
@@ -33,7 +33,7 @@ const Apheresis = () => {
 
       <ApheresisDescriptionSection className={'mb-[75px]'} />
 
-      <div className='flex flex-col lg:flex-row gap-10 px-[160px] pb-[75px]'>
+      <div className='flex flex-col lg:flex-row gap-10 px-[40px] lg:px-[160px] pb-[75px]'>
         <ApheresisRequirementsData title='Syarat & Prosedur Donor Darah Apheresis' />
         <ApheresisProceduresData title='Prosedur Donor Darah Apheresis' />
       </div>

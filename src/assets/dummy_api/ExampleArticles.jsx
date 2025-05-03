@@ -2,7 +2,7 @@
  * Dummy data for the articles.
  */
 
-import { DummyBody, DummyHeading, DummySubtitle } from "../dummy_text/LoremIpsum"
+import { DummyHeading, DummySubtitle } from "../dummy_text/LoremIpsum"
 import articleImage1 from '../images/pmi_article1.png'
 import articleImage2 from '../images/pmi_article2.png'
 import articleImage3 from '../images/pmi_article3.png'

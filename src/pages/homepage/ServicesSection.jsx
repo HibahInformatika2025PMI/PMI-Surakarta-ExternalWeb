@@ -6,7 +6,7 @@
 import React from 'react'
 import { FaAmbulance, FaDonate, FaTint } from 'react-icons/fa'
 
-import { DummySubtitle } from '../../assets/dummy_text/LoremIpsum'
+import { DummySubtitle } from '../../assets/text/LoremIpsum'
 import HomepageCard from '../../components/cards/HomepageCard'
 import { PrimaryColor } from '../../themes/color_palletes/ColorPalletes'
 

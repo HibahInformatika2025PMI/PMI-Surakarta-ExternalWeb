@@ -16,11 +16,10 @@ import UseFetchArticleDetails from '../../hooks/UseFetchArticleDetails'
 import UseFetchNews from '../../hooks/UseFetchNews'
 import UseScrollToTop from '../../hooks/UseScrollToTop'
 
+import { PrimaryColor } from '../../themes/color_palletes/ColorPalletes'
 import PageTitle from '../../themes/typography/PageTitle'
 import Heading from '../../themes/typography/Heading'
 import Body from '../../themes/typography/Body'
-
-import { PrimaryColor } from '../../themes/color_palletes/ColorPalletes'
 
 import HandleError from '../../utils/HandleError'
 import HandleLoading from '../../utils/HandleLoading'

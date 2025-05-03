@@ -5,7 +5,7 @@
 
 import React from 'react'
 
-import { ConventionalType, ApheresisType } from '../../../assets/dummy_text/ProcedureRequirementsData'
+import { ConventionalType, ApheresisType } from '../../../assets/text/ProcedureRequirementsData'
 
 import ApheresisImage from '../../../assets/images/pmi_donordarah2.jpg'
 import ConventionalImage from '../../../assets/images/pmi_donordarah3.jpg'

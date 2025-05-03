@@ -8,8 +8,9 @@
 
 import React from 'react'
 
-import UseNavigation from '../../hooks/UseNavigation'
 import NewsCard from '../cards/NewsCard'
+
+import UseNavigation from '../../hooks/UseNavigation'
 
 const ArticlesList = ({ news }) => {
   const { handleNavigation } = UseNavigation();

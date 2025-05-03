@@ -15,16 +15,16 @@ const ApheresisDescriptionSection = ({ className }) => {
   return (
     <div 
       className={`flex flex-col lg:flex-row items-center justify-center gap-10 py-[50px] px-[160px] ${className}`}
-      style={{ background: PrimaryColor.white}}
+      style={{ background: PrimaryColor.red}}
     >
       <img 
         src={PMIApheresis2}
         alt="PMI Surakarta Lama"
         className='w-[500px] object-cover'
-        style={{ color: PrimaryColor.red, border: '5px solid '}}
+        style={{ color: PrimaryColor.red}}
       />
 
-      <div className='flex flex-col gap-8'>
+      <div className='flex flex-col gap-8' style={{ color: PrimaryColor.white}}>
         <PageSubTitle className={'text-center lg:text-start'}>
           Syarat & Prosedur Donor Darah Apheresis
         </PageSubTitle>

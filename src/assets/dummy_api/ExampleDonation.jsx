@@ -5,7 +5,7 @@
 import donationImage1 from '../images/pmi_donation1.png'
 import donationImage2 from '../images/pmi_donation2.png'
 import donationImage3 from '../images/pmi_donation3.png'
-import { DummyHeading, DummySubtitle } from '../dummy_text/LoremIpsum'
+import { DummyHeading, DummySubtitle } from '../text/LoremIpsum'
 
 const ExampleDonation = [
   {

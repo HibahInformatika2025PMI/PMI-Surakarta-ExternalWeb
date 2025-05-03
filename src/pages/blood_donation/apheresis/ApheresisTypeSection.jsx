@@ -5,7 +5,7 @@
 
 import React from 'react'
 
-import { ApheresisTypesData } from '../../../assets/dummy_text/ApheresisData'
+import { ApheresisTypesData } from '../../../assets/text/ApheresisData'
 
 import PageTitle from '../../../themes/typography/PageTitle'
 

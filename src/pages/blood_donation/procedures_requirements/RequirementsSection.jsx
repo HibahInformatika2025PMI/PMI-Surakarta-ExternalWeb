@@ -6,7 +6,7 @@
 import React from 'react'
 
 import PageTitle from '../../../themes/typography/PageTitle'
-import { BloodDonationRequirements } from '../../../assets/dummy_text/ProcedureRequirementsData'
+import { BloodDonationRequirements } from '../../../assets/text/ProcedureRequirementsData'
 
 const RequirementsSection = ({ className }) => {
   return (

@@ -5,7 +5,7 @@
 
 import React from 'react'
 
-import { BloodDonationProcedures } from '../../../assets/dummy_text/ProcedureRequirementsData'
+import { BloodDonationProcedures } from '../../../assets/text/ProcedureRequirementsData'
 
 import PageTitle from '../../../themes/typography/PageTitle'
 

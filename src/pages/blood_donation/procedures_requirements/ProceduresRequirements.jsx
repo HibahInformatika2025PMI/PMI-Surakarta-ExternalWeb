@@ -8,7 +8,7 @@ import ProceduresSection from './ProceduresSection';
 import RequirementsSection from './RequirementsSection';
 import BloodDonationTypes from './BloodDonationTypesSection';
 
-import { AboutProceduresRequirements } from '../../../assets/dummy_text/ProcedureRequirementsData'
+import { AboutProceduresRequirements } from '../../../assets/text/ProcedureRequirementsData'
 import PMIDonorDarah1 from '../../../assets/images/pmi_donordarah1.jpg'
 
 import BannerLayout from '../../../components/shared/BannerLayout'

@@ -11,7 +11,7 @@ import PrincipleSection from './PrincipleSection'
 import { AboutPMI, PalangMerahPrinciple } from '../../assets/text/ProfileData'
 import SeragamPMI from '../../assets/images/pmi_seragam.jpg'
 
-import BannerLayout from '../../components/shared/BannerLayout'
+import { BannerLayout1 } from '../../components/shared/BannerLayout'
 
 import UseScrollToTop from '../../hooks/UseScrollToTop'
 
@@ -21,13 +21,13 @@ const Profile = () => {
 
   return (
     <div>
-      <BannerLayout
+      <BannerLayout1
         image={SeragamPMI}
         imageDescription='Seragam PMI Kota Surakarta'
         title='Tentang Palang Merah Indonesia'
       >
         <AboutPMI className={'mt-4 ml-2'}/>
-      </BannerLayout>
+      </BannerLayout1>
 
       <HistoryPMISection />
 
@@ -35,7 +35,7 @@ const Profile = () => {
 
       <PrincipleSection />
       
-      <PalangMerahPrinciple className={'py-[50px] px-[50px] md:px-[100px] xl:px-[200px]'} />
+      <PalangMerahPrinciple className={'py-[50px] px-[50px] md:px-[100px] xl:px-[160px]'} />
     </div>
   )
 }

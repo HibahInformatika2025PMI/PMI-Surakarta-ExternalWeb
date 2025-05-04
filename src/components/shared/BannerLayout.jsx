@@ -12,7 +12,8 @@ import React from 'react'
 import { GradientColor, PrimaryColor } from '../../themes/color_palletes/ColorPalletes'
 import PageTitle from '../../themes/typography/PageTitle'
 
-const BannerLayout = ({ image, imageDescription, title, children, className }) => {
+// Banner Layout 1 (text at the start)
+export const BannerLayout1 = ({ image, imageDescription, title, children, className }) => {
   return (
     <div className={`relative overflow-hidden ${className}`}>
       <img
@@ -34,4 +35,25 @@ const BannerLayout = ({ image, imageDescription, title, children, className }) =
   )
 }
 
-export default BannerLayout
+// Banner Layout 2 (text at the center)
+export const BannerLayout2 = ({ image, imageDescription, title, children, className }) => {
+  return (
+    <div className={`relative overflow-hidden ${className}`}>
+      <img
+        src={image}
+        alt={imageDescription}
+        className='w-full h-[500px] object-cover'
+      />
+
+      <div className='absolute inset-0 opacity-30' style={{ background: GradientColor.gradient3 }} />
+      <div className='absolute inset-0 opacity-70' style={{ background: GradientColor.gradient6 }} />
+
+      <div className='absolute inset-0 flex justify-center items-center px-[50px] md:px-[100px] xl:px-[200px]'>
+        <div className='flex flex-col'>
+          <PageTitle className={'mb-6 text-center'} style={{ color: PrimaryColor.white }}>{title}</PageTitle>
+          {children}
+        </div>
+      </div>
+    </div>
+  )
+}

@@ -11,7 +11,7 @@ import BloodDonationTypes from './BloodDonationTypesSection';
 import { AboutProceduresRequirements } from '../../../assets/text/ProcedureRequirementsData'
 import PMIDonorDarah1 from '../../../assets/images/pmi_donordarah1.jpg'
 
-import BannerLayout from '../../../components/shared/BannerLayout'
+import { BannerLayout1 } from '../../../components/shared/BannerLayout'
 
 import UseScrollToTop from '../../../hooks/UseScrollToTop'
 
@@ -21,14 +21,14 @@ const ProceduresRequirements = () => {
 
   return (
     <div>
-      <BannerLayout
+      <BannerLayout1
         image={PMIDonorDarah1}
         imageDescription='Donor Darah PMI Kota Surakarta'
         title='Prosedur & Syarat'
         className='mb-[75px]'
       >
         <AboutProceduresRequirements />
-      </BannerLayout>
+      </BannerLayout1>
 
       <ProceduresSection className={'mb-[75px]'} />
 

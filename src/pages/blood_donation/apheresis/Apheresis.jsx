@@ -10,7 +10,7 @@ import ApheresisDescriptionSection from './ApheresisDescriptionSection'
 import { AboutApheresis, ApheresisRequirementsData, ApheresisProceduresData } from '../../../assets/text/ApheresisData'
 import PMIApheresis1 from '../../../assets/images/pmi_apheresis1.jpg'
 
-import BannerLayout from '../../../components/shared/BannerLayout'
+import { BannerLayout1 } from '../../../components/shared/BannerLayout'
 
 import UseScrollToTop from '../../../hooks/UseScrollToTop'
 
@@ -20,14 +20,14 @@ const Apheresis = () => {
 
   return (
     <div>
-      <BannerLayout
+      <BannerLayout1
         image={PMIApheresis1}
         imageDescription='Donor Darah Apheresis PMI Kota Surakarta'
         title='Donor Darah Apheresis'
         className='mb-[75px]'
       >
         <AboutApheresis />
-      </BannerLayout>
+      </BannerLayout1>
 
       <ApheresisTypeSection className={'mb-[75px]'} />
 

@@ -20,11 +20,11 @@ const ProceduresRequirements = () => {
   UseScrollToTop();
 
   return (
-    <div>
+    <section>
       <BannerLayout1
         image={PMIDonorDarah1}
         imageDescription='Donor Darah PMI Kota Surakarta'
-        title='Prosedur & Syarat'
+        title={`Prosedur & Syarat`}
         className='mb-[75px]'
       >
         <AboutProceduresRequirements />
@@ -35,7 +35,7 @@ const ProceduresRequirements = () => {
       <RequirementsSection className={'mb-[75px]'} />
 
       <BloodDonationTypes className={'pb-[25px]'} />
-    </div>
+    </section>
   )
 }
 

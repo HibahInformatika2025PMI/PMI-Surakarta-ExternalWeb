@@ -37,7 +37,7 @@ const News = () => {
   const { searchQuery, filteredItems: filteredNews, handleSearch } = UseSearch(featuredNews, ['title', 'summary', 'content']);
 
   return (
-    <div className='w-full flex flex-col items-center py-[48px] px-[160px]'>
+    <section className='w-full flex flex-col items-center py-[48px] px-[160px]'>
       {/* Header */}
       <PageTitle className={'mb-6 uppercase'} style={{ color: PrimaryColor.red }}>Berita Terkini</PageTitle>
       <Body className={'max-w-[1180px] text-lg text-center mb-6'}>
@@ -110,7 +110,7 @@ const News = () => {
           )}
         </div>
       )}
-    </div>
+    </section>
   )
 }
 

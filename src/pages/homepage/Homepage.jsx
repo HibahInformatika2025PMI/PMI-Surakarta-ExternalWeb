@@ -19,7 +19,7 @@ const Homepage = () => {
   UseScrollToTop();
 
   return (
-    <div>
+    <section>
       <BannerSection className={'mb-[75px]'} />
 
       <ServicesSection className={'mb-[75px]'} />
@@ -33,7 +33,7 @@ const Homepage = () => {
       <QuotesSection className={'mb-[75px]'} />
 
       <PartnershipSection className={'pb-[75px]'} />
-    </div>
+    </section>
   )
 }
 

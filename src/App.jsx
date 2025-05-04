@@ -21,6 +21,8 @@ import Apheresis from './pages/blood_donation/apheresis/Apheresis';
 import PMR from './pages/volunteers/pmr/PMR';
 import Satgana from './pages/volunteers/satgana/Satgana';
 
+import PratamaClinic from './pages/health_services/pratama_clinic/PratamaClinic';
+
 function App() {
   return (
     <Router>
@@ -48,6 +50,9 @@ function App() {
             {/* Relawan Route */}
             <Route path='/pmr' element={ <PMR /> } />
             <Route path='/satgana' element={ <Satgana /> } />
+
+            {/* Yankes Route */}
+            <Route path='/klinik-pratama' element={ <PratamaClinic /> } />
           </Routes>
         </main>
         

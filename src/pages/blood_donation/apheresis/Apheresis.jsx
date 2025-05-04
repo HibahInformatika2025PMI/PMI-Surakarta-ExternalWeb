@@ -19,11 +19,11 @@ const Apheresis = () => {
   UseScrollToTop();
 
   return (
-    <div>
+    <section>
       <BannerLayout1
         image={PMIApheresis1}
         imageDescription='Donor Darah Apheresis PMI Kota Surakarta'
-        title='Donor Darah Apheresis'
+        title={`Donor Darah Apheresis`}
         className='mb-[75px]'
       >
         <AboutApheresis />
@@ -37,7 +37,7 @@ const Apheresis = () => {
         <ApheresisRequirementsData title='Syarat & Prosedur Donor Darah Apheresis' />
         <ApheresisProceduresData title='Prosedur Donor Darah Apheresis' />
       </div>
-    </div>
+    </section>
   )
 }
 

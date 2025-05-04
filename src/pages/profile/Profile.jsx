@@ -20,13 +20,13 @@ const Profile = () => {
   UseScrollToTop();
 
   return (
-    <div>
+    <section>
       <BannerLayout1
         image={SeragamPMI}
         imageDescription='Seragam PMI Kota Surakarta'
-        title='Tentang Palang Merah Indonesia'
+        title={`Tentang Palang Merah Indonesia`}
       >
-        <AboutPMI className={'mt-4 ml-2'}/>
+        <AboutPMI className={'ml-2'}/>
       </BannerLayout1>
 
       <HistoryPMISection />
@@ -36,7 +36,7 @@ const Profile = () => {
       <PrincipleSection />
       
       <PalangMerahPrinciple className={'py-[50px] px-[50px] md:px-[100px] xl:px-[160px]'} />
-    </div>
+    </section>
   )
 }
 

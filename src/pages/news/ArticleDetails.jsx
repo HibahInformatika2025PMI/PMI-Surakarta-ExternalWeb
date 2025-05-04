@@ -33,7 +33,7 @@ const Article_Details = () => {
   const { articleDetails, loading, error } = UseFetchArticleDetails();
 
   return (
-    <div>
+    <section>
       {loading ? (
         <HandleLoading loadingText={'Memuat detail berita...'} />
       ) : error ? (
@@ -87,7 +87,7 @@ const Article_Details = () => {
           </div>
         </div>
       )}
-    </div>
+    </section>
   )
 }
 

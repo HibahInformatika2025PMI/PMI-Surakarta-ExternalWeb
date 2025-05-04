@@ -5,6 +5,7 @@
  * - Apheresis.jsx
  * - ProceduresRequirements.jsx
  * - Profile.jsx
+ * - Satgana.jsx
  */
 
 import React from 'react'
@@ -27,7 +28,11 @@ export const BannerLayout1 = ({ image, imageDescription, title, children, classN
 
       <div className='absolute inset-0 flex items-center px-[50px] md:px-[100px] xl:px-[200px]'>
         <div className='flex flex-col'>
-          <PageTitle className={'mb-4'} style={{ color: PrimaryColor.white }}>{title}</PageTitle>
+          {title.split('\n').map((line, index) => (
+            <PageTitle key={index} className={'mb-6'} style={{ color: PrimaryColor.white }}>
+              {line}
+            </PageTitle>
+          ))}
           {children}
         </div>
       </div>
@@ -50,7 +55,11 @@ export const BannerLayout2 = ({ image, imageDescription, title, children, classN
 
       <div className='absolute inset-0 flex justify-center items-center px-[50px] md:px-[100px] xl:px-[200px]'>
         <div className='flex flex-col'>
-          <PageTitle className={'mb-6 text-center'} style={{ color: PrimaryColor.white }}>{title}</PageTitle>
+          {title.split('\n').map((line, index) => (
+            <PageTitle key={index} className={'mb-6 text-center'} style={{ color: PrimaryColor.white }}>
+              {line}
+            </PageTitle>
+          ))}
           {children}
         </div>
       </div>

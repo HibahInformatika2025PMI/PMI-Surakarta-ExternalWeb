@@ -18,17 +18,18 @@ const Satgana = () => {
   UseScrollToTop();
 
   return (
-    <div>
+    <section>
       <BannerLayout2
         image={satganaImage}
-        imageDescription='Satuan Siaga Penanggulangan Bencana (Satgana) PMI Surakarta'
-        title='Satuan Siaga Penanggulangan Bencana (Satgana)'
+        imageDescription='Satuan Siaga Penanggulangan Bencana (SATGANA) PMI Surakarta'
+        title={`Satuan Siaga Penanggulangan Bencana
+          (SATGANA)`}
       >
         <SatganaDescription className='text-center' style={{ color: PrimaryColor.white }}/>
       </BannerLayout2>
 
       <AboutSatgana className='px-[50px] md:px-[100px] xl:px-[160px] py-[75px] flex gap-10' />
-    </div>
+    </section>
   )
 }
 

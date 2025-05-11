@@ -14,28 +14,21 @@ import RedOutlineButton from '../../buttons/RedOutlineButton'
 
 const DekstopNavbar = ({ className }) => {
   return (
-    <div>
-      <div className={`${className}`}>
-        <ul className='flex items-center'>
-          <NavbarTitle navigate='/'>Beranda</NavbarTitle>
-          <NavbarTitle navigate='/profile'>Profil</NavbarTitle>
-          <NavbarTitle navigate='/news'>Berita</NavbarTitle>
-
-          <NavbarDropdown items={DonorDarahItems}>Donor Darah</NavbarDropdown>
-          <NavbarDropdown items={RelawanItems}>Relawan</NavbarDropdown>
-          <NavbarDropdown items={YankesItems}>Yankes</NavbarDropdown>
-          <NavbarDropdown items={YansosItems}>Yansos</NavbarDropdown>
-          <NavbarDropdown items={PendidikanItems}>Pendidikan</NavbarDropdown>
-
-          <NavbarTitle navigate='/contact'>Kontak</NavbarTitle>
-
-          {/* <NavbarTitle navigate={'/admin-news'}>Admin-Berita</NavbarTitle>
-            <NavbarTitle navigate={'/auth'}>Authentication</NavbarTitle> */}
-        </ul>
-
-        <div className='flex items-center gap-4'>
-          <RedOutlineButton path={'/donasi'}>Donasi Sekarang</RedOutlineButton>
-        </div>
+    <div className={`${className}`}>
+      <ul className='flex items-center'>
+        <NavbarTitle navigate='/'>Beranda</NavbarTitle>
+        <NavbarTitle navigate='/profile'>Profil</NavbarTitle>
+        <NavbarTitle navigate='/news'>Berita</NavbarTitle>
+        <NavbarDropdown items={DonorDarahItems}>Donor Darah</NavbarDropdown>
+        <NavbarDropdown items={RelawanItems}>Relawan</NavbarDropdown>
+        <NavbarDropdown items={YankesItems}>Yankes</NavbarDropdown>
+        <NavbarDropdown items={YansosItems}>Yansos</NavbarDropdown>
+        <NavbarDropdown items={PendidikanItems}>Pendidikan</NavbarDropdown>
+        <NavbarTitle navigate='/contact'>Kontak</NavbarTitle>
+      </ul>
+      
+      <div className='flex items-center gap-4'>
+        <RedOutlineButton path={'/donasi'}>Donasi Sekarang</RedOutlineButton>
       </div>
     </div>
   )

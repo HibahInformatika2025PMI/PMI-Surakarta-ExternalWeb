@@ -11,7 +11,7 @@ import PMILogo from '../../shared/PMILogo'
 import SocialMediaLink from '../../shared/SocialMediaLink'
 
 import Body from '../../../themes/typography/Body'
-import { GradientColor } from '../../../themes/color_palletes/ColorPalletes'
+import { GradientColor, PrimaryColor } from '../../../themes/color_palletes/ColorPalletes'
 
 const Navbar = () => {
   return (
@@ -22,7 +22,7 @@ const Navbar = () => {
 
         <div className='flex items-center gap-x-4'>
           <Body className='italic mr-4'>find us on</Body>
-          <SocialMediaLink size={32} />
+          <SocialMediaLink size={32} style={{ color: PrimaryColor.red }} />
         </div>
       </div>
 

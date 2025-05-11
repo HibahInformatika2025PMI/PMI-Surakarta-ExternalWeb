@@ -78,7 +78,10 @@ export const PendidikanItems = [
   {
     id: 2,
     label: 'Politeknik',
-    route: '/politeknik',
-    onClick: () => console.log('Politeknik clicked')
+    isExternal: true,
+    onClick: (e) => {
+      e.preventDefault();
+      window.open('https://akbara.ac.id/', '_blank');
+    }
   }
 ];

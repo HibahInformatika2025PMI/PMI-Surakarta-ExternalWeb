@@ -21,7 +21,7 @@ export const AboutApheresis = ({ className, style }) => {
         Donor darah dengan prosedur Apheresis merupakan prosedur pengambilan darah dari pendonor, di mana hanya komponen tertentu saja yang akan dikeluarkan, dan komponen darah lainnya dikembalikan ke dalam tubuh pada saat itu juga dengan alat khusus.
       </Body>
       <Body className={`text-justify ${className}`} style={{ color: PrimaryColor.white, ...style }}>
-      Jumlahnya bahkan bisa sampai 7-8 kali dari produk donor darah secara konvensional, sebab volume produk yang lainnya dikembalikan ke dalam tubuh.
+        Jumlahnya bahkan bisa sampai 7-8 kali dari produk donor darah secara konvensional, sebab volume produk yang lainnya dikembalikan ke dalam tubuh.
       </Body>
     </div>
   )

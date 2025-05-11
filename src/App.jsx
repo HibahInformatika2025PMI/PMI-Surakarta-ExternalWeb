@@ -23,6 +23,8 @@ import Satgana from './pages/volunteers/satgana/Satgana';
 
 import PratamaClinic from './pages/health_services/pratama_clinic/PratamaClinic';
 
+import Training from './pages/education/training/Training';
+
 import Contact from './pages/contact/Contact';
 
 function App() {
@@ -55,6 +57,9 @@ function App() {
 
             {/* Yankes Route */}
             <Route path='/klinik-pratama' element={ <PratamaClinic /> } />
+
+            {/* Pendidikan Route */}
+            <Route path='/pelatihan' element={ <Training /> } />
 
             {/* Contact Route */}
             <Route path='/contact' element={ <Contact /> } />

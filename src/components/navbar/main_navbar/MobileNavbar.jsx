@@ -53,6 +53,8 @@ const MobileNavbar = ({ className }) => {
             <li><NavbarDropdown items={YankesItems}>Yankes</NavbarDropdown></li>
             <li><NavbarDropdown items={YansosItems}>Yansos</NavbarDropdown></li>
             <li><NavbarDropdown items={PendidikanItems}>Pendidikan</NavbarDropdown></li>
+
+            <li><NavbarTitle navigate={'/contact'}>Kontak</NavbarTitle></li>
           </ul>
         </div>
       )}

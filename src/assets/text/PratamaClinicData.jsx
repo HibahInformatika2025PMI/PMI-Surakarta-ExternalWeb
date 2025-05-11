@@ -23,12 +23,12 @@ export const AboutPratamaClinic = ({ title, className, style }) => {
   
   return (
     <div className={`flex flex-col gap-[10px] ${className}`} style={style}>
-      <PageTitle className={'mb-4'}>
+      <PageTitle className={'mb-6'}>
         {title}
       </PageTitle>
 
       {aboutPratamaClinic.map((about, index) => (
-        <Body key={index} className={'text-justify'}>
+        <Body key={index} className={'text-justify mb-3'}>
           {about}
         </Body>
       ))}

@@ -23,6 +23,8 @@ import Satgana from './pages/volunteers/satgana/Satgana';
 
 import PratamaClinic from './pages/health_services/pratama_clinic/PratamaClinic';
 
+import Contact from './pages/contact/Contact';
+
 function App() {
   return (
     <Router>
@@ -53,6 +55,9 @@ function App() {
 
             {/* Yankes Route */}
             <Route path='/klinik-pratama' element={ <PratamaClinic /> } />
+
+            {/* Contact Route */}
+            <Route path='/contact' element={ <Contact /> } />
           </Routes>
         </main>
         

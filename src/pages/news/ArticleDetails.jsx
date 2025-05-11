@@ -23,6 +23,7 @@ import Body from '../../themes/typography/Body'
 
 import HandleError from '../../utils/HandleError'
 import HandleLoading from '../../utils/HandleLoading'
+import PageSubTitle from '../../themes/typography/PageSubTitle'
 
 const Article_Details = () => {
   // For auto scroll to top when the page is loaded
@@ -82,6 +83,7 @@ const Article_Details = () => {
               ))}
             </div>
             <div className='w-full lg:w-2/6 h-full'>
+              <PageSubTitle className={'mb-8'} style={{ color: PrimaryColor.grey }}>Berita Lainnya</PageSubTitle>
               <OtherNewsList otherNews={featuredNews.slice(0, 4)} />
             </div>
           </div>

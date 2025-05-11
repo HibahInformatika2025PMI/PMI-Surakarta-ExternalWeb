@@ -27,6 +27,8 @@ const DekstopNavbar = ({ className }) => {
           <NavbarDropdown items={YansosItems}>Yansos</NavbarDropdown>
           <NavbarDropdown items={PendidikanItems}>Pendidikan</NavbarDropdown>
 
+          <NavbarTitle navigate='/contact'>Kontak</NavbarTitle>
+
           {/* <NavbarTitle navigate={'/admin-news'}>Admin-Berita</NavbarTitle>
             <NavbarTitle navigate={'/auth'}>Authentication</NavbarTitle> */}
         </ul>

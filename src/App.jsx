@@ -30,6 +30,7 @@ import Contact from './pages/contact/Contact';
 import Home from './pages/donation/home/Home';
 import MoneyDonate from './pages/donation/money_donation/MoneyDonate';
 import ItemDonate from './pages/donation/item_donation/ItemDonate';
+import ItemDonateForm from './pages/donation/item_donation/ItemDonateForm';
 
 // Create a wrapper component to handle navbar selection
 const NavbarWrapper = () => {
@@ -83,6 +84,7 @@ function App() {
             <Route path='/donasi' element={ <Home /> } />
             <Route path='/donasi/donasi-uang' element={ <MoneyDonate /> } />
             <Route path='/donasi/donasi-barang' element={ <ItemDonate /> } />
+            <Route path='/donasi/form-barang' element={ <ItemDonateForm /> } />
             <Route path='/donasi/laporan' element={ <Home /> } />
           </Routes>
         </main>

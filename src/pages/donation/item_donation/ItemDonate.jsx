@@ -9,11 +9,17 @@ import GradRedPurpleButton from '../../../components/buttons/GradRedPurpleButton
 import { griyaItemDonations } from '../../../assets/dummy_api/ExampleGriyaDonation';
 import { umumItemDonations } from '../../../assets/dummy_api/ExampleUmumDonation';
 import pmiGriya3 from '../../../assets/images/pmi_griya3.png';
+import PopUpItemDetail from '../../../components/pop_up/PopUpItemDetail';
+import { useNavigate } from 'react-router-dom';
 
 const ItemDonate = () => {
   const [activeTab, setActiveTab] = useState('griya');
   const [search, setSearch] = useState('');
   const [checkedItems, setCheckedItems] = useState([]);
+  const [popupOpen, setPopupOpen] = useState(false);
+  const [popupItem, setPopupItem] = useState(null);
+  const [selectedItems, setSelectedItems] = useState([]);
+  const navigate = useNavigate();
 
   // Filter data sesuai tab dan pencarian
   const data = activeTab === 'griya' ? griyaItemDonations : umumItemDonations;
@@ -23,9 +29,36 @@ const ItemDonate = () => {
   );
 
   const handleCheck = (id) => {
-    setCheckedItems((prev) =>
-      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
-    );
+    const dataSource = activeTab === 'griya' ? griyaItemDonations : umumItemDonations;
+    const item = dataSource.find((itm) => itm.id === id);
+    if (!checkedItems.includes(id)) {
+      setPopupItem(item);
+      setPopupOpen(true);
+    } else {
+      // Uncheck: remove from checkedItems & selectedItems
+      setCheckedItems((prev) => prev.filter((itemId) => itemId !== id));
+      setSelectedItems((prev) => prev.filter((itm) => itm.id !== id));
+    }
+  };
+
+  const handleSaveDetail = (detail) => {
+    setCheckedItems((prev) => [...prev, detail.id]);
+    setSelectedItems((prev) => {
+      // replace if already exists
+      const filtered = prev.filter((itm) => itm.id !== detail.id);
+      return [...filtered, detail];
+    });
+    setPopupOpen(false);
+    setPopupItem(null);
+  };
+
+  const handleClosePopup = () => {
+    setPopupOpen(false);
+    setPopupItem(null);
+  };
+
+  const handleLanjutDonasi = () => {
+    navigate('/donasi/form-barang', { state: { items: selectedItems, tab: activeTab } });
   };
 
   return (
@@ -114,10 +147,17 @@ const ItemDonate = () => {
       </div>
       {/* Button Lanjut Donasi */}
       <div className='flex justify-center mb-12'>
-        <GradRedPurpleButton className='w-[300px] h-[46px] text-lg font-semibold rounded-2xl'>
+        <GradRedPurpleButton className='w-[300px] h-[46px] text-lg font-semibold rounded-2xl' onClick={handleLanjutDonasi} disabled={selectedItems.length === 0}>
           Lanjut Donasi
         </GradRedPurpleButton>
       </div>
+      {/* PopUp Detail Barang */}
+      <PopUpItemDetail
+        open={popupOpen}
+        onClose={handleClosePopup}
+        onSave={handleSaveDetail}
+        item={popupItem}
+      />
     </div>
   );
 };

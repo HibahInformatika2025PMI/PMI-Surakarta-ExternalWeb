@@ -28,6 +28,8 @@ import Training from './pages/education/training/Training';
 
 import Contact from './pages/contact/Contact';
 import Home from './pages/donation/home/Home';
+import MoneyDonate from './pages/donation/money_donation/MoneyDonate';
+import ItemDonate from './pages/donation/item_donation/ItemDonate';
 
 // Create a wrapper component to handle navbar selection
 const NavbarWrapper = () => {
@@ -79,8 +81,8 @@ function App() {
 
             {/* Donation Route */}
             <Route path='/donasi' element={ <Home /> } />
-            <Route path='/donasi/donasi-uang' element={ <Home /> } />
-            <Route path='/donasi/donasi-barang' element={ <Home /> } />
+            <Route path='/donasi/donasi-uang' element={ <MoneyDonate /> } />
+            <Route path='/donasi/donasi-barang' element={ <ItemDonate /> } />
             <Route path='/donasi/laporan' element={ <Home /> } />
           </Routes>
         </main>

@@ -48,29 +48,11 @@ const NavbarDropdown = ({ items, children }) => {
               style={{ color: PrimaryColor.red }}
               onClick={item.onClick}
             >
-              {item.label}
+              <strong>{item.label}</strong>
             </Link>
           </li>
         ))}
       </ul>
-
-      {/* Mobile dropdown menu (click) */}
-      {isOpen && (
-        <ul className='lg:hidden min-w-[200px] py-2 rounded-lg mt-2 shadow-inner z-[100]' style={{ background: SecondaryColor.white_greyish}}>
-          {items.map((item) => (
-            <li key={item.id}>
-              <Link
-                to={item.route}
-                className={`py-2 px-8 text-sm cursor-pointer transition-colors duration-300 hover:bg-[${SecondaryColor.light_red}] block`}
-                style={{ color: PrimaryColor.red }}
-                onClick={item.onClick}
-              >
-                {item.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      )}
     </div>
   )
 }

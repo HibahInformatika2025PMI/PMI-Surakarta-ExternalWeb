@@ -13,7 +13,7 @@ const DonationListCard = ({
   nominalText = "",
   onDetail,
   onShare,
-  className = "",
+  className,
 }) => {
   return (
     <div className={`flex flex-row items-center gap-3 w-full max-w-[1180px] min-h-[244px] bg-white shadow-[0_4px_10px_rgba(135,36,39,0.3)] px-6 py-6 border-b border-[#D9D9D9] ${className}`}>

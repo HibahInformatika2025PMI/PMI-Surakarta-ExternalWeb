@@ -4,9 +4,26 @@
 
 import React from 'react'
 
-const Home = () => {
+import FirstHomeSection from './FirstHomeSection'
+import SecondHomeSection from './SecondHomeSection'
+import ThirdHomeSection from './ThirdHomeSection'
+import FourthHomeSection from './FourthHomeSection'
+import FifthHomeSection from './FifthHomeSection'
+
+import UseScrollToTop from '../../../hooks/UseScrollToTop'
+
+const Home = ({ className }) => {
+  // For auto scroll to top when the page is loaded
+  UseScrollToTop();
+
   return (
-    <div>Home</div>
+    <section className={`${className}`}>
+      <FirstHomeSection className={'mb-10'} />
+      <SecondHomeSection className={'mb-10'} />
+      <ThirdHomeSection className={'mb-10'} />
+      <FourthHomeSection className={'mb-10'} />
+      <FifthHomeSection />
+    </section>
   )
 }
 

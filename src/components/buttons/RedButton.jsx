@@ -20,7 +20,7 @@ const RedButton = ({ children, className, path, ...props }) => {
       style={{ 
         background: isHovered ? PrimaryColor.white : PrimaryColor.red,
         color: isHovered ? PrimaryColor.red : PrimaryColor.white,
-        border: '2px solid',
+        border: isHovered ? '2px solid' : 'none',
         transition: 'background-color 0.2s ease'
       }}
       onMouseEnter={handleMouseEnter}

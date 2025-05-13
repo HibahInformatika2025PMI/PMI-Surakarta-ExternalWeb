@@ -7,6 +7,8 @@
 
 import React from 'react'
 
+import { PrimaryColor } from '../../themes/color_palletes/ColorPalletes'
+
 const PartnershipList = ({ partnership, style }) => {
   return (
     <div
@@ -18,7 +20,7 @@ const PartnershipList = ({ partnership, style }) => {
           key={item.id}
           className='w-full flex-shrink-0'
         >
-          <span className='w-[full] h-[300px] flex items-center justify-center p-4 rounded-lg shadow-sm'>
+          <span className='w-full h-[300px] flex items-center justify-center p-4 rounded-lg shadow-sm' style={{ backgroundColor: PrimaryColor.white }}>
             <img
               src={item.image}
               alt={item.name}

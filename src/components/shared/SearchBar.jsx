@@ -3,16 +3,20 @@
  * 
  * Is used in:
  * - News.jsx
+ * - SecondHomeSection.jsx
+ * - ItemDonate.jsx
  */
 
 import React, { useState } from 'react'
-import { FaSearch } from 'react-icons/fa'
+import { FaFilter, FaSearch } from 'react-icons/fa'
 
+import RedOutlineButton from '../buttons/RedOutlineButton'
 import SearchButton from '../buttons/SearchButton'
 
 import { PrimaryColor, SecondaryColor } from '../../themes/color_palletes/ColorPalletes'
 
-const SearchBar = ({ placeholder, onSearch }) => {
+// Search Bar with button Search
+export const SearchBar1 = ({ placeholder, onSearch }) => {
   const [searchQuery, setSearchQuery] = useState('')
 
   const handleSearch = (e) => {
@@ -24,7 +28,7 @@ const SearchBar = ({ placeholder, onSearch }) => {
     <form onSubmit={handleSearch} className='relative w-full h-[48px] mt-5 mb-6 mx-auto'>
       <FaSearch
         className='absolute left-4 top-1/2 transform -translate-y-1/2'
-        style={{ color: PrimaryColor }}
+        style={{ color: PrimaryColor.grey }}
       />
 
       <input
@@ -46,4 +50,46 @@ const SearchBar = ({ placeholder, onSearch }) => {
   )
 }
 
-export default SearchBar
+// Search Bar with button filter and search
+export const SearchBar2 = ({ placeholder, onSearch }) => {
+  const [searchQuery, setSearchQuery] = useState('')
+
+  const handleSearch = (e) => {
+    e.preventDefault()
+    onSearch(searchQuery)
+  }
+
+  return (
+    <form
+      onSubmit={handleSearch}
+      className='flex flex-col md:flex-row w-full md:h-[48px] mt-5 mb-6 mx-auto shadow-xl rounded-lg gap-2'
+      style={{ borderColor: SecondaryColor.darker_red }}
+    >
+      <div className='flex items-center pl-4'>
+        <FaSearch style={{ color: PrimaryColor.grey }} />
+      </div>
+
+      <input
+        type="text"
+        placeholder={placeholder}
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+        className='flex-1 h-full bg-transparent border-none outline-none font-inter text-base px-4'
+      />
+
+      <RedOutlineButton
+        className={'h-full px-6 rounded-lg mx-2 flex items-center justify-center gap-2'}
+      >
+        <FaFilter style={{ color: PrimaryColor.grey }} />
+        Filter
+      </RedOutlineButton>
+
+      <SearchButton 
+        type="submit"
+        className={'h-full px-6 rounded-lg'}
+      >
+        Cari
+      </SearchButton>
+    </form>
+  )
+}

@@ -24,7 +24,7 @@ const PartnershipSection = ({ className }) => {
       <PageSubTitle className={'mb-5 text-center'} style={{ color: PrimaryColor.red }}>Partner Kami</PageSubTitle>
 
       <div className='relative'>
-        <div className='overflow-hidden'>
+        <div className='overflow-hidden mb-5'>
           <PartnershipList
             partnership={ExamplePartnership}
             style={{ transform: `translateX(-${currentSlide * 100}%)` }}

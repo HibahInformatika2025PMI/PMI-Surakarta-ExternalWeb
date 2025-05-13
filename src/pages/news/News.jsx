@@ -6,7 +6,7 @@
 import React from 'react'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 
-import SearchBar from '../../components/shared/SearchBar'
+import { SearchBar1 } from '../../components/shared/SearchBar'
 import ArticlesList from '../../components/shared/ArticlesList'
 
 import UseFetchNews from '../../hooks/UseFetchNews'
@@ -23,6 +23,7 @@ import Body from '../../themes/typography/Body'
 import HandleLoading from '../../utils/HandleLoading'
 import HandleError from '../../utils/HandleError'
 import HandleZeroNews from '../../utils/HandleZeroNews'
+import CarouselCard from '../../components/cards/CarouselCard'
 
 const News = () => {
   // For auto scroll to top when the page is loaded
@@ -46,7 +47,7 @@ const News = () => {
 
       {/* Search Bar */}
       <div className='w-full max-w-[780px] min-w-[320px]'>
-        <SearchBar 
+        <SearchBar1 
           placeholder={'Cari artikel disini....'} 
           onSearch={handleSearch}
         />
@@ -69,17 +70,14 @@ const News = () => {
                 {featuredNews.map((news) => (
                   <div 
                     key={news.id}
-                    className='min-w-full relative cursor-pointer group'
+                    className='min-w-full relative cursor-pointer group h-[500px] flex transition-transform duration-500'
                     onClick={() => handleNavigation(`/news/article/${news.id}`)}
                   >
-                    <img src={news.cover_image} alt={news.title} className='w-full h-full object-cover rounded-lg' />
-                    <div 
-                      className='absolute bottom-0 left-0 w-full p-4 backdrop-opacity-90 px-10 py-10 rounded-b-lg'
-                      style={{ background: GradientColor.gradient7, color: PrimaryColor.white }}
-                    >
-                      <Heading style={{ color: PrimaryColor.white }}>{news.title}</Heading>
-                      <Body className={'mt-2 line-clamp-2'} style={{ color: PrimaryColor.white }}>{news.summary}</Body>
-                    </div>
+                    <CarouselCard
+                      image={news.cover_image}
+                      title={news.title}
+                      summary={news.summary}
+                    />
                   </div>
                 ))}
               </div>

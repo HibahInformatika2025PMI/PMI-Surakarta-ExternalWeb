@@ -6,12 +6,13 @@
  */
 
 import React from 'react'
+
 import { PrimaryColor } from '../../themes/color_palletes/ColorPalletes'
 import SubHeading from '../../themes/typography/SubHeading'
 import Subtitle from '../../themes/typography/Subtitle'
 import GradRedPurpleButton from '../buttons/GradRedPurpleButton'
 
-const DonationCard = ({ image, title, description, buttonLabel, path, className, style, ...props }) => {
+const DonationHomepageCard = ({ image, title, description, buttonLabel, path, className, style, ...props }) => {
   return (
     <div
       className={`max-w-[300px] rounded-3xl shadow-md overflow-hidden ${className}`}
@@ -40,4 +41,4 @@ const DonationCard = ({ image, title, description, buttonLabel, path, className,
   )
 }
 
-export default DonationCard
+export default DonationHomepageCard

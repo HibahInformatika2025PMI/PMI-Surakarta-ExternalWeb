@@ -4,15 +4,18 @@
 
 import React, { useState } from 'react';
 import DonationListCard from '../../../components/cards/DonationListCard';
-import SearchBar from '../../../components/shared/SearchBar';
+import { SearchBar1 } from '../../../components/shared/SearchBar';
 import GradRedPurpleButton from '../../../components/buttons/GradRedPurpleButton';
 import { griyaItemDonations } from '../../../assets/dummy_api/ExampleGriyaDonation';
 import { umumItemDonations } from '../../../assets/dummy_api/ExampleUmumDonation';
 import pmiGriya3 from '../../../assets/images/pmi_griya3.png';
 import PopUpItemDetail from '../../../components/pop_up/PopUpItemDetail';
 import { useNavigate } from 'react-router-dom';
+import UseScrollToTop from '../../../hooks/UseScrollToTop';
 
 const ItemDonate = () => {
+  UseScrollToTop();
+
   const [activeTab, setActiveTab] = useState('griya');
   const [search, setSearch] = useState('');
   const [checkedItems, setCheckedItems] = useState([]);
@@ -101,7 +104,7 @@ const ItemDonate = () => {
       {/* SearchBar & Filter */}
       <div className='flex flex-col items-center w-full mt-4 mb-6'>
         <div className='w-full max-w-3xl'>
-          <SearchBar
+          <SearchBar1
             placeholder={activeTab === 'griya' ? 'Ketik kebutuhan Griya ...' : 'Ketik kebutuhan umum ...'}
             onSearch={setSearch}
           />

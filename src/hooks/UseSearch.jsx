@@ -4,6 +4,7 @@
  * 
  * Is used in:
  * - News.jsx
+ * - SecondHomeSection.jsx
  */
 
 import { useState, useEffect } from 'react'

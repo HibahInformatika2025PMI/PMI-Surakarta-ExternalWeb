@@ -10,7 +10,7 @@ import PMIBeranda2 from '../../assets/images/pmi_beranda2.png'
 
 import ExampleDonation from '../../assets/dummy_api/ExampleDonation'
 
-import DonationCard from '../../components/cards/DonationCard'
+import DonationHomepageCard from '../../components/cards/DonationHomepageCard'
 
 import { UseSlider2 } from '../../hooks/UseSlider'
 
@@ -42,7 +42,7 @@ const DonationSection = ({ className }) => {
           >
             {ExampleDonation.map((donation) => (
               <div key={donation.id} className='flex-shrink-0 w-[calc(100%/1)] lg:w-[calc(100%/2)] xl:w-[calc(100%/3)] 2xl:w-[calc(100%/4)] justify-items-center'>
-                <DonationCard 
+                <DonationHomepageCard 
                   image={donation.image}
                   title={donation.title}
                   description={donation.description}

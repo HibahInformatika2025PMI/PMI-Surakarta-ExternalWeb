@@ -3,7 +3,7 @@
  */
 
 import React, { useState } from 'react';
-import SearchBar from '../../../components/shared/SearchBar';
+import { SearchBar1 } from '../../../components/shared/SearchBar';
 import GradRedPurpleButton from '../../../components/buttons/GradRedPurpleButton';
 import DonationListCard from '../../../components/cards/DonationListCard';
 import { griyaMoneyDonations } from '../../../assets/dummy_api/ExampleGriyaDonation';
@@ -68,7 +68,7 @@ const MoneyDonate = () => {
       {/* SearchBar & Filter */}
       <div className='flex flex-col items-center w-full mt-4 mb-6'>
         <div className='w-full max-w-3xl'>
-          <SearchBar
+          <SearchBar1
             placeholder={activeTab === 'griya' ? 'Ketik kebutuhan Griya ...' : 'Ketik nama pasien atau kampanye donasi ...'}
             onSearch={setSearch}
           />

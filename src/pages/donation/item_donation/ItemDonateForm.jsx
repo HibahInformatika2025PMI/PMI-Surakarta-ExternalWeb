@@ -4,6 +4,8 @@ import GradRedPurpleButton from '../../../components/buttons/GradRedPurpleButton
 import pmiBanner from '../../../assets/images/pmi_griya3.png'; // Ganti dengan gambar header yang sesuai
 
 const ItemDonateForm = () => {
+  UseScrollToTop();
+
   const location = useLocation();
   const navigate = useNavigate();
   const items = location.state?.items || [];

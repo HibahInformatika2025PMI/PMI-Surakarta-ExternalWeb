@@ -1,10 +1,9 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import { SecondaryColor } from './themes/color_palletes/ColorPalletes';
 
-import Navbar from './components/navbar/main_navbar/Navbar';
-import DonationNavbar from './components/navbar/donation_navbar/DonationNavbar';
+import NavbarWrapper from './components/navbar/NavbarWrapper';
 import Footer from './components/footer/Footer';
 
 import Homepage from './pages/homepage/Homepage';
@@ -27,21 +26,11 @@ import PratamaClinic from './pages/health_services/pratama_clinic/PratamaClinic'
 import Training from './pages/education/training/Training';
 
 import Contact from './pages/contact/Contact';
+
 import Home from './pages/donation/home/Home';
 import MoneyDonate from './pages/donation/money_donation/MoneyDonate';
 import ItemDonate from './pages/donation/item_donation/ItemDonate';
 import ItemDonateForm from './pages/donation/item_donation/ItemDonateForm';
-
-// Create a wrapper component to handle navbar selection
-const NavbarWrapper = () => {
-  const location = useLocation();
-  
-  if (location.pathname.startsWith('/donasi')) {
-    return <DonationNavbar />;
-  }
-  
-  return <Navbar />;
-};
 
 function App() {
   return (

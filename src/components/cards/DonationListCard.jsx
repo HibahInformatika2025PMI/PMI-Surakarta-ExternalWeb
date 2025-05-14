@@ -1,3 +1,10 @@
+/***
+ * This component is used as a template for the list of donation cards in Donation page.
+ * 
+ * Is used in:
+ * - ItemDonate.jsx
+ */
+
 import React from "react";
 
 const DonationListCard = ({

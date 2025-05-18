@@ -1,36 +1,39 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-import { SecondaryColor } from './themes/color_palletes/ColorPalletes';
+import NavbarWrapper from './components/navbar/NavbarWrapper'
+import Footer from './components/footer/Footer'
 
-import NavbarWrapper from './components/navbar/NavbarWrapper';
-import Footer from './components/footer/Footer';
+import Homepage from './pages/homepage/Homepage'
 
-import Homepage from './pages/homepage/Homepage';
+import Profile from './pages/profile/Profile'
 
-import Profile from './pages/profile/Profile';
+import News from './pages/news/News'
+import ArticleDetails from './pages/news/ArticleDetails'
 
-import News from './pages/news/News';
-import ArticleDetails from './pages/news/ArticleDetails';
+import ProceduresRequirements from './pages/blood_donation/procedures_requirements/ProceduresRequirements'
+import BloodStock from './pages/blood_donation/blood_stock/BloodStock'
+import Schedule from './pages/blood_donation/schedule/Schedule'
+import Apheresis from './pages/blood_donation/apheresis/Apheresis'
 
-import ProceduresRequirements from './pages/blood_donation/procedures_requirements/ProceduresRequirements';
-import BloodStock from './pages/blood_donation/blood_stock/BloodStock';
-import Schedule from './pages/blood_donation/schedule/Schedule';
-import Apheresis from './pages/blood_donation/apheresis/Apheresis';
+import PMR from './pages/volunteers/pmr/PMR'
+import Satgana from './pages/volunteers/satgana/Satgana'
 
-import PMR from './pages/volunteers/pmr/PMR';
-import Satgana from './pages/volunteers/satgana/Satgana';
+import PratamaClinic from './pages/health_services/pratama_clinic/PratamaClinic'
 
-import PratamaClinic from './pages/health_services/pratama_clinic/PratamaClinic';
+import Training from './pages/education/training/Training'
 
-import Training from './pages/education/training/Training';
+import Contact from './pages/contact/Contact'
 
-import Contact from './pages/contact/Contact';
+import Home from './pages/donation/home/Home'
+import MoneyDonate from './pages/donation/money_donation/MoneyDonation'
+import MonetaryDonation from './pages/donation/money_donation/MonetaryDonation'
+import ItemDonate from './pages/donation/items_donation/ItemDonate'
+import ItemDonateForm from './pages/donation/items_donation/ItemDonateForm'
+import ItemsDonation from './pages/donation/items_donation/ItemsDonation'
 
-import Home from './pages/donation/home/Home';
-import MoneyDonate from './pages/donation/money_donation/MoneyDonate';
-import ItemDonate from './pages/donation/item_donation/ItemDonate';
-import ItemDonateForm from './pages/donation/item_donation/ItemDonateForm';
+
+import { SecondaryColor } from './themes/color_palletes/ColorPalletes'
 
 function App() {
   return (
@@ -71,8 +74,10 @@ function App() {
 
             {/* Donation Route */}
             <Route path='/donasi' element={ <Home /> } />
-            <Route path='/donasi/donasi-uang' element={ <MoneyDonate /> } />
-            <Route path='/donasi/donasi-barang' element={ <ItemDonate /> } />
+            <Route path='/donasi/donasi-uang' element={ <MonetaryDonation /> } />
+            {/* <Route path='/donasi/donasi-uang' element={ <MoneyDonate /> } /> */}
+            <Route path='/donasi/donasi-barang' element={ <ItemsDonation /> } />
+            {/* <Route path='/donasi/donasi-barang' element={ <ItemDonate /> } /> */}
             <Route path='/donasi/form-barang' element={ <ItemDonateForm /> } />
             <Route path='/donasi/laporan' element={ <Home /> } />
           </Routes>

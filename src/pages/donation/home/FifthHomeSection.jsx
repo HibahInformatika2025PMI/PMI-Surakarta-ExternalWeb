@@ -10,14 +10,15 @@ import { DonationRequirementsData, DonationMethodData } from '../../../assets/te
 import { PrimaryColor } from '../../../themes/color_palletes/ColorPalletes'
 import PageSubTitle from '../../../themes/typography/PageSubTitle'
 import Body from '../../../themes/typography/Body'
+
 const FifthHomeSection = ({ className, style }) => {
   return (
     <div className={`px-[50px] md:px-[100px] xl:px-[160px] py-[75px] ${className}`} style={style}>
-      <PageSubTitle className={'uppercase mb-4'} style={{ color: PrimaryColor.red }}>
+      <PageSubTitle className={'uppercase mb-6'} style={{ color: PrimaryColor.red }}>
         Donasi Barang
       </PageSubTitle>
 
-      <Body className={'text-justify mb-4'}>
+      <Body className={'text-justify mb-8'}>
         Donasi dalam bentuk barang sangat berarti untuk mendukung misi kemanusiaan PMI. Dengan menyumbangkan barang seperti makanan pokok, paket kebersihan, atau perlengkapan penting lainnya, Anda turut membantu penyaluran bantuan ke mereka yang paling membutuhkan. Di bawah ini tersedia panduan donasi, ketentuan yang perlu diperhatikan, serta formulir online untuk mempermudah proses donasi Anda.dan barang yang kamu donasikan membantu sesama dan menciptakan perubahan nyata bersama PMI Kota Surakarta.
       </Body>
 

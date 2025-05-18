@@ -6,8 +6,9 @@
 import React from 'react'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 
-import { SearchBar1 } from '../../components/shared/SearchBar'
 import ArticlesList from '../../components/shared/ArticlesList'
+import CarouselCard from '../../components/cards/CarouselCard'
+import { SearchBar1 } from '../../components/shared/SearchBar'
 
 import UseFetchNews from '../../hooks/UseFetchNews'
 import UseSearch from '../../hooks/UseSearch'
@@ -15,15 +16,13 @@ import { UseSlider1 } from '../../hooks/UseSlider'
 import UseNavigation from '../../hooks/UseNavigation'
 import UseScrollToTop from '../../hooks/UseScrollToTop'
 
-import { GradientColor, PrimaryColor } from '../../themes/color_palletes/ColorPalletes'
+import { PrimaryColor } from '../../themes/color_palletes/ColorPalletes'
 import PageTitle from '../../themes/typography/PageTitle'
-import Heading from '../../themes/typography/Heading'
 import Body from '../../themes/typography/Body'
 
 import HandleLoading from '../../utils/HandleLoading'
 import HandleError from '../../utils/HandleError'
 import HandleZeroNews from '../../utils/HandleZeroNews'
-import CarouselCard from '../../components/cards/CarouselCard'
 
 const News = () => {
   // For auto scroll to top when the page is loaded

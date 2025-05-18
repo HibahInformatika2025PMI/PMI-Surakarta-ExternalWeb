@@ -7,9 +7,10 @@
  */
 
 import React from 'react'
+
+import { GradientColor, PrimaryColor } from '../../themes/color_palletes/ColorPalletes'
 import Heading from '../../themes/typography/Heading'
 import Body from '../../themes/typography/Body'
-import { GradientColor, PrimaryColor } from '../../themes/color_palletes/ColorPalletes'
 
 const CarouselCard = ({ image, title, summary, onClick, className, style }) => {
   return (

@@ -5,8 +5,9 @@
 
 import React from 'react'
 
-import PageTitle from '../../themes/typography/PageTitle'
 import { VisionPMI, MissionPMI, RegulationPMI } from '../../assets/text/ProfileData'
+
+import PageTitle from '../../themes/typography/PageTitle'
 
 const VisionMisionSection = ({ className }) => {
   return (

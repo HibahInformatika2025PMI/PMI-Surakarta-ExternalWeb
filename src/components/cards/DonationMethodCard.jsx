@@ -1,5 +1,5 @@
 /***
- * This component is used as a template for the donation procedure cards in Donation page.
+ * This component is used as a template for the donation Method cards in Donation page.
  * 
  * Is used in:
  * - DonationHomeData.jsx
@@ -11,7 +11,7 @@ import { PrimaryColor } from '../../themes/color_palletes/ColorPalletes'
 import Body from '../../themes/typography/Body'
 import Subtitle from '../../themes/typography/Subtitle'
 
-const DonationProcedureCard = ({ icon, title, description, className, style, ...props }) => {
+const DonationMethodCard = ({ icon, title, description, className, style, ...props }) => {
   return (
     <div
       className={`overflow-hidden px-2 ${className}`}
@@ -36,4 +36,4 @@ const DonationProcedureCard = ({ icon, title, description, className, style, ...
   )
 }
 
-export default DonationProcedureCard
+export default DonationMethodCard

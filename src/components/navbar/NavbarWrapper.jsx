@@ -1,7 +1,12 @@
-import React from 'react';
-import { useLocation } from 'react-router-dom';
-import Navbar from './main_navbar/Navbar';
-import DonationNavbar from './donation_navbar/DonationNavbar';
+/***
+ * This component is used to differentiate between the main navbar and the donation navbar.
+ */
+
+import React from 'react'
+import { useLocation } from 'react-router-dom'
+
+import DonationNavbar from './donation_navbar/DonationNavbar'
+import Navbar from './main_navbar/Navbar'
 
 const NavbarWrapper = () => {
   const location = useLocation();

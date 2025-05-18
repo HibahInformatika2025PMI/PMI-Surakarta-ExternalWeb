@@ -8,12 +8,11 @@ import ClinicFacilitySection from './ClinicFacilitySection'
 import ClinicServicesSection from './ClinicServicesSection'
 
 import PratamaClinicImage from '../../../assets/images/pmi_poliklinik.jpg'
+import { AboutPratamaClinic } from '../../../assets/text/PratamaClinicData'
 
 import UseScrollToTop from '../../../hooks/UseScrollToTop'
 
 import { GradientColor, PrimaryColor } from '../../../themes/color_palletes/ColorPalletes'
-import { AboutPratamaClinic } from '../../../assets/text/PratamaClinicData'
-
 
 const PratamaClinic = () => {
   // For auto scroll to top when the page is loaded

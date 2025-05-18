@@ -2,16 +2,16 @@
  * This is a utility function that handles the UI of error state while fetching data.
  * 
  * Is used in:
- * - ArticleDetails.jsx
  * - TopNewsSection.jsx
+ * - ArticleDetails.jsx
  * - News.jsx
  */
 
 import React from 'react'
 
+import { PrimaryColor, SecondaryColor } from '../themes/color_palletes/ColorPalletes'
 import SubHeading from '../themes/typography/SubHeading'
 import Body from '../themes/typography/Body'
-import { PrimaryColor, SecondaryColor } from '../themes/color_palletes/ColorPalletes'
 
 const HandleError = ({ errorText }) => {
   return (

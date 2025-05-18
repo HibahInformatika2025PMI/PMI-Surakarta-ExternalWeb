@@ -7,8 +7,8 @@ import React from 'react'
 import ApheresisTypeSection from './ApheresisTypeSection'
 import ApheresisDescriptionSection from './ApheresisDescriptionSection'
 
-import { AboutApheresis, ApheresisRequirementsData, ApheresisProceduresData } from '../../../assets/text/ApheresisData'
 import PMIApheresis1 from '../../../assets/images/pmi_apheresis1.jpg'
+import { AboutApheresis, ApheresisRequirementsData, ApheresisProceduresData } from '../../../assets/text/ApheresisData'
 
 import { BannerLayout1 } from '../../../components/shared/BannerLayout'
 

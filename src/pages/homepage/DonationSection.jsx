@@ -8,7 +8,7 @@ import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
 
 import PMIBeranda2 from '../../assets/images/pmi_beranda2.png'
 
-import ExampleDonation from '../../assets/dummy_api/ExampleDonation'
+import ExampleMonetaryDonation from '../../assets/dummy_api/ExampleMonetaryDonation'
 
 import DonationHomepageCard from '../../components/cards/DonationHomepageCard'
 
@@ -17,10 +17,10 @@ import { UseSlider2 } from '../../hooks/UseSlider'
 import { GradientColor, PrimaryColor } from '../../themes/color_palletes/ColorPalletes'
 import PageSubTitle from '../../themes/typography/PageSubTitle'
 import Body from '../../themes/typography/Body'
-
+import RedOutlineButton from '../../components/buttons/RedOutlineButton'
 
 const DonationSection = ({ className }) => {
-  const { currentSlide, totalItems, itemsToShow, nextSlide, prevSlide } = UseSlider2(ExampleDonation)
+  const { currentSlide, totalItems, itemsToShow, nextSlide, prevSlide } = UseSlider2(ExampleMonetaryDonation)
 
   return (
     <div className={`relative overflow-hidden ${className}`}>
@@ -35,13 +35,13 @@ const DonationSection = ({ className }) => {
         <Body className={'py-3'} style={{ color: PrimaryColor.white }}>Mari Peduli Dengan Berbagi Untuk Sesama</Body>
 
         {/* Slider */}
-        <div className='relative w-full overflow-hidden py-[50px]'>
+        <div className='relative w-full overflow-hidden py-[25px]'>
           <div 
             className='flex transition-transform duration-500'
             style={{ transform: `translateX(-${currentSlide * (100 / itemsToShow)}%)` }}
           >
-            {ExampleDonation.map((donation) => (
-              <div key={donation.id} className='flex-shrink-0 w-[calc(100%/1)] lg:w-[calc(100%/2)] xl:w-[calc(100%/3)] 2xl:w-[calc(100%/4)] justify-items-center'>
+            {ExampleMonetaryDonation.slice(0, 4).map((donation) => (
+              <div key={donation.id} className='flex-shrink-0 w-[calc(100%/1)] lg:w-[calc(100%/2)] xl:w-[calc(100%/3)] justify-items-center'>
                 <DonationHomepageCard 
                   image={donation.image}
                   title={donation.title}
@@ -51,12 +51,18 @@ const DonationSection = ({ className }) => {
                 />
               </div>
             ))}
+            {/* Additional card with different layout */}
+            {ExampleMonetaryDonation[4] && (
+              <div className='flex-shrink-0 w-[calc(100%/1)] lg:w-[calc(100%/2)] xl:w-[calc(100%/3)] justify-items-center self-center'>
+                <RedOutlineButton className='w-full' path={'/donasi'}>Selengkapnya</RedOutlineButton>
+              </div>
+            )}
           </div>
 
           {/* Navigation Buttons */}
           {totalItems > itemsToShow && (
             <div>
-              <button className='absolute left-1 top-1/2 transform -translate-y-1/2 rounded-full p-2 transition-colors' style={{ backgroundColor: PrimaryColor.white }} onClick={prevSlide}>
+              <button className='absolute left-4 top-1/2 transform -translate-y-1/2 rounded-full p-2 -ml-3 transition-colors' style={{ backgroundColor: PrimaryColor.white }} onClick={prevSlide}>
                 <FaAngleLeft size={24} />
               </button>
 

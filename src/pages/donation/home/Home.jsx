@@ -21,7 +21,7 @@ const Home = ({ className }) => {
       <FirstHomeSection className={'mb-10'} />
       <SecondHomeSection className={'mb-10'} />
       <ThirdHomeSection className={'mb-10'} />
-      <FourthHomeSection className={'mb-10'} />
+      <FourthHomeSection />
       <FifthHomeSection />
     </section>
   )

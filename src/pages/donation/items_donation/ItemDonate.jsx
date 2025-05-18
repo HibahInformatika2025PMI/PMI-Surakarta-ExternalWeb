@@ -1,31 +1,70 @@
 /***
- * this component will display the Money Donation for the donation page.
+ * this component will display the Item Donation for the donation page.
  */
 
-import React, { useState } from 'react';
-import { SearchBar1 } from '../../../components/shared/SearchBar';
-import GradRedPurpleButton from '../../../components/buttons/GradRedPurpleButton';
-import DonationListCard from '../../../components/cards/DonationListCard';
-import { griyaMoneyDonations } from '../../../assets/dummy_api/ExampleGriyaDonation';
-import { umumMoneyDonations } from '../../../assets/dummy_api/ExampleUmumDonation';
-import pmiGriya3 from '../../../assets/images/pmi_griya3.png';
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
-const MoneyDonate = () => {
+import { griyaItemDonations } from '../../../assets/dummy_api/ExampleGriyaDonation'
+import { umumItemDonations } from '../../../assets/dummy_api/ExampleUmumDonation'
+import pmiGriya3 from '../../../assets/images/pmi_griya3.png'
+
+import GradRedPurpleButton from '../../../components/buttons/GradRedPurpleButton'
+import DonationListCard from '../../../components/cards/DonationListCard'
+import PopUpItemDetail from '../../../components/pop_up/PopUpItemDetail'
+import { SearchBar1 } from '../../../components/shared/SearchBar'
+
+import UseScrollToTop from '../../../hooks/UseScrollToTop'
+
+const ItemDonate = () => {
+  UseScrollToTop();
+
   const [activeTab, setActiveTab] = useState('griya');
   const [search, setSearch] = useState('');
   const [checkedItems, setCheckedItems] = useState([]);
+  const [popupOpen, setPopupOpen] = useState(false);
+  const [popupItem, setPopupItem] = useState(null);
+  const [selectedItems, setSelectedItems] = useState([]);
+  const navigate = useNavigate();
 
   // Filter data sesuai tab dan pencarian
-  const data = activeTab === 'griya' ? griyaMoneyDonations : umumMoneyDonations;
+  const data = activeTab === 'griya' ? griyaItemDonations : umumItemDonations;
   const filteredData = data.filter((item) =>
     item.title.toLowerCase().includes(search.toLowerCase()) ||
     item.description.toLowerCase().includes(search.toLowerCase())
   );
 
   const handleCheck = (id) => {
-    setCheckedItems((prev) =>
-      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
-    );
+    const dataSource = activeTab === 'griya' ? griyaItemDonations : umumItemDonations;
+    const item = dataSource.find((itm) => itm.id === id);
+    if (!checkedItems.includes(id)) {
+      setPopupItem(item);
+      setPopupOpen(true);
+    } else {
+      // Uncheck: remove from checkedItems & selectedItems
+      setCheckedItems((prev) => prev.filter((itemId) => itemId !== id));
+      setSelectedItems((prev) => prev.filter((itm) => itm.id !== id));
+    }
+  };
+
+  const handleSaveDetail = (detail) => {
+    setCheckedItems((prev) => [...prev, detail.id]);
+    setSelectedItems((prev) => {
+      // replace if already exists
+      const filtered = prev.filter((itm) => itm.id !== detail.id);
+      return [...filtered, detail];
+    });
+    setPopupOpen(false);
+    setPopupItem(null);
+  };
+
+  const handleClosePopup = () => {
+    setPopupOpen(false);
+    setPopupItem(null);
+  };
+
+  const handleLanjutDonasi = () => {
+    navigate('/donasi/form-barang', { state: { items: selectedItems, tab: activeTab } });
   };
 
   return (
@@ -41,12 +80,12 @@ const MoneyDonate = () => {
         <div className='absolute w-full h-full top-0 left-0 bg-gradient-to-l from-[#5A24870D] via-[#5A248780] to-[#6A0003D4] opacity-50 z-20'></div>
         <div className='absolute w-full h-full flex flex-col justify-center items-center z-30'>
           <h1 className='text-3xl font-bold text-white drop-shadow-lg mb-2'>
-            {activeTab === 'griya' ? 'Daftar Donasi Uang Griya' : 'Daftar Donasi Uang Umum'}
+            {activeTab === 'griya' ? 'Daftar Donasi Barang Griya' : 'Daftar Donasi Barang Umum'}
           </h1>
           <p className='text-lg text-white drop-shadow-md text-center max-w-2xl'>
             {activeTab === 'griya'
-              ? 'Salurkan donasi uang untuk mendukung aksi kemanusiaan di Griya PMI.'
-              : 'Daftar kampanye donasi uang untuk mendukung aksi kemanusiaan di masyarakat umum.'}
+              ? 'Salurkan barang dengan donasi barang untuk mendukung aksi kemanusiaan di Griya PMI.'
+              : 'Daftar kampanye donasi barang untuk mendukung aksi kemanusiaan di masyarakat umum.'}
           </p>
         </div>
       </div>
@@ -69,7 +108,7 @@ const MoneyDonate = () => {
       <div className='flex flex-col items-center w-full mt-4 mb-6'>
         <div className='w-full max-w-3xl'>
           <SearchBar1
-            placeholder={activeTab === 'griya' ? 'Ketik kebutuhan Griya ...' : 'Ketik nama pasien atau kampanye donasi ...'}
+            placeholder={activeTab === 'griya' ? 'Ketik kebutuhan Griya ...' : 'Ketik kebutuhan umum ...'}
             onSearch={setSearch}
           />
         </div>
@@ -114,12 +153,19 @@ const MoneyDonate = () => {
       </div>
       {/* Button Lanjut Donasi */}
       <div className='flex justify-center mb-12'>
-        <GradRedPurpleButton className='w-[300px] h-[46px] text-lg font-semibold rounded-2xl'>
+        <GradRedPurpleButton className='w-[300px] h-[46px] text-lg font-semibold rounded-2xl' onClick={handleLanjutDonasi} disabled={selectedItems.length === 0}>
           Lanjut Donasi
         </GradRedPurpleButton>
       </div>
+      {/* PopUp Detail Barang */}
+      <PopUpItemDetail
+        open={popupOpen}
+        onClose={handleClosePopup}
+        onSave={handleSaveDetail}
+        item={popupItem}
+      />
     </div>
   );
 };
 
-export default MoneyDonate;
+export default ItemDonate;

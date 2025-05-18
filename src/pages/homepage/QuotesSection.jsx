@@ -4,11 +4,11 @@
  */
 
 import React from 'react'
-import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
 
 import ExampleQuotes from '../../assets/dummy_api/ExampleQuotes'
 
 import QuotesList from '../../components/shared/QuotesList'
+import { Pagination1 } from '../../components/shared/Pagination'
 
 import { UseSlider3 } from '../../hooks/UseSlider'
 
@@ -25,32 +25,23 @@ const QuotesSection = ({ className }) => {
       <PageSubTitle className={'mb-5 text-center'} style={{ color: PrimaryColor.red }}>Apa Kata Mereka Tentang PMI Kota Surakarta</PageSubTitle>
       <Body className={'mb-10 text-center'}>Pendapat masyarakat, mitra kerja, pejabat, tokoh masyarakat, dan pengusaha mengenai peran serta kegiatan yang dijalankan oleh PMI Kota Surakarta.</Body>
 
+      {/* Content */}
       <div className='relative'>
-        <div className='overflow-hidden'>
+        <div className='overflow-hidden mb-5'>
           <QuotesList
             quotes={ExampleQuotes}
             style={{ transform: `translateX(-${currentSlide * 100}%)` }}
           />
         </div>
 
-        <div className='flex justify-center items-center mt-6'>
-          <button onClick={prevSlide} className='mr-4'>
-            <FaAngleLeft size={24} />
-          </button>
-
-          {ExampleQuotes.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`w-3 h-3 mx-2 rounded-full ${index === currentSlide ? 'bg-[#9e2a2b]' : 'bg-gray-300'}`}
-              aria-label={`Slide ${index + 1}`}
-            ></button>
-          ))}
-
-          <button onClick={nextSlide} className='ml-4'>
-            <FaAngleRight size={24} />
-          </button>
-        </div>
+        {/* Pagination */}
+        <Pagination1
+          currentSlide={currentSlide}
+          totalSlides={ExampleQuotes.length}
+          onPrev={prevSlide}
+          onNext={nextSlide}
+          onSlideClick={goToSlide}
+        />
       </div>
     </div>
   )

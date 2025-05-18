@@ -8,8 +8,8 @@ import HistoryPMISection from './HistoryPMISection'
 import VisionMisionSection from './VisionMisionSection'
 import PrincipleSection from './PrincipleSection'
 
-import { AboutPMI, PalangMerahPrinciple } from '../../assets/text/ProfileData'
 import SeragamPMI from '../../assets/images/pmi_seragam.jpg'
+import { AboutPMI, PalangMerahPrinciple } from '../../assets/text/ProfileData'
 
 import { BannerLayout1 } from '../../components/shared/BannerLayout'
 

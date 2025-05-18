@@ -2,7 +2,9 @@
  * This is the text data for the profile page.
  * 
  * Is used in:
- * - AboutPMISection.jsx
+ * - Profile.jsx
+ * - VisionMisionSection.jsx
+ * - PrincipleSection.jsx
  */
 
 import React from 'react'

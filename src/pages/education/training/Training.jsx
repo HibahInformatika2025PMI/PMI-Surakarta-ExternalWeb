@@ -11,15 +11,15 @@ import AccidentImage2 from '../../../assets/images/Data-Kasus-Laka-Lantas.png'
 import FirstAiderImage from '../../../assets/images/pmi_logo_FirstAider.png'
 import { AboutPPGD, ImportanceOfPPGD, BasicMaterial, Facility, ElectiveMaterial, TrainingLocation } from '../../../assets/text/TrainingData'
 
+import RedButton from '../../../components/buttons/RedButton'
 import { BannerLayout2 } from '../../../components/shared/BannerLayout'
 
 import UseScrollToTop from '../../../hooks/UseScrollToTop'
 
 import { PrimaryColor } from '../../../themes/color_palletes/ColorPalletes'
-import PageSubTitle from '../../../themes/typography/PageSubTitle'
 import PageTitle from '../../../themes/typography/PageTitle'
+import PageSubTitle from '../../../themes/typography/PageSubTitle'
 import Body from '../../../themes/typography/Body'
-import RedButton from '../../../components/buttons/RedButton'
 
 const Training = ({ className }) => {
   // For auto scroll to top when the page is loaded

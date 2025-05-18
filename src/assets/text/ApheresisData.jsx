@@ -3,6 +3,7 @@
  * 
  * Is used in:
  * - Apheresis.jsx
+ * - ApheresisTypeSection.jsx
  */
 
 import React from 'react'

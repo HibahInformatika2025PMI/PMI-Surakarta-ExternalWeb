@@ -7,22 +7,20 @@ import React from 'react'
 
 import PMICarouselImage from '../../../assets/images/pmi_griya3.png'
 
+import CarouselCard from '../../../components/cards/CarouselCard'
 import { SearchBar2 } from '../../../components/shared/SearchBar'
 
 import { PrimaryColor } from '../../../themes/color_palletes/ColorPalletes'
 import PageSubTitle from '../../../themes/typography/PageSubTitle'
 import Body from '../../../themes/typography/Body'
-import CarouselCard from '../../../components/cards/CarouselCard'
 
 const SecondHomeSection = ({ className, style }) => {
-  
-
   return (
     <div className={`px-[50px] md:px-[100px] xl:px-[160px] py-[75px] ${className}`} style={style}>
       <PageSubTitle className={'text-center mb-4'} style={{ color: PrimaryColor.red }}>KAMPANYE DONASI : BANTU SESAMA LEWAT AKSI NYATA</PageSubTitle>
       <Body className={'text-center'}>Lihat bagaimana setiap rupiah dan barang yang kamu donasikan membantu sesama dan menciptakan perubahan nyata bersama PMI Kota Surakarta.</Body>
 
-      <div className='w-full py-[50px]'>
+      <div className='w-full py-[25px]'>
         <SearchBar2 
           placeholder={'Ketik nama pasien atau kampanye donasi...'}
         />

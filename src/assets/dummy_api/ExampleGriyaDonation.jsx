@@ -1,8 +1,14 @@
-// Data dummy donasi barang Griya
-import pmiGriya1 from '../images/pmi_griya1.png';
-import pmiGriya2 from '../images/pmi_griya2.png';
-import pmiGriya3 from '../images/pmi_griya3.png';
+/***
+ * Data dummy donasi barang Griya
+ */
 
+import pmiGriya1 from '../images/pmi_griya1.png'
+import pmiGriya2 from '../images/pmi_griya2.png'
+import pmiGriya3 from '../images/pmi_griya3.png'
+import pmiDonation1 from '../images/pmi_donation1.png'
+import pmiDonation2 from '../images/pmi_donation2.png'
+
+// Donasi Barang Griya
 export const griyaItemDonations = [
   {
     id: 1,
@@ -39,10 +45,7 @@ export const griyaItemDonations = [
   },
 ];
 
-// Data dummy donasi uang Griya
-import pmiDonation1 from '../images/pmi_donation1.png';
-import pmiDonation2 from '../images/pmi_donation2.png';
-
+// Donasi Uang Griya
 export const griyaMoneyDonations = [
   {
     id: 1,

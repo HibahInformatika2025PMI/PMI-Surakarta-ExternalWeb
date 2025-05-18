@@ -3,9 +3,9 @@
  * 
  * Is used in:
  * - ProceduresRequirements.jsx
- * - Procedures.jsx
- * - Requirements.jsx
- * - BloodDonationTypes.jsx
+ * - BloodDonationTypesSection.jsx
+ * - ProceduresSection.jsx
+ * - RequirementsSection.jsx
  */
 
 import React from 'react'

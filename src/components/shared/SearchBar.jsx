@@ -5,6 +5,7 @@
  * - News.jsx
  * - SecondHomeSection.jsx
  * - ItemDonate.jsx
+ * - SecondHomeSection.jsx
  */
 
 import React, { useState } from 'react'
@@ -62,20 +63,19 @@ export const SearchBar2 = ({ placeholder, onSearch }) => {
   return (
     <form
       onSubmit={handleSearch}
-      className='flex flex-col md:flex-row w-full md:h-[48px] mt-5 mb-6 mx-auto shadow-xl rounded-lg gap-2'
+      className='flex flex-col md:flex-row w-full md:h-[48px] mt-5 mb-6 mx-auto rounded-lg gap-2'
       style={{ borderColor: SecondaryColor.darker_red }}
     >
-      <div className='flex items-center pl-4'>
-        <FaSearch style={{ color: PrimaryColor.grey }} />
+      <div className='relative w-full h-[48px] rounded-lg shadow-lg mx-auto'>
+        <FaSearch className='absolute left-5 top-1/2 transform -translate-y-1/2' style={{ color: PrimaryColor.grey }} />
+        <input
+          type="text"
+          placeholder={placeholder}
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          className='w-full h-full pl-[50px] pr-24 border font-inter text-lg'
+        />
       </div>
-
-      <input
-        type="text"
-        placeholder={placeholder}
-        value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
-        className='flex-1 h-full bg-transparent border-none outline-none font-inter text-base px-4'
-      />
 
       <RedOutlineButton
         className={'h-full px-6 rounded-lg mx-2 flex items-center justify-center gap-2'}

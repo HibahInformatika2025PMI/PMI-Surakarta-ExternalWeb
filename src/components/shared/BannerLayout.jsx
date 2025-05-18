@@ -4,8 +4,10 @@
  * is used in :
  * - Apheresis.jsx
  * - ProceduresRequirements.jsx
+ * - Training.jsx
  * - Profile.jsx
  * - Satgana.jsx
+ * - FirstHomeSection.jsx
  */
 
 import React from 'react'
@@ -57,6 +59,33 @@ export const BannerLayout2 = ({ image, imageDescription, title, children, classN
         <div className='flex flex-col'>
           {title.split('\n').map((line, index) => (
             <PageTitle key={index} className={'mb-6 text-center'} style={{ color: PrimaryColor.white }}>
+              {line}
+            </PageTitle>
+          ))}
+          {children}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+// Banner Layout 3 (text at the end)
+export const BannerLayout3 = ({ image, imageDescription, title, children, className }) => {
+  return (
+    <div className={`relative overflow-hidden ${className}`}>
+      <img
+        src={image}
+        alt={imageDescription}
+        className='w-full h-[300px] object-cover object-[50%_20%]'
+      />
+
+      <div className='absolute inset-0 opacity-70' style={{ background: GradientColor.gradient5 }} />
+      <div className='absolute inset-0' style={{ background: GradientColor.gradient4 }} />
+
+      <div className='absolute inset-0 flex justify-end items-center px-[50px] md:px-[100px] xl:px-[200px]'>
+        <div className='flex flex-col'>
+          {title.split('\n').map((line, index) => (
+            <PageTitle key={index} className={'mb-6 text-end'} style={{ color: PrimaryColor.white }}>
               {line}
             </PageTitle>
           ))}

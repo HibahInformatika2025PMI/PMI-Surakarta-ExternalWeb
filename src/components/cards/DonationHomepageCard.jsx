@@ -7,15 +7,16 @@
 
 import React from 'react'
 
+import GradRedPurpleButton from '../buttons/GradRedPurpleButton'
+
 import { PrimaryColor } from '../../themes/color_palletes/ColorPalletes'
 import SubHeading from '../../themes/typography/SubHeading'
 import Subtitle from '../../themes/typography/Subtitle'
-import GradRedPurpleButton from '../buttons/GradRedPurpleButton'
 
 const DonationHomepageCard = ({ image, title, description, buttonLabel, path, className, style, ...props }) => {
   return (
     <div
-      className={`max-w-[300px] rounded-3xl shadow-md overflow-hidden ${className}`}
+      className={`max-w-[400px] rounded-3xl shadow-md overflow-hidden ${className}`}
       style={{ backgroundColor: PrimaryColor.white, ...style }}
       {...props}
     >
@@ -24,12 +25,12 @@ const DonationHomepageCard = ({ image, title, description, buttonLabel, path, cl
         <img src={image} alt={title} className='w-full h-[150px] object-cover' />
       </div>
 
-      <div className='p-4'>
+      <div className='py-4 px-6'>
         <SubHeading className={'mb-2 line-clamp-2'}>
           {title}
         </SubHeading>
 
-        <Subtitle className={'mb-3 line-clamp-3'}>
+        <Subtitle className={'mb-3 line-clamp-3 text-justify'}>
           {description}
         </Subtitle>
 

@@ -4,11 +4,14 @@
  * Is used in:
  * - DonationSection.jsx
  * - TopNewsSection.jsx
- * - News.jsx
  * - QuotesSection.jsx
+ * - DonationSection.jsx
+ * - QuotesSection.jsx
+ * - PartnershipSection.jsx
+ * - News.jsx
  */
 
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 // Normal Slider
 export const UseSlider1 = (items) => {
@@ -34,9 +37,7 @@ export const UseSlider2 = (items) => {
   // Update items to show based on screen width
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 1600) { // 2xl breakpoint
-        setItemsToShow(4);
-      } else if (window.innerWidth >= 1280) { // xl breakpoint
+      if (window.innerWidth >= 1280) { // xl breakpoint
         setItemsToShow(3);
       } else if (window.innerWidth >= 1024) { // lg breakpoint
         setItemsToShow(2);

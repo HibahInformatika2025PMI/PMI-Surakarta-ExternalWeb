@@ -2,7 +2,7 @@
  * This component is used as a template for the quotes cards.
  * 
  * Is used in:
- * - QuotesList.jsx
+ * - 
  */
 
 import React from 'react'

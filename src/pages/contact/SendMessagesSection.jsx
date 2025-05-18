@@ -4,12 +4,13 @@
  */
 
 import React, { useState } from 'react'
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
+
+import RedButton from '../../components/buttons/RedButton'
 
 import { PrimaryColor } from '../../themes/color_palletes/ColorPalletes'
 import PageSubTitle from '../../themes/typography/PageSubTitle'
-import PhoneInput from 'react-phone-input-2'
-import 'react-phone-input-2/lib/style.css'
-import RedButton from '../../components/buttons/RedButton'
 
 const SendMessagesSection = ({ className }) => {
   const [phone, setPhone] = useState('')

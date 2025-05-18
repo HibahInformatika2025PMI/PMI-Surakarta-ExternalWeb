@@ -2,8 +2,7 @@
  * This is the card for the procedures of blood donation.
  * 
  * Is used in:
- * - BloodDonationData.jsx
- * - ApheresisData.jsx
+ * - 
  */
 
 import React from 'react'

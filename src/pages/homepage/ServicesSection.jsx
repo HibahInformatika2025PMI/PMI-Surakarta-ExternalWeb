@@ -6,8 +6,8 @@
 import React from 'react'
 import { FaAmbulance, FaDonate, FaTint } from 'react-icons/fa'
 
-import { DummySubtitle } from '../../assets/text/LoremIpsum'
 import HomepageCard from '../../components/cards/HomepageCard'
+
 import { PrimaryColor } from '../../themes/color_palletes/ColorPalletes'
 
 const ServicesSection = ({ className }) => {
@@ -16,21 +16,21 @@ const ServicesSection = ({ className }) => {
       <HomepageCard
         icon={<FaTint size={28} color={PrimaryColor.white} />}
         title={'DONOR DARAH'}
-        description={<DummySubtitle />}
+        description={'Prosedur dan syarat donor darah yang harus dipatuhi agar dapat menjadi donor darah yang sehat dan aman bagi penerima.'}
         buttonLabel={'Selengkapnya'}
-        path={'/donor-darah'}
+        path={'/prosedur-syarat-donor-darah'}
       />
       <HomepageCard
         icon={<FaAmbulance size={28} color={PrimaryColor.white} />}
         title={'CALL AMBULANCE'}
-        description={<DummySubtitle />}
+        description={'Kontak ambulans 24 jam nonstop untuk pelayanan emergency dan transportasi pasien.'}
         buttonLabel={'Selengkapnya'}
         path={'/call-ambulance'}
       />
       <HomepageCard
         icon={<FaDonate size={28} color={PrimaryColor.white} />}
         title={'DONASI'}
-        description={<DummySubtitle />}
+        description={'Bantu PMI dalam memberikan pelayanan yang terbaik kepada masyarakat dengan berdonasi.'}
         buttonLabel={'Selengkapnya'}
         path={'/donasi'}
       />

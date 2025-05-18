@@ -4,19 +4,20 @@
  * Is used in:
  * - FirstHomeSection.jsx
  * - ThirdHomeSection.jsx
+ * - FifthHomeSection.jsx
  */
 
 import React from 'react'
 import { FaBox, FaDropbox, FaRegFileAlt, FaShippingFast } from 'react-icons/fa'
 import { MdOutlineContactMail, MdPayments } from 'react-icons/md'
 
+import GradRedDarkButton from '../../components/buttons/GradRedDarkButton'
 import DonationTypesCard from '../../components/cards/DonationTypesCard'
+import DonationMethodCard from '../../components/cards/DonationMethodCard'
 
 import { PrimaryColor } from '../../themes/color_palletes/ColorPalletes'
 import Body from '../../themes/typography/Body'
 import PageSubTitle from '../../themes/typography/PageSubTitle'
-import DonationProcedureCard from '../../components/cards/DonationProcedureCard'
-import GradRedDarkButton from '../../components/buttons/GradRedDarkButton'
 
 // Donation Types Data
 export const DonationTypesData = ({ iconSize, className, style }) => {
@@ -30,10 +31,10 @@ export const DonationTypesData = ({ iconSize, className, style }) => {
     },
     {
       icon: <MdPayments size={iconSize} />,
-      title: 'Donasi Dana',
+      title: 'Donasi Uang',
       description: 'Setiap rupiah yang Anda sumbangkan bukan hanya angka, melainkan secercah harapan yang membantu sesama bangkit, bertahan, dan melanjutkan hidup dengan lebih layak. Bersama, kita bisa ciptakan perubahan nyata.',
       button: 'Daftar Donasi Uang',
-      path: '/donasi/donasi-dana'
+      path: '/donasi/donasi-uang'
     },
   ]
   return (
@@ -144,9 +145,9 @@ export const DonationMethodData = ({ iconSize, className, style }) => {
       style={{ background: PrimaryColor.white, ...style }}
     >
       <PageSubTitle className={'mb-4'}>Cara Donasi</PageSubTitle>
-      <div className='flex flex-row gap-5 md:gap-0'>
+      <div className='flex flex-col lg:flex-row gap-5 md:gap-0'>
         {donationMethodList.map((donationType, index) => (
-          <DonationProcedureCard 
+          <DonationMethodCard 
             key={index}
             icon={donationType.icon}
             title={donationType.title}

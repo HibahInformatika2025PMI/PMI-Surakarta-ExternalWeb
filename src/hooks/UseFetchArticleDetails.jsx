@@ -2,7 +2,7 @@
  * This hook provides a simple way to fetch the article details from the server.
  * 
  * Is used in:
- * - Article_Details.jsx
+ * - ArticleDetails.jsx
  */
 
 import { useEffect, useState } from 'react'

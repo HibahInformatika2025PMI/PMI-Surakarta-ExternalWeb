@@ -2,8 +2,8 @@
  * This is a utility function that handles the UI of zero news state.
  * 
  * Is used in:
- * - News.jsx
  * - TopNewsSection.jsx
+ * - News.jsx
  */
 
 import React from 'react'

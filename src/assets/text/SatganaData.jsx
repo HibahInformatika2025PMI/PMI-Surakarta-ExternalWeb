@@ -3,6 +3,7 @@
  * 
  * Is used in:
  * - Satgana.jsx
+ * - AboutSatgana.jsx
  */
 
 import React from 'react'

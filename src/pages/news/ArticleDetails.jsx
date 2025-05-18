@@ -18,12 +18,12 @@ import UseScrollToTop from '../../hooks/UseScrollToTop'
 
 import { PrimaryColor } from '../../themes/color_palletes/ColorPalletes'
 import PageTitle from '../../themes/typography/PageTitle'
+import PageSubTitle from '../../themes/typography/PageSubTitle'
 import Heading from '../../themes/typography/Heading'
 import Body from '../../themes/typography/Body'
 
 import HandleError from '../../utils/HandleError'
 import HandleLoading from '../../utils/HandleLoading'
-import PageSubTitle from '../../themes/typography/PageSubTitle'
 
 const Article_Details = () => {
   // For auto scroll to top when the page is loaded

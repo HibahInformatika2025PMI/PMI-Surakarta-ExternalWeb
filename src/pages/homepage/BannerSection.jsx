@@ -6,6 +6,7 @@
 import React from 'react'
 
 import PMIBeranda1 from '../../assets/images/pmi_beranda1.png'
+
 import RedOutlineButton from '../../components/buttons/RedOutlineButton'
 
 import { GradientColor, PrimaryColor } from '../../themes/color_palletes/ColorPalletes'

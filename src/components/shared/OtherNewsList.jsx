@@ -2,7 +2,7 @@
  * This component is used to display a list of other news cards.
  * 
  * Is used in:
- * - Article_Details.jsx
+ * - ArticleDetails.jsx
  */
 
 import React from 'react'

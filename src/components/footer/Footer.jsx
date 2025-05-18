@@ -3,6 +3,7 @@
  */
 
 import React from 'react'
+import { useLocation } from 'react-router-dom'
 import { MdEmail, MdFax, MdPhone } from 'react-icons/md'
 
 import PMILogo from '../shared/PMILogo'
@@ -13,13 +14,15 @@ import Heading from '../../themes/typography/Heading'
 import Body from '../../themes/typography/Body'
 
 const Footer = () => {
+  const location = useLocation();
+
   return (
     <footer className='relative w-full' style={{ background: PrimaryColor.white}}>
       {/* Top Footer */}
       <div className='grid grid-cols-1 lg:grid-cols-2 justify-items-center items-start w-full p-10'>
         {/* Left Column */}
         <div className='w-1/2 self-start mb-10'>
-          <PMILogo navigate='/' />
+          <PMILogo navigate={location.pathname.startsWith('/donasi') ? '/donasi' : '/'} />
           <Body className='py-2'>Jl. Kol. Sutarto No. 58 Jebres, Surakarta, Jawa Tengah 57126</Body>
           <Body className={'flex items-center py-1'}><MdPhone size={20} className="mr-2" />0271 646 505</Body>
           <Body className={'flex items-center py-1'}><MdFax size={20} className="mr-2" />0271 664 881</Body>

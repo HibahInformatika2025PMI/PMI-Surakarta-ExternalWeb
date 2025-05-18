@@ -2,7 +2,7 @@
  * This component is used as a template for the news cards.
  * 
  * Is used in:
- * - ArticleList.jsx
+ * - ArticlesList.jsx
  */
 
 import React from 'react'

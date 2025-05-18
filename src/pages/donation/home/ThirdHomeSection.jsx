@@ -9,10 +9,10 @@ import ExampleBasicNeeds from '../../../assets/dummy_api/ExampleBasicNeeds'
 import { BasicNeedData } from '../../../assets/text/DonationHomeData'
 
 import GradRedDarkButton from '../../../components/buttons/GradRedDarkButton'
+import Table3Header from '../../../components/shared/Table3Header'
 
 import { PrimaryColor } from '../../../themes/color_palletes/ColorPalletes'
 import PageSubTitle from '../../../themes/typography/PageSubTitle'
-import Table3Header from '../../../components/shared/Table3Header'
 import Body from '../../../themes/typography/Body'
 
 const ThirdHomeSection = ({ className, style }) => {

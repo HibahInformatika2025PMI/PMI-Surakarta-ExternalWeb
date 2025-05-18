@@ -5,9 +5,9 @@
 
 import React from 'react'
 
-import { AboutPrinciple } from '../../assets/text/ProfileData'
 import TopiPMI from '../../assets/images/pmi_topi.jpg'
 import SevenPrinciples from '../../assets/images/tujuh-prinsip-dasar-palang-merah.png'
+import { AboutPrinciple } from '../../assets/text/ProfileData'
 
 import { PrimaryColor } from '../../themes/color_palletes/ColorPalletes'
 import Heading from '../../themes/typography/Heading'

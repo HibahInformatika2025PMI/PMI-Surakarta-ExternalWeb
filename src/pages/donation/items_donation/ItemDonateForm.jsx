@@ -1,7 +1,13 @@
-import React, { useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
-import GradRedPurpleButton from '../../../components/buttons/GradRedPurpleButton';
-import pmiBanner from '../../../assets/images/pmi_griya3.png'; // Ganti dengan gambar header yang sesuai
+/***
+ * This is the form for the item donation page
+ */
+
+import React, { useState } from 'react'
+import { useLocation, useNavigate } from 'react-router-dom'
+
+import pmiBanner from '../../../assets/images/pmi_griya3.png'
+
+import UseScrollToTop from '../../../hooks/UseScrollToTop'
 
 const ItemDonateForm = () => {
   UseScrollToTop();

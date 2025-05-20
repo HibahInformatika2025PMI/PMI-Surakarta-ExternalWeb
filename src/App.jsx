@@ -75,11 +75,12 @@ function App() {
 
             {/* Donation Route */}
             <Route path='/donasi' element={ <Home /> } />
-            <Route path='/donasi/donasi-uang' element={ <MonetaryDonation /> } />
-            {/* <Route path='/donasi/donasi-uang' element={ <MoneyDonate /> } /> */}
-            <Route path='/donasi/donasi-barang' element={ <ItemsDonation /> } />
-            {/* <Route path='/donasi/donasi-barang' element={ <ItemDonate /> } /> */}
-            <Route path='/donasi/form-barang' element={ <ItemDonateForm /> } />
+            {/* <Route path='/donasi/donasi-uang' element={ <MonetaryDonation /> } /> */}
+            <Route path='/donasi/donasi-uang' element={ <MoneyDonate /> } />
+            {/* <Route path='/donasi/donasi-barang' element={ <ItemsDonation /> } /> */}
+            <Route path='/donasi/donasi-barang' element={ <ItemDonate /> } />
+            <Route path='/donasi/donasi-barang/form' element={ <ItemDonateForm /> } />
+            <Route path='/donasi/donasi-barang/form/confirm' element={ <ItemDonateConfirm /> } />
             <Route path='/donasi/laporan' element={ <Home /> } />
           </Routes>
         </main>

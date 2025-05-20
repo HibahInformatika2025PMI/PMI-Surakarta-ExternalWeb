@@ -10,7 +10,7 @@ import { umumMoneyDonations } from '../../../assets/dummy_api/ExampleUmumDonatio
 
 import GradRedPurpleButton from '../../../components/buttons/GradRedPurpleButton'
 import DonationListCard from '../../../components/cards/DonationListCard'
-import { SearchBar1 } from '../../../components/shared/SearchBar'
+import { SearchBar2 } from '../../../components/shared/SearchBar'
 
 import UseScrollToTop from '../../../hooks/UseScrollToTop'
 
@@ -44,36 +44,41 @@ const MoneyDonate = () => {
         />
         <div className='absolute w-full h-full top-0 left-0 bg-gradient-to-r from-[#D60100] via-[#A01837E6] to-[#692F6E66] opacity-90 z-10'></div>
         <div className='absolute w-full h-full top-0 left-0 bg-gradient-to-l from-[#5A24870D] via-[#5A248780] to-[#6A0003D4] opacity-50 z-20'></div>
-        <div className='absolute w-full h-full flex flex-col justify-center items-center z-30'>
-          <h1 className='text-3xl font-bold text-white drop-shadow-lg mb-2'>
-            {activeTab === 'griya' ? 'Daftar Donasi Uang Griya' : 'Daftar Donasi Uang Umum'}
-          </h1>
-          <p className='text-lg text-white drop-shadow-md text-center max-w-2xl'>
-            {activeTab === 'griya'
-              ? 'Salurkan donasi uang untuk mendukung aksi kemanusiaan di Griya PMI.'
-              : 'Daftar kampanye donasi uang untuk mendukung aksi kemanusiaan di masyarakat umum.'}
-          </p>
+        <div className='absolute w-full h-full flex items-center justify-end pr-[250px] z-30'>
+          <div className='flex flex-col items-end'>
+            <h1 className='text-3xl font-bold text-white drop-shadow-lg mb-2 text-right'>
+              Daftar Donasi Uang
+            </h1>
+            <p className='text-lg text-white drop-shadow-md text-right max-w-xl'>
+              Salurkan donasi uang untuk mendukung aksi kemanusiaan dan menyelamatkan lebih banyak nyawa.
+            </p>
+          </div>
         </div>
       </div>
-      {/* Tab Switcher */}
-      <div className='flex justify-center mt-8'>
-        <button
-          className={`px-8 py-3 rounded-t-2xl font-semibold text-lg ${activeTab === 'griya' ? 'bg-gradient-to-b from-[#D60100] to-[#872427] text-white' : 'bg-white text-[#D60100] border-b-4 border-[#D60100]'}`}
-          onClick={() => setActiveTab('griya')}
-        >
-          Griya PMI
-        </button>
-        <button
-          className={`px-8 py-3 rounded-t-2xl font-semibold text-lg ${activeTab === 'umum' ? 'bg-gradient-to-b from-[#D60100] to-[#872427] text-white' : 'bg-white text-[#D60100] border-b-4 border-[#D60100]'}`}
-          onClick={() => setActiveTab('umum')}
-        >
-          Umum
-        </button>
+      {/* Tab Switcher & Garis Merah */}
+      <div className='w-full max-w-[1180px] mx-auto mt-8'>
+        <div className='flex'>
+          <button
+            className={`px-8 py-3 rounded-t-2xl font-semibold text-lg border-b-0 ${activeTab === 'griya' ? 'bg-gradient-to-b from-[#D60100] to-[#872427] text-white' : 'bg-white text-[#D60100]'}`}
+            onClick={() => setActiveTab('griya')}
+            style={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0 }}
+          >
+            Griya PMI
+          </button>
+          <button
+            className={`px-8 py-3 rounded-t-2xl font-semibold text-lg border-b-0 ${activeTab === 'umum' ? 'bg-gradient-to-b from-[#D60100] to-[#872427] text-white' : 'bg-white text-[#D60100]'}`}
+            onClick={() => setActiveTab('umum')}
+            style={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0 }}
+          >
+            Umum
+          </button>
+        </div>
+        <div className='h-1 bg-[#872427] rounded-b-xl w-full'></div>
       </div>
-      {/* SearchBar & Filter */}
+      {/* SearchBar & Filter/Cari */}
       <div className='flex flex-col items-center w-full mt-4 mb-6'>
-        <div className='w-full max-w-3xl'>
-          <SearchBar1
+        <div className='w-full max-w-[1180px]'>
+          <SearchBar2
             placeholder={activeTab === 'griya' ? 'Ketik kebutuhan Griya ...' : 'Ketik nama pasien atau kampanye donasi ...'}
             onSearch={setSearch}
           />

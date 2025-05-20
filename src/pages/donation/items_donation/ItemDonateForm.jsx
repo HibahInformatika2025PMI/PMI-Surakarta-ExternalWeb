@@ -37,6 +37,11 @@ const ItemDonateForm = () => {
     setBarangList(barangList => barangList.map((b, i) => i === idx ? { ...b, [field]: value } : b));
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate('/donasi/donasi-barang/form/confirm', { state: { donor, barangList } });
+  };
+
   return (
     <div className="min-h-screen flex flex-col items-center bg-[#F7F3F5] pb-16">
       {/* Banner/Header */}
@@ -98,7 +103,7 @@ const ItemDonateForm = () => {
       </div>
       {/* Form Donatur & Barang */}
       <div className="w-full flex justify-center">
-        <form className="bg-white rounded-2xl shadow-lg p-8 max-w-5xl w-full flex flex-col gap-8">
+        <form className="bg-white rounded-2xl shadow-lg p-8 max-w-5xl w-full flex flex-col gap-8" onSubmit={handleSubmit}>
           {/* Informasi Donatur */}
           <div>
             <h3 className="text-lg font-bold text-[#872427] mb-4">Informasi Donatur</h3>
@@ -139,7 +144,7 @@ const ItemDonateForm = () => {
                 </div>
                 <div className="flex-1">
                   <label className="block font-semibold mb-1">Unit</label>
-                  <input value={barang.unit} onChange={e => handleBarangChange(idx, 'unit', e.target.value)} className="w-full bg-white border border-[#E1E1E1] rounded-lg p-3" />
+                  <input value={barang.unit} readOnly className="w-full bg-white border border-[#E1E1E1] rounded-lg p-3" />
                 </div>
               </div>
               <div>

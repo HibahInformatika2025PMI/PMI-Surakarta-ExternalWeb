@@ -30,7 +30,7 @@ const ItemsDonation = ({ className }) => {
         title='Daftar Donasi Barang'
       >
         <Body className='text-end' style={{ color: PrimaryColor.white }}>
-        Salurkan barang dengan donasi barang untuk mendukung aksi kemanusiaan dan menyelamatkan lebih banyak nyawa.
+          Salurkan barang dengan donasi barang untuk mendukung aksi kemanusiaan dan menyelamatkan lebih banyak nyawa.
         </Body>
       </BannerLayout3>
 

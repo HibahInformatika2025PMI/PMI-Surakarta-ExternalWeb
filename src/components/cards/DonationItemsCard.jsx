@@ -61,7 +61,7 @@ const DonationItemsCard = ({ image, startDate, endDate, title, description, prog
             <div className='h-full rounded-full' style={{ width: `calc(${itemsReceived / targetItems * 100}%)`, backgroundColor: PrimaryColor.red }}></div>
           </div>
           <Subtitle style={{ color: PrimaryColor.red }}>
-            Barang terkumpul <strong>{itemsReceived} Kg</strong> dari <strong>{targetItems} Kg</strong>
+            Tersedia <strong>{itemsReceived} Kg</strong> dari kebutuhan <strong>{targetItems} Kg</strong>
           </Subtitle>
         </div>
       </div>

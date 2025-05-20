@@ -2,10 +2,6 @@
  * Dummy data for the donation items.
  */
 
-/***
- * Dummy data for the donation.
- */
-
 import donationImage1 from '../images/pmi_donationItems1.png'
 import donationImage2 from '../images/pmi_donationItems2.png'
 import donationImage3 from '../images/pmi_donationItems3.png'

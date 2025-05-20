@@ -26,6 +26,7 @@ import Training from './pages/education/training/Training'
 import Contact from './pages/contact/Contact'
 
 import Home from './pages/donation/home/Home'
+import FAQ from './pages/donation/faq/FAQ'
 import MoneyDonate from './pages/donation/money_donation/MoneyDonation'
 import MonetaryDonation from './pages/donation/money_donation/MonetaryDonation'
 import ItemDonate from './pages/donation/items_donation/ItemDonate'
@@ -74,6 +75,7 @@ function App() {
 
             {/* Donation Route */}
             <Route path='/donasi' element={ <Home /> } />
+            <Route path='/donasi/faq' element={ <FAQ /> } />
             <Route path='/donasi/donasi-uang' element={ <MonetaryDonation /> } />
             {/* <Route path='/donasi/donasi-uang' element={ <MoneyDonate /> } /> */}
             <Route path='/donasi/donasi-barang' element={ <ItemsDonation /> } />

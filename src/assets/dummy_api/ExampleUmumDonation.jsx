@@ -13,6 +13,7 @@ export const umumItemDonations = [
     progressText: '30%',
     fundText: 'Tersedia 2 Paket dari kebutuhan 10 Paket',
     nominalText: 'Kebutuhan: 10 Paket / Tahun',
+    unit: 'Paket',
   },
   {
     id: 2,
@@ -24,6 +25,7 @@ export const umumItemDonations = [
     progressText: '30%',
     fundText: 'Tersedia 1 Kursi Roda dari kebutuhan 5 Kursi Roda',
     nominalText: 'Kebutuhan: 5 Kursi Roda / Tahun',
+    unit: 'Kursi Roda',
   },
 ];
 

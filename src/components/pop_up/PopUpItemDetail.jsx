@@ -8,7 +8,7 @@ const PopUpItemDetail = ({ open, onClose, onSave, item }) => {
   useEffect(() => {
     if (open) {
       setJumlah(1);
-      setUnit('Unit');
+      setUnit(item?.unit || 'Unit');
       setCatatan('');
     }
   }, [open, item]);
@@ -34,7 +34,7 @@ const PopUpItemDetail = ({ open, onClose, onSave, item }) => {
           </div>
           <div className="flex-1">
             <label className="font-bold text-[#261317] mb-1 block">Unit</label>
-            <input className="w-full bg-[#F7F3F5] border border-[#E1E1E1] rounded-lg p-3" value={unit} onChange={e => setUnit(e.target.value)} />
+            <input className="w-full bg-[#F7F3F5] border border-[#E1E1E1] rounded-lg p-3" value={unit} readOnly />
           </div>
         </div>
         <div>

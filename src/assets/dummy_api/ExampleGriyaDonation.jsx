@@ -20,6 +20,7 @@ export const griyaItemDonations = [
     progressText: '30%',
     fundText: 'Tersedia 2 Kg dari kebutuhan 10 Kg',
     nominalText: 'Kebutuhan: 150 Kg / Tahun',
+    unit: 'Kg',
   },
   {
     id: 2,
@@ -31,6 +32,7 @@ export const griyaItemDonations = [
     progressText: '30%',
     fundText: 'Tersedia 2 Kg dari kebutuhan 10 Kg',
     nominalText: 'Kebutuhan: 1500 Pcs / Tahun',
+    unit: 'Pcs',
   },
   {
     id: 3,
@@ -42,6 +44,7 @@ export const griyaItemDonations = [
     progressText: '30%',
     fundText: 'Tersedia 2 Kg dari kebutuhan 10 Kg',
     nominalText: 'Kebutuhan: 150 Kg / Tahun',
+    unit: 'Kg',
   },
 ];
 

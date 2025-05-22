@@ -48,7 +48,7 @@ const ItemDonateConfirm = () => {
             <GreyButton className="flex-1 h-[43px] text-[16px] font-bold rounded-2xl border-[#7A7A7A]" onClick={() => navigate(-1)}>
               Kembali
             </GreyButton>
-            <RedButton className="flex-1 h-[43px] text-[16px] font-bold rounded-2xl" onClick={() => alert('Donasi diselesaikan!')}>
+            <RedButton className="flex-1 h-[43px] text-[16px] font-bold rounded-2xl" onClick={() => navigate('/donasi/donasi-barang/form/confirm/done')}>
               Selesaikan Donasi
             </RedButton>
           </div>

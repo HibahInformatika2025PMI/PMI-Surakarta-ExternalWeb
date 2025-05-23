@@ -12,6 +12,7 @@ import briLogo from '../../../assets/images/bri.png';
 import bniLogo from '../../../assets/images/bni.png';
 import banklainLogo from '../../../assets/images/banklain.png';
 
+import RedButton from '../../../components/buttons/RedButton';
 import UseScrollToTop from '../../../hooks/UseScrollToTop';
 
 const MoneyDonateForm = () => {
@@ -317,7 +318,9 @@ const MoneyDonateForm = () => {
             </div>
           </div>
 
-          <button type="submit" className="w-full h-[46px] text-lg font-semibold rounded-2xl bg-[#D60100] text-white mt-2" disabled={!selectedPaymentOption}>Lanjutkan Donasi</button>
+          <RedButton type="submit" className="w-full h-[46px] text-lg font-semibold rounded-2xl mt-2" disabled={!selectedPaymentOption}>
+            Lanjutkan Donasi
+          </RedButton>
         </form>
       </div>
     </div>

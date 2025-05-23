@@ -52,6 +52,18 @@ const MoneyDonateConfirm = () => {
     }
   }
 
+  // Handler untuk lanjutkan donasi berdasarkan metode pembayaran
+  const handleLanjutkanDonasi = () => {
+    if (metode.type === 'qris') {
+      navigate('/donasi/uang/qris', { state: { nominal, metode } });
+    } else if (metode.type === 'va') {
+      navigate('/donasi/uang/va', { state: { nominal, metode } });
+    } else {
+      // Fallback jika metode tidak dikenali
+      alert('Metode pembayaran tidak valid');
+    }
+  };
+
   return (
     <div className="min-h-screen flex flex-col items-center bg-[#F7F3F5] font-inter py-8">
       <div className="w-full flex flex-col items-center mb-8">
@@ -102,7 +114,10 @@ const MoneyDonateConfirm = () => {
         <GreyButton className="flex-1 h-[46px] text-[16px] font-bold rounded-2xl border-[#7A7A7A]" onClick={() => navigate(-1)}>
           Kembali
         </GreyButton>
-        <RedButton className="flex-1 h-[46px] text-[16px] font-bold rounded-2xl" onClick={() => alert('Donasi diselesaikan!')}>
+        <RedButton 
+          className="flex-1 h-[46px] text-[16px] font-bold rounded-2xl" 
+          onClick={handleLanjutkanDonasi}
+        >
           Lanjutkan Donasi
         </RedButton>
       </div>

@@ -36,6 +36,8 @@ import ItemDonateConfirm from './pages/donation/items_donation/ItemDonateConfirm
 import ItemDonateDone from './pages/donation/items_donation/ItemDonateDone'
 import MoneyDonateForm from './pages/donation/money_donation/MoneyDonateForm'
 import MoneyDonateConfirm from './pages/donation/money_donation/MoneyDonateConfirm'
+import MoneyDonateQRIS from './pages/donation/money_donation/MoneyDonateQRIS'
+import MoneyDonateVA from './pages/donation/money_donation/MoneyDonateVA'
 
 import { SecondaryColor } from './themes/color_palletes/ColorPalletes'
 
@@ -87,6 +89,8 @@ function App() {
             <Route path='/donasi/donasi-barang/form/confirm/done' element={ <ItemDonateDone /> } />
             <Route path='/donasi/donasi-uang/form' element={ <MoneyDonateForm /> } />
             <Route path='/donasi/donasi-uang/form/confirm' element={ <MoneyDonateConfirm /> } />
+            <Route path='/donasi/uang/qris' element={ <MoneyDonateQRIS /> } />
+            <Route path='/donasi/uang/va' element={ <MoneyDonateVA /> } />
 
             <Route path='/donasi/laporan' element={ <Home /> } />
           </Routes>

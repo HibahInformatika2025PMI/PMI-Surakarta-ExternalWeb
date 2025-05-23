@@ -78,6 +78,7 @@ function App() {
 
             {/* Donation Route */}
             <Route path='/donasi' element={ <Home /> } />
+            <Route path='/donasi/faq' element={ <FAQ /> } />
             {/* <Route path='/donasi/donasi-uang' element={ <MonetaryDonation /> } /> */}
             <Route path='/donasi/donasi-uang' element={ <MoneyDonate /> } />
             {/* <Route path='/donasi/donasi-barang' element={ <ItemsDonation /> } /> */}

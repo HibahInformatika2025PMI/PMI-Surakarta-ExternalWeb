@@ -38,6 +38,7 @@ import MoneyDonateForm from './pages/donation/money_donation/MoneyDonateForm'
 import MoneyDonateConfirm from './pages/donation/money_donation/MoneyDonateConfirm'
 import MoneyDonateQRIS from './pages/donation/money_donation/MoneyDonateQRIS'
 import MoneyDonateVA from './pages/donation/money_donation/MoneyDonateVA'
+import Report from './pages/donation/report/Report'
 
 import { SecondaryColor } from './themes/color_palletes/ColorPalletes'
 
@@ -81,9 +82,7 @@ function App() {
             {/* Donation Route */}
             <Route path='/donasi' element={ <Home /> } />
             <Route path='/donasi/faq' element={ <FAQ /> } />
-            {/* <Route path='/donasi/donasi-uang' element={ <MonetaryDonation /> } /> */}
             <Route path='/donasi/donasi-uang' element={ <MoneyDonate /> } />
-            {/* <Route path='/donasi/donasi-barang' element={ <ItemsDonation /> } /> */}
             <Route path='/donasi/donasi-barang' element={ <ItemDonate /> } />
             <Route path='/donasi/donasi-barang/form' element={ <ItemDonateForm /> } />
             <Route path='/donasi/donasi-barang/form/confirm' element={ <ItemDonateConfirm /> } />
@@ -92,8 +91,7 @@ function App() {
             <Route path='/donasi/donasi-uang/form/confirm' element={ <MoneyDonateConfirm /> } />
             <Route path='/donasi/uang/qris' element={ <MoneyDonateQRIS /> } />
             <Route path='/donasi/uang/va' element={ <MoneyDonateVA /> } />
-
-            <Route path='/donasi/laporan' element={ <Home /> } />
+            <Route path='/donasi/laporan' element={ <Report /> } />
           </Routes>
         </main>
         

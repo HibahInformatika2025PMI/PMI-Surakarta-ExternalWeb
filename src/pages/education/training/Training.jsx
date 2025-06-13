@@ -7,7 +7,7 @@ import React from 'react'
 import TrainingImage from '../../../assets/images/pmi_cpr.jpg'
 import TrainingImage2 from '../../../assets/images/pmi_simulasibencana.jpg'
 import AccidentImage1 from '../../../assets/images/Data-Kasus-Kecelakaan-Kerja.png'
-import AccidentImage2 from '../../../assets/images/Data-Kasus-Laka-Lantas.png'
+import AccidentImage2 from '../../../assets/images/pmi_simulasibencana.jpg'
 import FirstAiderImage from '../../../assets/images/pmi_logo_FirstAider.png'
 import { AboutPPGD, ImportanceOfPPGD, BasicMaterial, Facility, ElectiveMaterial, TrainingLocation } from '../../../assets/text/TrainingData'
 

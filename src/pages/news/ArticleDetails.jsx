@@ -25,6 +25,16 @@ import Body from '../../themes/typography/Body'
 import HandleError from '../../utils/HandleError'
 import HandleLoading from '../../utils/HandleLoading'
 
+// Tambahkan helper function untuk parsing Lexical JSON
+function extractTextFromLexical(node) {
+  if (!node) return '';
+  if (node.text) return node.text;
+  if (node.children) {
+    return node.children.map(extractTextFromLexical).join(' ');
+  }
+  return '';
+}
+
 const Article_Details = () => {
   // For auto scroll to top when the page is loaded
   UseScrollToTop();
@@ -76,11 +86,22 @@ const Article_Details = () => {
           {/* Article Content */}
           <div className='flex flex-col lg:flex-row gap-10 lg:gap-8 mt-10'>
             <div className='w-full lg:w-4/6 h-full prose'>
-              {articleDetails.content.split('\n').map((line, index) => (
-                <Body key={index} className={'text-justify indent-10 break-all mb-2'}>
-                  {line}
-                </Body>
-              ))}
+              {(() => {
+                let textContent = '';
+                try {
+                  if (articleDetails.content) {
+                    const parsed = JSON.parse(JSON.parse(articleDetails.content));
+                    textContent = extractTextFromLexical(parsed.root);
+                  }
+                } catch (e) {
+                  textContent = articleDetails.content;
+                }
+                return (
+                  <Body className={'text-justify indent-10 break-all mb-2'}>
+                    {textContent}
+                  </Body>
+                );
+              })()}
             </div>
             <div className='w-full lg:w-2/6 h-full'>
               <PageSubTitle className={'mb-8'} style={{ color: PrimaryColor.grey }}>Berita Lainnya</PageSubTitle>
